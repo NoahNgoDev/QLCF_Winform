@@ -23,6 +23,7 @@ namespace QLCF
         public MainQuanLy()
         {
             InitializeComponent();
+            pnlHeadBar.BackColor = Color.FromArgb(255, 255, 255);
         }
 
         // đóng cửa sổ chương trình
@@ -104,7 +105,11 @@ namespace QLCF
             MainForm_MouseUp(sender, e);
         }
 
+        private void pnlHeadBar_Paint(object sender, PaintEventArgs e)
+        {
+            pnlHeadBar.BackColor = Color.FromArgb(255, 255, 255);
+        }
 
-
+        
     }
 }
