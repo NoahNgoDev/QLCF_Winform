@@ -53,10 +53,10 @@ namespace QLCF
             {
                 flowLayoutPnl2.Size = new Size(1395, 550);
 
-                pnlDatcho.Size = new Size(403, 200);
-                pnlKhachHang.Size = new Size(403, 200);
-                pnlDonHang.Size = new Size(403, 200);
-                pnlDoanhThu.Size = new Size(403, 200);
+                pnlDatcho.Size = new Size(403, 150);
+                pnlKhachHang.Size = new Size(403, 150);
+                pnlDonHang.Size = new Size(403, 150);
+                pnlDoanhThu.Size = new Size(403, 150);
 
             }else if (userControlWidth == 1395)
             {
@@ -69,6 +69,19 @@ namespace QLCF
             }
         }
 
-        
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
