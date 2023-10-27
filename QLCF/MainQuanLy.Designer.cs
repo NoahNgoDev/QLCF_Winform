@@ -44,11 +44,15 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDoanhThu = new System.Windows.Forms.Button();
+            this.btnTongQuan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlCenter = new System.Windows.Forms.Panel();
+            this.pnlForUserControl = new System.Windows.Forms.Panel();
             this.TitleBar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlContainAvarta = new System.Windows.Forms.Panel();
             this.pnlNameAvarta = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -59,22 +63,19 @@
             this.SearchBox = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pnlHeadBar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.TitleBar.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.pnlContainAvarta.SuspendLayout();
             this.pnlNameAvarta.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PanelContainSearchBox.SuspendLayout();
             this.SearchBox.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeadBar
@@ -198,8 +199,8 @@
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnDoanhThu);
+            this.panel2.Controls.Add(this.btnTongQuan);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 34);
@@ -349,45 +350,47 @@
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnDoanhThu
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 113);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(220, 55);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "  Doanh thu";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDoanhThu.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnDoanhThu.FlatAppearance.BorderSize = 0;
+            this.btnDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoanhThu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoanhThu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDoanhThu.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.Image")));
+            this.btnDoanhThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoanhThu.Location = new System.Drawing.Point(0, 113);
+            this.btnDoanhThu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDoanhThu.Name = "btnDoanhThu";
+            this.btnDoanhThu.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnDoanhThu.Size = new System.Drawing.Size(220, 55);
+            this.btnDoanhThu.TabIndex = 2;
+            this.btnDoanhThu.Text = "  Doanh thu";
+            this.btnDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoanhThu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDoanhThu.UseVisualStyleBackColor = false;
+            this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
             // 
-            // button1
+            // btnTongQuan
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 58);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(220, 55);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "  Tổng quan";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTongQuan.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnTongQuan.FlatAppearance.BorderSize = 0;
+            this.btnTongQuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTongQuan.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTongQuan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnTongQuan.Image = ((System.Drawing.Image)(resources.GetObject("btnTongQuan.Image")));
+            this.btnTongQuan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTongQuan.Location = new System.Drawing.Point(0, 58);
+            this.btnTongQuan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTongQuan.Name = "btnTongQuan";
+            this.btnTongQuan.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnTongQuan.Size = new System.Drawing.Size(220, 55);
+            this.btnTongQuan.TabIndex = 1;
+            this.btnTongQuan.Text = "  Tổng quan";
+            this.btnTongQuan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTongQuan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTongQuan.UseVisualStyleBackColor = false;
+            this.btnTongQuan.Click += new System.EventHandler(this.btnTongQuan_Click);
             // 
             // label1
             // 
@@ -404,13 +407,22 @@
             // pnlCenter
             // 
             this.pnlCenter.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlCenter.Controls.Add(this.panel6);
+            this.pnlCenter.Controls.Add(this.pnlForUserControl);
             this.pnlCenter.Controls.Add(this.TitleBar);
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCenter.Location = new System.Drawing.Point(220, 34);
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Size = new System.Drawing.Size(1395, 780);
             this.pnlCenter.TabIndex = 4;
+            // 
+            // pnlForUserControl
+            // 
+            this.pnlForUserControl.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pnlForUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlForUserControl.Location = new System.Drawing.Point(0, 65);
+            this.pnlForUserControl.Name = "pnlForUserControl";
+            this.pnlForUserControl.Size = new System.Drawing.Size(1395, 715);
+            this.pnlForUserControl.TabIndex = 1;
             // 
             // TitleBar
             // 
@@ -424,14 +436,44 @@
             this.TitleBar.Size = new System.Drawing.Size(1395, 65);
             this.TitleBar.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(409, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(456, 65);
+            this.panel1.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 65);
+            this.panel5.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(27, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Ten cua so";
+            // 
             // pnlContainAvarta
             // 
             this.pnlContainAvarta.BackColor = System.Drawing.Color.White;
             this.pnlContainAvarta.Controls.Add(this.pnlNameAvarta);
             this.pnlContainAvarta.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlContainAvarta.Location = new System.Drawing.Point(1011, 0);
+            this.pnlContainAvarta.Location = new System.Drawing.Point(865, 0);
             this.pnlContainAvarta.Name = "pnlContainAvarta";
-            this.pnlContainAvarta.Size = new System.Drawing.Size(384, 65);
+            this.pnlContainAvarta.Size = new System.Drawing.Size(530, 65);
             this.pnlContainAvarta.TabIndex = 5;
             // 
             // pnlNameAvarta
@@ -439,30 +481,32 @@
             this.pnlNameAvarta.BackColor = System.Drawing.Color.MistyRose;
             this.pnlNameAvarta.Controls.Add(this.panel4);
             this.pnlNameAvarta.Controls.Add(this.panel3);
+            this.pnlNameAvarta.Controls.Add(this.panel6);
             this.pnlNameAvarta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlNameAvarta.Location = new System.Drawing.Point(0, 0);
             this.pnlNameAvarta.Name = "pnlNameAvarta";
-            this.pnlNameAvarta.Size = new System.Drawing.Size(384, 65);
+            this.pnlNameAvarta.Size = new System.Drawing.Size(530, 65);
             this.pnlNameAvarta.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.lbchucvu);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 37);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(384, 28);
+            this.panel4.Size = new System.Drawing.Size(506, 28);
             this.panel4.TabIndex = 1;
             // 
             // lbchucvu
             // 
             this.lbchucvu.AutoSize = true;
+            this.lbchucvu.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbchucvu.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lbchucvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbchucvu.Location = new System.Drawing.Point(306, 3);
+            this.lbchucvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbchucvu.Location = new System.Drawing.Point(434, 0);
             this.lbchucvu.Name = "lbchucvu";
-            this.lbchucvu.Size = new System.Drawing.Size(66, 20);
+            this.lbchucvu.Size = new System.Drawing.Size(72, 22);
             this.lbchucvu.TabIndex = 4;
             this.lbchucvu.Text = "Quản lý";
             this.lbchucvu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -474,22 +518,22 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(384, 37);
+            this.panel3.Size = new System.Drawing.Size(506, 40);
             this.panel3.TabIndex = 0;
             // 
             // lbNameAvarta
             // 
-            this.lbNameAvarta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNameAvarta.AutoSize = true;
+            this.lbNameAvarta.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbNameAvarta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbNameAvarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbNameAvarta.Location = new System.Drawing.Point(217, 4);
+            this.lbNameAvarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbNameAvarta.Location = new System.Drawing.Point(333, 0);
             this.lbNameAvarta.Name = "lbNameAvarta";
             this.lbNameAvarta.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbNameAvarta.Size = new System.Drawing.Size(155, 26);
+            this.lbNameAvarta.Size = new System.Drawing.Size(173, 29);
             this.lbNameAvarta.TabIndex = 3;
             this.lbNameAvarta.Text = "Nguyễn Văn Tùng";
-            this.lbNameAvarta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbNameAvarta.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.lbNameAvarta.UseCompatibleTextRendering = true;
             // 
             // PanelContainSearchBox
@@ -536,44 +580,14 @@
             this.textBox1.Size = new System.Drawing.Size(350, 31);
             this.textBox1.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(409, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(602, 65);
-            this.panel1.TabIndex = 6;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 65);
-            this.panel5.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(27, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 29);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Ten cua so";
-            // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.DarkGray;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 65);
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(506, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1395, 715);
-            this.panel6.TabIndex = 1;
+            this.panel6.Size = new System.Drawing.Size(24, 65);
+            this.panel6.TabIndex = 4;
             // 
             // MainQuanLy
             // 
@@ -597,6 +611,9 @@
             this.panel2.PerformLayout();
             this.pnlCenter.ResumeLayout(false);
             this.TitleBar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.pnlContainAvarta.ResumeLayout(false);
             this.pnlNameAvarta.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -606,9 +623,6 @@
             this.PanelContainSearchBox.ResumeLayout(false);
             this.SearchBox.ResumeLayout(false);
             this.SearchBox.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -624,8 +638,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnTongQuan;
+        private System.Windows.Forms.Button btnDoanhThu;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
@@ -648,6 +662,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlForUserControl;
         private System.Windows.Forms.Panel panel6;
     }
 }

@@ -17,21 +17,26 @@ namespace QLCF
         private int mouseX;
         private int mouseY;
         private Boolean enable = false;
+        private int userControlCurrenly = 0;
 
 
+        // GK-Gọi userControl 
+        TongQuan userControl_TongQuan = new TongQuan();
+        DoanhThu userControl_DoanhThu = new DoanhThu();
 
         public MainQuanLy()
         {
             InitializeComponent();
+            //GK
             caiDatTriChoNameAvarta();
-
-
+            //GK
+            addUserControlForPanel(userControl_TongQuan);
         }
 
 
 
 
-        // đóng cửa sổ chương trình
+        // GK-đóng cửa sổ chương trình 
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -40,7 +45,7 @@ namespace QLCF
 
 
 
-        // thu nhỏ phóng to cửa sổ
+        // GK-thu nhỏ phóng to cửa sổ
         private void btnmax_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
@@ -57,7 +62,7 @@ namespace QLCF
 
 
 
-        // thu cửa sổ 
+        // GK-thu cửa sổ 
         private void btnmin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -65,7 +70,7 @@ namespace QLCF
 
 
 
-        // di chuyển cửa sổ (form)
+        // GK-di chuyển cửa sổ (form)
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
             if (enable)
@@ -98,7 +103,7 @@ namespace QLCF
 
 
 
-        // di chuyển cửa sổ (btn move)
+        // GK-di chuyển cửa sổ (btn move)
         private void btnmove_MouseMown(object sender, MouseEventArgs e)
         {
             enable = true;
@@ -119,23 +124,26 @@ namespace QLCF
             MainForm_MouseUp(sender, e);
         }
 
-        
 
 
-        // cài đặt vị trí cho lable dịch qua trái
+
+        // GK-cài đặt vị trí cho lable dịch qua trái
         private void caiDatTriChoNameAvarta()
         {
-            // Đặt vị trí cho chữ
+            // lấy độ rộng lúc cũ
             int rightlbNameAvarta = lbNameAvarta.Width;
-            lbNameAvarta.Text = "nguyên van tuầna";
+            lbNameAvarta.Text = "Trần Lê Nguyễn Anh Kiệt";
+            // lấy độ rộng lúc mới
             int rightlbNameAvartaNew = lbNameAvarta.Width;
             //MessageBox.Show(rightlbNameAvartaNew + "  " + rightlbNameAvarta);
+            // độ rộng mới trừ độ rộng cũ = độ rộng khoản cách mới 
             int rightXnew = rightlbNameAvartaNew - rightlbNameAvarta;
             int rightXX = lbNameAvarta.Location.X - rightXnew;
             int rightY = lbNameAvarta.Location.Y;
             lbNameAvarta.Location = new Point(rightXX, rightY);
 
             int right_lbchucvu = lbchucvu.Width;
+            lbchucvu.Text = "nhân viên - Part time";
             int right_lbchucvuNew = lbchucvu.Width;
             int right_lbchucvu_ = right_lbchucvuNew - right_lbchucvu;
             int right_lbchucvu__ = lbchucvu.Location.X - right_lbchucvu_;
@@ -146,6 +154,44 @@ namespace QLCF
 
 
 
-        //chuyển đổi giữa các user control
+
+        // GK-Thêm usercontrol vào panel để hiển thị
+        private void addUserControlForPanel(UserControl userControl)
+        {
+            //pnlForUserControl.Controls.Add(userControl_TongQuan);
+            //pnlForUserControl.Controls.Add(userControl_DoanhThu);
+
+            userControl.Dock = DockStyle.Fill;
+            pnlForUserControl.Controls.Clear();
+            pnlForUserControl.Controls.Add(userControl);
+            userControl.BackColor = Color.White;
+            //userControl.Location = new Point(157, 34);
+            userControl.BringToFront();
+
+        }
+
+
+
+
+
+        // GK-chuyển đổi giữa các user control
+        private void chuyenUserControl()
+        {
+            if (userControlCurrenly == 0)
+            {
+                userControl_TongQuan.Visible = true;
+            }
+        }
+
+        private void btnTongQuan_Click(object sender, EventArgs e)
+        {
+            userControlCurrenly = 0;
+        }
+        
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+            userControlCurrenly = 1;
+        }
     }
 }
