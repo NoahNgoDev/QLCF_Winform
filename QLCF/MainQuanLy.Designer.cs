@@ -59,11 +59,11 @@
             this.lbchucvu = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbNameAvarta = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.PanelContainSearchBox = new System.Windows.Forms.Panel();
             this.SearchBox = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.pnlHeadBar.SuspendLayout();
             this.LeftBarControll.SuspendLayout();
             this.pnlCenter.SuspendLayout();
@@ -536,6 +536,15 @@
             this.lbNameAvarta.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.lbNameAvarta.UseCompatibleTextRendering = true;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(506, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(24, 65);
+            this.panel6.TabIndex = 4;
+            // 
             // PanelContainSearchBox
             // 
             this.PanelContainSearchBox.BackColor = System.Drawing.Color.White;
@@ -579,15 +588,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(350, 31);
             this.textBox1.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(506, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(24, 65);
-            this.panel6.TabIndex = 4;
             // 
             // MainQuanLy
             // 

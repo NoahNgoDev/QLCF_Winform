@@ -44,7 +44,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
             this.Controls.Add(this.button1);
             this.Name = "DoanhThu";
             this.Size = new System.Drawing.Size(1395, 715);

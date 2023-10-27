@@ -23,6 +23,7 @@ namespace QLCF
         // GK-Gọi userControl 
         TongQuan userControl_TongQuan = new TongQuan();
         DoanhThu userControl_DoanhThu = new DoanhThu();
+        
 
         public MainQuanLy()
         {
@@ -34,6 +35,8 @@ namespace QLCF
             TitleCurently.Text = btnTongQuan.Text;
             //GK-cửa sổ mặc định sẽ ở trang tổng quan
             addUserControlForPanel(userControl_TongQuan);
+
+            
         }
 
 
@@ -55,11 +58,13 @@ namespace QLCF
             {
                 // Nếu cửa sổ đang ở trạng thái bình thường, thì chuyển sang trạng thái phóng to (maximized).
                 this.WindowState = FormWindowState.Maximized;
+                userControl_TongQuan.dieuChinhKichThuoc4BoxPnl2();
             }
             else if (this.WindowState == FormWindowState.Maximized)
             {
                 // Nếu cửa sổ đang ở trạng thái phóng to, thì chuyển về trạng thái bình thường.
                 this.WindowState = FormWindowState.Normal;
+                userControl_TongQuan.dieuChinhKichThuoc4BoxPnl2();
             }
         }
 
@@ -164,7 +169,7 @@ namespace QLCF
             userControl.Dock = DockStyle.Fill;
             pnlForUserControl.Controls.Clear();
             pnlForUserControl.Controls.Add(userControl);
-            userControl.BackColor = Color.LightSteelBlue;
+            userControl.BackColor = Color.FromArgb(205, 245, 253);
             //userControl.Location = new Point(157, 34);
             userControl.BringToFront();
 
