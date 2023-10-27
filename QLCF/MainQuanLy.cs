@@ -18,7 +18,7 @@ namespace QLCF
         private int mouseY;
         private Boolean enable = false;
         private int userControlCurrenly = 0;
-
+        private Button currentButton;
 
         // GK-Gọi userControl 
         TongQuan userControl_TongQuan = new TongQuan();
@@ -28,8 +28,11 @@ namespace QLCF
         {
             InitializeComponent();
             //GK
-            caiDatTriChoNameAvarta();
-            //GK
+            caiDatViTriChoNameAvarta();
+
+            //GK-Điều chỉnh tên cửa sổ theo cửa sổ đang mở
+            TitleCurently.Text = btnTongQuan.Text;
+            //GK-cửa sổ mặc định sẽ ở trang tổng quan
             addUserControlForPanel(userControl_TongQuan);
         }
 
@@ -128,7 +131,7 @@ namespace QLCF
 
 
         // GK-cài đặt vị trí cho lable dịch qua trái
-        private void caiDatTriChoNameAvarta()
+        private void caiDatViTriChoNameAvarta()
         {
             // lấy độ rộng lúc cũ
             int rightlbNameAvarta = lbNameAvarta.Width;
@@ -158,40 +161,69 @@ namespace QLCF
         // GK-Thêm usercontrol vào panel để hiển thị
         private void addUserControlForPanel(UserControl userControl)
         {
-            //pnlForUserControl.Controls.Add(userControl_TongQuan);
-            //pnlForUserControl.Controls.Add(userControl_DoanhThu);
-
             userControl.Dock = DockStyle.Fill;
             pnlForUserControl.Controls.Clear();
             pnlForUserControl.Controls.Add(userControl);
-            userControl.BackColor = Color.White;
+            userControl.BackColor = Color.LightSteelBlue;
             //userControl.Location = new Point(157, 34);
             userControl.BringToFront();
 
         }
 
-
-
-
-
-        // GK-chuyển đổi giữa các user control
-        private void chuyenUserControl()
+        // đổi màu button cửa sổ đang bật
+        private void ActivateButton(object btnSender)
         {
-            if (userControlCurrenly == 0)
+            if (btnSender != null)
             {
-                userControl_TongQuan.Visible = true;
+                if (currentButton != (Button)btnSender)
+                {
+                    DisableButton();
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = Color.FromArgb(0, 119, 179);
+                    currentButton.ForeColor = Color.Honeydew;
+                    //currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    TitleCurently.Text = currentButton.Text;
+                }
+            }
+        }
+        
+        // trả lại màu cũ khi button không còn được kích hoạt
+        private void DisableButton()
+        {
+            foreach (Control previousBtn in LeftBarControll.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.ForeColor = Color.Black;
+                    previousBtn.BackColor = Color.DarkSeaGreen;
+                }
             }
         }
 
+
+        
+
+
+        // button tổng quan đổi màu và kích hoạt hiện form user control khi được lick vào
         private void btnTongQuan_Click(object sender, EventArgs e)
         {
             userControlCurrenly = 0;
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_TongQuan);
         }
-        
 
+        // button doanh thu đổi màu và kích hoạt hiện form user control khi được lick vào
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
             userControlCurrenly = 1;
+            
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_DoanhThu);
         }
+
+
+
+
+
     }
 }

@@ -36,7 +36,7 @@
             this.btnmin = new System.Windows.Forms.Button();
             this.btnmax = new System.Windows.Forms.Button();
             this.btnclose = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.LeftBarControll = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.TitleBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TitleCurently = new System.Windows.Forms.Label();
             this.pnlContainAvarta = new System.Windows.Forms.Panel();
             this.pnlNameAvarta = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -65,7 +65,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pnlHeadBar.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.LeftBarControll.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.TitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -189,25 +189,25 @@
             this.btnclose.UseVisualStyleBackColor = true;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
-            // panel2
+            // LeftBarControll
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.btnDoanhThu);
-            this.panel2.Controls.Add(this.btnTongQuan);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 34);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 780);
-            this.panel2.TabIndex = 1;
+            this.LeftBarControll.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.LeftBarControll.Controls.Add(this.button11);
+            this.LeftBarControll.Controls.Add(this.button7);
+            this.LeftBarControll.Controls.Add(this.button8);
+            this.LeftBarControll.Controls.Add(this.button9);
+            this.LeftBarControll.Controls.Add(this.button10);
+            this.LeftBarControll.Controls.Add(this.button3);
+            this.LeftBarControll.Controls.Add(this.button4);
+            this.LeftBarControll.Controls.Add(this.btnDoanhThu);
+            this.LeftBarControll.Controls.Add(this.btnTongQuan);
+            this.LeftBarControll.Controls.Add(this.label1);
+            this.LeftBarControll.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LeftBarControll.Location = new System.Drawing.Point(0, 34);
+            this.LeftBarControll.Margin = new System.Windows.Forms.Padding(4);
+            this.LeftBarControll.Name = "LeftBarControll";
+            this.LeftBarControll.Size = new System.Drawing.Size(220, 780);
+            this.LeftBarControll.TabIndex = 1;
             // 
             // button11
             // 
@@ -216,7 +216,7 @@
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button11.ForeColor = System.Drawing.Color.Black;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.Location = new System.Drawing.Point(0, 725);
@@ -236,7 +236,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.ForeColor = System.Drawing.Color.Black;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(0, 448);
@@ -256,7 +256,7 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(0, 393);
@@ -276,7 +276,7 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button9.ForeColor = System.Drawing.Color.Black;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(0, 336);
@@ -296,7 +296,7 @@
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button10.ForeColor = System.Drawing.Color.Black;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.Location = new System.Drawing.Point(0, 281);
@@ -316,7 +316,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(0, 225);
@@ -336,7 +336,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 170);
@@ -356,7 +356,7 @@
             this.btnDoanhThu.FlatAppearance.BorderSize = 0;
             this.btnDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoanhThu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoanhThu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDoanhThu.ForeColor = System.Drawing.Color.Black;
             this.btnDoanhThu.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.Image")));
             this.btnDoanhThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDoanhThu.Location = new System.Drawing.Point(0, 113);
@@ -377,7 +377,7 @@
             this.btnTongQuan.FlatAppearance.BorderSize = 0;
             this.btnTongQuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTongQuan.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTongQuan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnTongQuan.ForeColor = System.Drawing.Color.Black;
             this.btnTongQuan.Image = ((System.Drawing.Image)(resources.GetObject("btnTongQuan.Image")));
             this.btnTongQuan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTongQuan.Location = new System.Drawing.Point(0, 58);
@@ -448,23 +448,23 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.TitleCurently);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 65);
             this.panel5.TabIndex = 0;
             // 
-            // label2
+            // TitleCurently
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(27, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 29);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Ten cua so";
+            this.TitleCurently.AutoSize = true;
+            this.TitleCurently.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TitleCurently.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TitleCurently.Location = new System.Drawing.Point(27, 19);
+            this.TitleCurently.Name = "TitleCurently";
+            this.TitleCurently.Size = new System.Drawing.Size(142, 29);
+            this.TitleCurently.TabIndex = 0;
+            this.TitleCurently.Text = "Ten cua so";
             // 
             // pnlContainAvarta
             // 
@@ -595,7 +595,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1615, 814);
             this.Controls.Add(this.pnlCenter);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.LeftBarControll);
             this.Controls.Add(this.pnlHeadBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -607,8 +607,8 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
             this.pnlHeadBar.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.LeftBarControll.ResumeLayout(false);
+            this.LeftBarControll.PerformLayout();
             this.pnlCenter.ResumeLayout(false);
             this.TitleBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -636,7 +636,7 @@
         private System.Windows.Forms.Button btnmove;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel LeftBarControll;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTongQuan;
         private System.Windows.Forms.Button btnDoanhThu;
@@ -661,7 +661,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TitleCurently;
         private System.Windows.Forms.Panel pnlForUserControl;
         private System.Windows.Forms.Panel panel6;
     }
