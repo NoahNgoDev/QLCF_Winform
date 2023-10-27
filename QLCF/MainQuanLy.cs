@@ -23,7 +23,9 @@ namespace QLCF
         public MainQuanLy()
         {
             InitializeComponent();
-            pnlHeadBar.BackColor = Color.FromArgb(255, 255, 255);
+            caiDatTriChoNameAvarta();
+
+
         }
 
         // đóng cửa sổ chương trình
@@ -105,11 +107,26 @@ namespace QLCF
             MainForm_MouseUp(sender, e);
         }
 
-        private void pnlHeadBar_Paint(object sender, PaintEventArgs e)
-        {
-            pnlHeadBar.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
         
+
+        private void caiDatTriChoNameAvarta()
+        {
+            // Đặt vị trí cho chữ
+            int rightlbNameAvarta = lbNameAvarta.Width;
+            lbNameAvarta.Text = "nguyên van tuầna";
+            int rightlbNameAvartaNew = lbNameAvarta.Width;
+            //MessageBox.Show(rightlbNameAvartaNew + "  " + rightlbNameAvarta);
+            int rightXnew = rightlbNameAvartaNew - rightlbNameAvarta;
+            int rightXX = lbNameAvarta.Location.X - rightXnew;
+            int rightY = lbNameAvarta.Location.Y;
+            lbNameAvarta.Location = new Point(rightXX, rightY);
+
+            int right_lbchucvu = lbchucvu.Width;
+            int right_lbchucvuNew = lbchucvu.Width;
+            int right_lbchucvu_ = right_lbchucvuNew - right_lbchucvu;
+            int right_lbchucvu__ = lbchucvu.Location.X - right_lbchucvu_;
+            int right_lbchucvu_Y = lbchucvu.Location.Y;
+            lbNameAvarta.Location = new Point(right_lbchucvu__, right_lbchucvu_Y);
+        }
     }
 }
