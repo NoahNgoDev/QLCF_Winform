@@ -28,11 +28,17 @@ namespace QLCF
 
         }
 
+
+
+
         // đóng cửa sổ chương trình
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
+
 
         // thu nhỏ phóng to cửa sổ
         private void btnmax_Click(object sender, EventArgs e)
@@ -49,11 +55,14 @@ namespace QLCF
             }
         }
 
+
+
         // thu cửa sổ 
         private void btnmin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
 
 
         // di chuyển cửa sổ (form)
@@ -86,6 +95,9 @@ namespace QLCF
                 this.isDragging = false;
         }
 
+
+
+
         // di chuyển cửa sổ (btn move)
         private void btnmove_MouseMown(object sender, MouseEventArgs e)
         {
@@ -109,6 +121,8 @@ namespace QLCF
 
         
 
+
+        // cài đặt vị trí cho lable dịch qua trái
         private void caiDatTriChoNameAvarta()
         {
             // Đặt vị trí cho chữ
@@ -128,5 +142,10 @@ namespace QLCF
             int right_lbchucvu_Y = lbchucvu.Location.Y;
             lbNameAvarta.Location = new Point(right_lbchucvu__, right_lbchucvu_Y);
         }
+
+
+
+
+        //chuyển đổi giữa các user control
     }
 }
