@@ -16,29 +16,41 @@ namespace QLCF
         private int userControlWidth;
         private int userControlHeight;
 
+        private Timer timer;
+
         public TongQuan()
         {
             InitializeComponent();
             //Gk
-            NgayThangHienTai();
-
+            KhoiTaoNgayThangHienTai();
+            //GK
             dieuChinhKichThuoc4BoxPnl2();
             
         }
 
+        private void TongQuan_Load(object sender, EventArgs e)
+        {
+            timer.Start();
+        }
+
 
         // GK - lấy ngày giờ hiện tại
-        private void NgayThangHienTai()
+        private void KhoiTaoNgayThangHienTai()
         {
-            // Lấy ngày tháng hiện tại
-            DateTime currentDate = DateTime.Now;
-
-            // Định dạng ngày tháng theo yêu cầu
-            string formattedDate = currentDate.ToString("HH:mm    dd-MM-yyyy");
-
-            // Hiển thị ngày tháng đã định dạng trong một TextBox
-            txtNgayThangHienTai.Text = formattedDate;
+            timer = new Timer();
+            timer.Interval = 1000; // Cập nhật mỗi 1 giây
+            timer.Tick += Timer_Tick;
         }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            string timeText = currentTime.ToString("HH:mm:ss");
+            string dateText = currentTime.ToString("dd/MM/yyyy");
+
+            txtNgayThangHienTai.Text = timeText + "  " + dateText;
+        }
+
 
         public void dieuChinhKichThuoc4BoxPnl2()
         {
@@ -51,7 +63,7 @@ namespace QLCF
 
             if (userControlWidth == 1700)
             {
-                flowLayoutPnl2.Size = new Size(1395, 550);
+                flowLayoutPnl2.Size = new Size(1395, 156);
 
                 pnlDatcho.Size = new Size(403, 150);
                 pnlKhachHang.Size = new Size(403, 150);
@@ -60,7 +72,7 @@ namespace QLCF
 
             }else if (userControlWidth == 1395)
             {
-                flowLayoutPnl2.Size = new Size(1395, 137);
+                flowLayoutPnl2.Size = new Size(1395, 143);
 
                 pnlDatcho.Size = new Size(328, 137);
                 pnlKhachHang.Size = new Size(328, 137);
@@ -69,19 +81,6 @@ namespace QLCF
             }
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

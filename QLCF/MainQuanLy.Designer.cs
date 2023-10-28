@@ -603,6 +603,7 @@
             this.Name = "MainQuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MiFaCoffee";
+            this.Load += new System.EventHandler(this.MainQuanLy_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);

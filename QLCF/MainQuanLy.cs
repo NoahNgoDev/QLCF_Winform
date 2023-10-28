@@ -28,18 +28,22 @@ namespace QLCF
         public MainQuanLy()
         {
             InitializeComponent();
+        }
+
+        private void MainQuanLy_Load(object sender, EventArgs e)
+        {
             //GK
             caiDatViTriChoNameAvarta();
 
+            // Kích hoạt Button có tên là button1 khi Form được tải
+            btnTongQuan.PerformClick();
+
             //GK-Điều chỉnh tên cửa sổ theo cửa sổ đang mở
             TitleCurently.Text = btnTongQuan.Text;
+
             //GK-cửa sổ mặc định sẽ ở trang tổng quan
             addUserControlForPanel(userControl_TongQuan);
-
-            
         }
-
-
 
 
         // GK-đóng cửa sổ chương trình 
@@ -226,9 +230,6 @@ namespace QLCF
             addUserControlForPanel(userControl_DoanhThu);
         }
 
-
-
-
-
+        
     }
 }

@@ -39,22 +39,18 @@
             this.txtNgayThangHienTai = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
+            this.flowLayoutPnl3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPnl2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlDatcho = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlKhachHang = new System.Windows.Forms.Panel();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,6 +60,7 @@
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlDonHang = new System.Windows.Forms.Panel();
             this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
@@ -73,6 +70,7 @@
             this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
             this.label16 = new System.Windows.Forms.Label();
             this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlDoanhThu = new System.Windows.Forms.Panel();
             this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
             this.label18 = new System.Windows.Forms.Label();
@@ -82,19 +80,22 @@
             this.flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
             this.label20 = new System.Windows.Forms.Label();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pnlTongQuan_1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCenter.SuspendLayout();
+            this.flowLayoutPnl3.SuspendLayout();
             this.flowLayoutPnl2.SuspendLayout();
             this.pnlDatcho.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             this.pnlKhachHang.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel8.SuspendLayout();
@@ -202,9 +203,9 @@
             this.txtNgayThangHienTai.Enabled = false;
             this.txtNgayThangHienTai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtNgayThangHienTai.ForeColor = System.Drawing.Color.Gray;
-            this.txtNgayThangHienTai.Location = new System.Drawing.Point(44, 28);
+            this.txtNgayThangHienTai.Location = new System.Drawing.Point(18, 28);
             this.txtNgayThangHienTai.Name = "txtNgayThangHienTai";
-            this.txtNgayThangHienTai.Size = new System.Drawing.Size(219, 25);
+            this.txtNgayThangHienTai.Size = new System.Drawing.Size(267, 25);
             this.txtNgayThangHienTai.TabIndex = 5;
             this.txtNgayThangHienTai.Text = "ngày và giờ";
             // 
@@ -221,8 +222,7 @@
             // 
             // pnlCenter
             // 
-            this.pnlCenter.Controls.Add(this.flowLayoutPanel6);
-            this.pnlCenter.Controls.Add(this.flowLayoutPanel1);
+            this.pnlCenter.Controls.Add(this.flowLayoutPnl3);
             this.pnlCenter.Controls.Add(this.flowLayoutPnl2);
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCenter.Location = new System.Drawing.Point(0, 83);
@@ -230,8 +230,19 @@
             this.pnlCenter.Size = new System.Drawing.Size(1395, 632);
             this.pnlCenter.TabIndex = 3;
             // 
+            // flowLayoutPnl3
+            // 
+            this.flowLayoutPnl3.Controls.Add(this.panel6);
+            this.flowLayoutPnl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPnl3.Location = new System.Drawing.Point(0, 143);
+            this.flowLayoutPnl3.Margin = new System.Windows.Forms.Padding(20);
+            this.flowLayoutPnl3.Name = "flowLayoutPnl3";
+            this.flowLayoutPnl3.Size = new System.Drawing.Size(1395, 489);
+            this.flowLayoutPnl3.TabIndex = 7;
+            // 
             // flowLayoutPnl2
             // 
+            this.flowLayoutPnl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
             this.flowLayoutPnl2.Controls.Add(this.pnlDatcho);
             this.flowLayoutPnl2.Controls.Add(this.pnlKhachHang);
             this.flowLayoutPnl2.Controls.Add(this.pnlDonHang);
@@ -255,40 +266,14 @@
             this.pnlDatcho.Size = new System.Drawing.Size(328, 137);
             this.pnlDatcho.TabIndex = 0;
             // 
-            // label3
+            // flowLayoutPanel3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Đặt bàn";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 18);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Hôm nay 22/10";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 18);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Xem chi tiết";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.flowLayoutPanel3.Controls.Add(this.label6);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 39);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(308, 72);
+            this.flowLayoutPanel3.TabIndex = 6;
             // 
             // label6
             // 
@@ -304,39 +289,25 @@
             this.label6.Text = "5";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // flowLayoutPanel2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 24);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Khách hàng";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.flowLayoutPanel2.Controls.Add(this.label9);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 111);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(308, 26);
+            this.flowLayoutPanel2.TabIndex = 6;
             // 
-            // label4
+            // label9
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 24);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Đơn hàng";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 24);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Doanh thu";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(85, 18);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Xem chi tiết";
             // 
             // panel1
             // 
@@ -348,12 +319,25 @@
             this.panel1.Size = new System.Drawing.Size(308, 39);
             this.panel1.TabIndex = 4;
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanel5
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1107, 247);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 5;
+            this.flowLayoutPanel5.Controls.Add(this.label8);
+            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(191, 0);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(117, 39);
+            this.flowLayoutPanel5.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 18);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Hôm nay 22/10";
             // 
             // flowLayoutPanel4
             // 
@@ -364,39 +348,16 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(106, 39);
             this.flowLayoutPanel4.TabIndex = 6;
             // 
-            // flowLayoutPanel5
+            // label3
             // 
-            this.flowLayoutPanel5.Controls.Add(this.label8);
-            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(191, 0);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(117, 39);
-            this.flowLayoutPanel5.TabIndex = 6;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.label6);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 39);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(308, 72);
-            this.flowLayoutPanel3.TabIndex = 6;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.label9);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 111);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(308, 26);
-            this.flowLayoutPanel2.TabIndex = 6;
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(783, 226);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel6.TabIndex = 6;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Đặt bàn";
             // 
             // pnlKhachHang
             // 
@@ -493,6 +454,17 @@
             this.flowLayoutPanel10.Size = new System.Drawing.Size(135, 34);
             this.flowLayoutPanel10.TabIndex = 6;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 24);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Khách hàng";
+            // 
             // pnlDonHang
             // 
             this.pnlDonHang.BackColor = System.Drawing.Color.White;
@@ -587,6 +559,17 @@
             this.flowLayoutPanel14.Name = "flowLayoutPanel14";
             this.flowLayoutPanel14.Size = new System.Drawing.Size(106, 34);
             this.flowLayoutPanel14.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 24);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Đơn hàng";
             // 
             // pnlDoanhThu
             // 
@@ -683,6 +666,26 @@
             this.flowLayoutPanel18.Size = new System.Drawing.Size(134, 34);
             this.flowLayoutPanel18.TabIndex = 6;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 24);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Doanh thu";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(10, 3);
+            this.panel6.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 483);
+            this.panel6.TabIndex = 0;
+            // 
             // TongQuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -692,6 +695,7 @@
             this.Controls.Add(this.pnlTongQuan_1);
             this.Name = "TongQuan";
             this.Size = new System.Drawing.Size(1395, 715);
+            this.Load += new System.EventHandler(this.TongQuan_Load);
             this.pnlTongQuan_1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -700,17 +704,18 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlCenter.ResumeLayout(false);
+            this.flowLayoutPnl3.ResumeLayout(false);
             this.flowLayoutPnl2.ResumeLayout(false);
             this.pnlDatcho.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
             this.pnlKhachHang.ResumeLayout(false);
             this.flowLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel7.PerformLayout();
@@ -766,13 +771,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Panel pnlKhachHang;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
         private System.Windows.Forms.Label label10;
@@ -800,5 +803,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel17;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPnl3;
+        private System.Windows.Forms.Panel panel6;
     }
 }
