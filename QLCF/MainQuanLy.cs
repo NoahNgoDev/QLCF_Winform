@@ -55,7 +55,7 @@ namespace QLCF
 
 
 
-        // GK-thu nhỏ phóng to cửa sổ
+        // GK-thu nhỏ  và phóng to cửa sổ
         private void btnmax_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
@@ -63,12 +63,14 @@ namespace QLCF
                 // Nếu cửa sổ đang ở trạng thái bình thường, thì chuyển sang trạng thái phóng to (maximized).
                 this.WindowState = FormWindowState.Maximized;
                 userControl_TongQuan.dieuChinhKichThuoc4BoxPnl2();
+                userControl_TongQuan.tammm();
             }
             else if (this.WindowState == FormWindowState.Maximized)
             {
                 // Nếu cửa sổ đang ở trạng thái phóng to, thì chuyển về trạng thái bình thường.
                 this.WindowState = FormWindowState.Normal;
                 userControl_TongQuan.dieuChinhKichThuoc4BoxPnl2();
+                userControl_TongQuan.tammm();
             }
         }
 
