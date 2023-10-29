@@ -68,21 +68,23 @@ namespace QLCF
 
             if (userControlWidth == 1700)
             {
-                flowLayoutPnl2.Size = new Size(1395, 156);
+                flowLayoutPnl2.Size = new Size(1700, 156);
 
-                pnlDatcho.Size = new Size(403, 150);
-                pnlKhachHang.Size = new Size(403, 150);
-                pnlDonHang.Size = new Size(403, 150);
-                pnlDoanhThu.Size = new Size(403, 150);
+                pnlDatcho.Size = new Size(242+60, 150);
+                pnlLuotDanhGia.Size = new Size(254 + 60, 150);
+                pnlKhachHang.Size = new Size(262 + 60, 150);
+                pnlDonHang.Size = new Size(240 + 60, 150);
+                pnlDoanhThu.Size = new Size(336 + 65, 150);
 
             }else if (userControlWidth == 1395)
             {
                 flowLayoutPnl2.Size = new Size(1395, 143);
 
-                pnlDatcho.Size = new Size(328, 137);
-                pnlKhachHang.Size = new Size(328, 137);
-                pnlDonHang.Size = new Size(328, 137);
-                pnlDoanhThu.Size = new Size(328, 137);
+                pnlDatcho.Size = new Size(234, 137);
+                pnlLuotDanhGia.Size = new Size(254, 137);
+                pnlKhachHang.Size = new Size(262, 137);
+                pnlDonHang.Size = new Size(251, 137);
+                pnlDoanhThu.Size = new Size(336, 137);
             }
         }
 
@@ -94,25 +96,7 @@ namespace QLCF
             userControlHeight = userControlSize.Height;
             //MessageBox.Show(userControlWidth +"--"+ userControlHeight);
 
-            if (userControlWidth == 1700)
-            {
-                flowLayoutPnl2.Size = new Size(1395, 156);
-
-                pnlDatcho.Size = new Size(403, 150);
-                pnlKhachHang.Size = new Size(403, 150);
-                pnlDonHang.Size = new Size(403, 150);
-                pnlDoanhThu.Size = new Size(403, 150);
-
-            }
-            else if (userControlWidth == 1395)
-            {
-                flowLayoutPnl2.Size = new Size(1395, 143);
-
-                pnlDatcho.Size = new Size(330, 137);
-                pnlKhachHang.Size = new Size(330, 137);
-                pnlDonHang.Size = new Size(330, 137);
-                pnlDoanhThu.Size = new Size(330, 137);
-            }
+            
         }
 
 
@@ -157,6 +141,5 @@ namespace QLCF
 
         }
 
-        
     }
 }

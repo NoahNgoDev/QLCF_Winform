@@ -63,14 +63,14 @@ namespace QLCF
                 // Nếu cửa sổ đang ở trạng thái bình thường, thì chuyển sang trạng thái phóng to (maximized).
                 this.WindowState = FormWindowState.Maximized;
                 userControl_TongQuan.dieuChinhKichThuoc4BoxPnl2();
-                userControl_TongQuan.tammm();
+                //userControl_TongQuan.tammm();
             }
             else if (this.WindowState == FormWindowState.Maximized)
             {
                 // Nếu cửa sổ đang ở trạng thái phóng to, thì chuyển về trạng thái bình thường.
                 this.WindowState = FormWindowState.Normal;
                 userControl_TongQuan.dieuChinhKichThuoc4BoxPnl2();
-                userControl_TongQuan.tammm();
+                //userControl_TongQuan.tammm();
             }
         }
 
