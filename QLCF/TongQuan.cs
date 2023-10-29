@@ -35,6 +35,30 @@ namespace QLCF
             timer.Start();
             //GK
             bieudo();
+
+
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
         }
 
 
@@ -134,12 +158,45 @@ namespace QLCF
                 chart.Series[NameSeries].Points.AddXY(categories[i], values[i]);
             }
 
-            //chart.Enabled = false;
 
-            //chart1.ChartAreas["chartArea"].AxisX.Title = "Categories";
-            //chart1.ChartAreas["chartArea"].AxisY.Title = "Values";
+            chart1.Legends["Khách hàng"].Position.Auto = false; // Vô hiệu hóa vị trí tự động
+
+            //Đặt tên cho trục
+            chart1.ChartAreas["Khách hàng"].AxisX.Title = "Ngày"; // Đặt tên trục X
+            chart1.ChartAreas["Khách hàng"].AxisY.Title = "Số lượng khách"; // Đặt tên trục Y
+
 
         }
 
+        private List<UserInfo> userList = new List<UserInfo>();
+        public class UserInfo
+        {
+            public int MaSo { get; set; }
+            public string HoTen { get; set; }
+            public string SoDienThoai { get; set; }
+        }
+        private void ThemDuLieuVaoDataGridView(int maSo, string hoTen, string soDienThoai)
+        {
+            UserInfo user = new UserInfo
+            {
+                MaSo = maSo,
+                HoTen = hoTen,
+                SoDienThoai = soDienThoai
+            };
+
+            userList.Add(user);
+
+            // Thêm dữ liệu vào DataGridView
+            dataGridView1.Rows.Add(user.MaSo, user.HoTen, user.SoDienThoai);
+
+            dataGridView1.ScrollBars = ScrollBars.Vertical; // Ẩn chỉ thanh cuộn dọc
+
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
