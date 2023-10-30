@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
 namespace QLCF
@@ -19,7 +20,11 @@ namespace QLCF
         private int userControlHeight;
 
         private Timer timer = new Timer();
-   
+
+        private int checkMax = 0;
+
+        private List<Panel> panelList;
+
 
         public TongQuan()
         {
@@ -46,8 +51,8 @@ namespace QLCF
             ThemDuLieuVaoDataGridView();
 
 
-            tammmm();
 
+            AddItemPanelDanhGia();
 
         }
 
@@ -103,17 +108,51 @@ namespace QLCF
         }
 
         //Gk - điều chỉnh kích thức khi thu-phóng cửa sổ của flowLayoutPanel 3
-        public void tammm()
+        public void dieuChinhKichThuoc3BoxPnl3()
         {
             Size userControlSize = this.Size;
             userControlWidth = userControlSize.Width;
             userControlHeight = userControlSize.Height;
             //MessageBox.Show(userControlWidth +"--"+ userControlHeight);
 
-            
+            if (userControlWidth == 1700)
+            {
+                checkMax = 1;
+                flowLayoutPnl3.Size = new Size(1700, 790);
+
+                pnlBieuDoAndDanhGia.Size = new Size(891 + 302, 730);
+                panelBieuDo.Size = new Size(891, 335+100);
+                chart1.Size = new Size(891, 304 + 100);
+                pnlDanhGia.Size = new Size(891, 141+146);
+                pnlMonBanChay.Size = new Size(470, 482+248);
+
+                
+
+                for (int i = 0; i < 10; i++)
+                {
+                    panelList[i].Size = new Size(429+150, 135*2);
+                }
+
+
+
+
+            }
+            else if (userControlWidth == 1395)
+            {
+                checkMax = 0;
+                flowLayoutPnl3.Size = new Size(1395, 490);
+
+                pnlBieuDoAndDanhGia.Size = new Size(891, 482);
+                panelBieuDo.Size = new Size(891, 335);
+                chart1.Size = new Size(891, 304);
+                pnlDanhGia.Size = new Size(891, 141);
+                pnlMonBanChay.Size = new Size(470, 482);
+
+
+
+            }
+
         }
-
-
         //GK - biểu đồ barchart
         // thêm thư viện System.Windows.Forms.DataVisualization vào dự án của mình.
         // Để làm điều này, cần thực hiện các bước sau:
@@ -156,6 +195,8 @@ namespace QLCF
 
 
         }
+
+
 
         //private List<UserInfo> userList = new List<UserInfo>();
         public class Person
@@ -220,6 +261,7 @@ namespace QLCF
             dataGridView1.Columns.Add("Tuoi", "Tuổi");
             dataGridView1.Columns.Add("aga", "agr");
 
+
             // Điều chỉnh độ rộng của cột 1 thành 100 pixels    
             dataGridView1.Columns[0].Width = 100;
 
@@ -265,14 +307,21 @@ namespace QLCF
                 dataGridView1.Rows.Add(person.MaSo,person.Name, person.Age);
             }
 
+
+            dataGridView1.RowTemplate.Height = 90; // Đặt độ cao dòng thành 30 pixel
+            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold); // Đặt font cho toàn bộ DataGridView
+
         }
 
 
 
-        private List<Panel> panelList;
+       
         
-        private void tammmm()
-        {       // Tạo danh sách Panel và thêm vào FlowLayoutPanel
+        
+
+        private void AddItemPanelDanhGia()
+        {
+            // Tạo danh sách Panel và thêm vào FlowLayoutPanel
             panelList = new List<Panel>();
             for (int i = 0; i < 10; i++)
             {
@@ -282,11 +331,17 @@ namespace QLCF
                 label11.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
                 label11.Dock = DockStyle.Top;
 
+                Label label22 = new Label();
+                label22.Text = "nội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
+                label22.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+                label22.Dock = DockStyle.Fill;
+
                 Panel panel = new Panel();
 
                 panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
                 panel.Size = new System.Drawing.Size(429, 135);
 
+                panel.Controls.Add(label22);
                 panel.Controls.Add(label11);
 
                 panelList.Add(panel);

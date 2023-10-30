@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongQuan));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlTongQuan_1 = new System.Windows.Forms.Panel();
@@ -43,17 +43,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.flowLayoutPnl3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlBieuDo = new System.Windows.Forms.Panel();
+            this.pnlBieuDoAndDanhGia = new System.Windows.Forms.Panel();
             this.pnlDanhGia = new System.Windows.Forms.Panel();
             this.flowLayoutPnlDanhGia = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelBieuDo = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlMonBanChay = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
@@ -115,12 +115,12 @@
             this.panel2.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.flowLayoutPnl3.SuspendLayout();
-            this.pnlBieuDo.SuspendLayout();
+            this.pnlBieuDoAndDanhGia.SuspendLayout();
             this.pnlDanhGia.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panelBieuDo.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.pnlMonBanChay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel14.SuspendLayout();
             this.flowLayoutPnl2.SuspendLayout();
@@ -280,8 +280,8 @@
             // 
             // flowLayoutPnl3
             // 
-            this.flowLayoutPnl3.Controls.Add(this.pnlBieuDo);
-            this.flowLayoutPnl3.Controls.Add(this.panel6);
+            this.flowLayoutPnl3.Controls.Add(this.pnlBieuDoAndDanhGia);
+            this.flowLayoutPnl3.Controls.Add(this.pnlMonBanChay);
             this.flowLayoutPnl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPnl3.Location = new System.Drawing.Point(0, 143);
             this.flowLayoutPnl3.Margin = new System.Windows.Forms.Padding(20);
@@ -289,16 +289,16 @@
             this.flowLayoutPnl3.Size = new System.Drawing.Size(1395, 490);
             this.flowLayoutPnl3.TabIndex = 7;
             // 
-            // pnlBieuDo
+            // pnlBieuDoAndDanhGia
             // 
-            this.pnlBieuDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
-            this.pnlBieuDo.Controls.Add(this.pnlDanhGia);
-            this.pnlBieuDo.Controls.Add(this.panel8);
-            this.pnlBieuDo.Location = new System.Drawing.Point(10, 2);
-            this.pnlBieuDo.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
-            this.pnlBieuDo.Name = "pnlBieuDo";
-            this.pnlBieuDo.Size = new System.Drawing.Size(891, 482);
-            this.pnlBieuDo.TabIndex = 0;
+            this.pnlBieuDoAndDanhGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
+            this.pnlBieuDoAndDanhGia.Controls.Add(this.pnlDanhGia);
+            this.pnlBieuDoAndDanhGia.Controls.Add(this.panelBieuDo);
+            this.pnlBieuDoAndDanhGia.Location = new System.Drawing.Point(10, 2);
+            this.pnlBieuDoAndDanhGia.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
+            this.pnlBieuDoAndDanhGia.Name = "pnlBieuDoAndDanhGia";
+            this.pnlBieuDoAndDanhGia.Size = new System.Drawing.Size(891, 482);
+            this.pnlBieuDoAndDanhGia.TabIndex = 0;
             // 
             // pnlDanhGia
             // 
@@ -319,16 +319,16 @@
             this.flowLayoutPnlDanhGia.Size = new System.Drawing.Size(891, 141);
             this.flowLayoutPnlDanhGia.TabIndex = 0;
             // 
-            // panel8
+            // panelBieuDo
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.panel12);
-            this.panel8.Controls.Add(this.chart1);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(891, 335);
-            this.panel8.TabIndex = 0;
+            this.panelBieuDo.BackColor = System.Drawing.Color.White;
+            this.panelBieuDo.Controls.Add(this.panel12);
+            this.panelBieuDo.Controls.Add(this.chart1);
+            this.panelBieuDo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBieuDo.Location = new System.Drawing.Point(0, 0);
+            this.panelBieuDo.Name = "panelBieuDo";
+            this.panelBieuDo.Size = new System.Drawing.Size(891, 335);
+            this.panelBieuDo.TabIndex = 0;
             // 
             // panel12
             // 
@@ -345,13 +345,14 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Navy;
-            this.button3.Location = new System.Drawing.Point(637, 3);
+            this.button3.Location = new System.Drawing.Point(666, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 25);
+            this.button3.Size = new System.Drawing.Size(75, 31);
             this.button3.TabIndex = 4;
             this.button3.Text = "Ngày";
             this.button3.UseVisualStyleBackColor = false;
@@ -359,13 +360,14 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Navy;
-            this.button2.Location = new System.Drawing.Point(719, 3);
+            this.button2.Location = new System.Drawing.Point(741, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 25);
+            this.button2.Size = new System.Drawing.Size(75, 31);
             this.button2.TabIndex = 3;
             this.button2.Text = "Tuần";
             this.button2.UseVisualStyleBackColor = false;
@@ -373,13 +375,14 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Location = new System.Drawing.Point(802, 3);
+            this.button1.Location = new System.Drawing.Point(816, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.Size = new System.Drawing.Size(75, 31);
             this.button1.TabIndex = 2;
             this.button1.Text = "Tháng";
             this.button1.UseVisualStyleBackColor = false;
@@ -400,33 +403,33 @@
             // 
             this.chart1.BorderlineWidth = 0;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.DimGray;
-            chartArea1.BorderColor = System.Drawing.Color.Gray;
-            chartArea1.Name = "Khách hàng";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea4.BorderColor = System.Drawing.Color.Gray;
+            chartArea4.Name = "Khách hàng";
+            this.chart1.ChartAreas.Add(chartArea4);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend1.Name = "Khách hàng";
-            this.chart1.Legends.Add(legend1);
+            legend4.Name = "Khách hàng";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(0, 31);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "Khách hàng";
-            series1.Legend = "Khách hàng";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series4.ChartArea = "Khách hàng";
+            series4.Legend = "Khách hàng";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(891, 304);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
             // 
-            // panel6
+            // pnlMonBanChay
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.dataGridView1);
-            this.panel6.Controls.Add(this.panel14);
-            this.panel6.Location = new System.Drawing.Point(909, 2);
-            this.panel6.Margin = new System.Windows.Forms.Padding(5, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(470, 482);
-            this.panel6.TabIndex = 1;
+            this.pnlMonBanChay.BackColor = System.Drawing.Color.White;
+            this.pnlMonBanChay.Controls.Add(this.dataGridView1);
+            this.pnlMonBanChay.Controls.Add(this.panel14);
+            this.pnlMonBanChay.Location = new System.Drawing.Point(909, 2);
+            this.pnlMonBanChay.Margin = new System.Windows.Forms.Padding(5, 2, 3, 2);
+            this.pnlMonBanChay.Name = "pnlMonBanChay";
+            this.pnlMonBanChay.Size = new System.Drawing.Size(470, 482);
+            this.pnlMonBanChay.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -434,7 +437,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeight = 29;
+            this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
@@ -444,7 +447,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 10;
-            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(470, 451);
             this.dataGridView1.TabIndex = 1;
@@ -1061,13 +1064,13 @@
             this.panel2.PerformLayout();
             this.pnlCenter.ResumeLayout(false);
             this.flowLayoutPnl3.ResumeLayout(false);
-            this.pnlBieuDo.ResumeLayout(false);
+            this.pnlBieuDoAndDanhGia.ResumeLayout(false);
             this.pnlDanhGia.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
+            this.panelBieuDo.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.panel6.ResumeLayout(false);
+            this.pnlMonBanChay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
@@ -1178,9 +1181,9 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPnl3;
-        private System.Windows.Forms.Panel pnlBieuDo;
+        private System.Windows.Forms.Panel pnlBieuDoAndDanhGia;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlMonBanChay;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel pnlLuotDanhGia;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
@@ -1193,7 +1196,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel21;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelBieuDo;
         private System.Windows.Forms.Panel pnlDanhGia;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel panel12;
