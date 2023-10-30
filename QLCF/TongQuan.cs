@@ -37,28 +37,10 @@ namespace QLCF
             bieudo();
 
 
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(1, "John Doe", "123-456-7890");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
-            ThemDuLieuVaoDataGridView(2, "Jane Smith", "987-654-3210");
+            
+
+            ThemDuLieuVaoDataGridView();
+            
         }
 
 
@@ -158,9 +140,8 @@ namespace QLCF
                 chart.Series[NameSeries].Points.AddXY(categories[i], values[i]);
             }
 
-
             chart1.Legends["Khách hàng"].Position.Auto = false; // Vô hiệu hóa vị trí tự động
-
+            
             //Đặt tên cho trục
             chart1.ChartAreas["Khách hàng"].AxisX.Title = "Ngày"; // Đặt tên trục X
             chart1.ChartAreas["Khách hàng"].AxisY.Title = "Số lượng khách"; // Đặt tên trục Y
@@ -168,35 +149,116 @@ namespace QLCF
 
         }
 
-        private List<UserInfo> userList = new List<UserInfo>();
-        public class UserInfo
+        //private List<UserInfo> userList = new List<UserInfo>();
+        public class Person
         {
             public int MaSo { get; set; }
-            public string HoTen { get; set; }
-            public string SoDienThoai { get; set; }
+            public string Name { get; set; }
+            public string Age { get; set; }
         }
-        private void ThemDuLieuVaoDataGridView(int maSo, string hoTen, string soDienThoai)
+        private void ThemDuLieuVaoDataGridView()//(int maSo, string hoTen, string soDienThoai)
         {
-            UserInfo user = new UserInfo
+            //UserInfo user = new UserInfo
+            //{
+            //    MaSo = maSo,
+            //    HoTen = hoTen,
+            //    SoDienThoai = soDienThoai
+            //};
+
+            //userList.Add(user);
+
+
+            //// Thêm dữ liệu vào DataGridView
+            //dataGridView1.Rows.Add(user.MaSo, user.HoTen, user.SoDienThoai);
+
+            dataGridView1.ScrollBars = ScrollBars.Vertical; // Ẩn chỉ thanh cuộn ngan
+
+
+
+            // Đặt tên cột
+            //dataGridView1.Columns.Add("Tên", "Tên");
+            //dataGridView1.Columns.Add("Tuổi", "Tuổi");
+
+            //dataGridView1.Rows.Add("MaSo", "HoTen", "SoDienThoai");
+
+
+            //// Thêm dữ liệu vào DataGridView bằng vòng lặp
+            //foreach (var person in userList)
+            //{
+            //    dataGridView1.Rows.Add(person.MaSo, person.HoTen, person.SoDienThoai);
+            //}
+
+
+            //DataGridViewTextBoxColumn column1 = new DataGridViewTextBoxColumn();
+            //column1.Name = "ColumnName1";
+            //column1.HeaderText = "Mã số";
+
+            //DataGridViewTextBoxColumn column2 = new DataGridViewTextBoxColumn();
+            //column2.Name = "ColumnName2";
+            //column2.HeaderText = "họ và tên";
+
+            //DataGridViewTextBoxColumn column3 = new DataGridViewTextBoxColumn();
+            //column3.Name = "ColumnName3";
+            //column3.HeaderText = "hsodt";
+
+            //dataGridView1.Columns.Add(column1);
+            //dataGridView1.Columns.Add(column2);
+            //dataGridView1.Columns.Add(column3);
+
+
+
+            // Đặt tên cột <Biến tên cột>,<name cột>
+            dataGridView1.Columns.Add("Ten", "Tên");
+            dataGridView1.Columns.Add("Tuoi", "Tuổi");
+            dataGridView1.Columns.Add("aga", "agr");
+
+            // Điều chỉnh độ rộng của cột 1 thành 100 pixels    
+            dataGridView1.Columns[0].Width = 100;
+
+            // Điều chỉnh độ rộng của cột 2 thành 150 pixels
+            dataGridView1.Columns[1].Width = 150;
+            // Điều chỉnh độ rộng của cột 3 thành 150 pixels
+            dataGridView1.Columns[2].Width = 150;
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+
+
+            // Tạo một danh sách dữ liệu (ví dụ: List of objects)
+            List<Person> people = new List<Person>
             {
-                MaSo = maSo,
-                HoTen = hoTen,
-                SoDienThoai = soDienThoai
+                new Person { MaSo = 1, Name = "John", Age = "3232" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
+                new Person { MaSo = 2, Name = "Alice", Age = "323g2" },
+                new Person { MaSo = 13, Name = "Bob", Age = "323d2g" },
             };
 
-            userList.Add(user);
-
-            // Thêm dữ liệu vào DataGridView
-            dataGridView1.Rows.Add(user.MaSo, user.HoTen, user.SoDienThoai);
-
-            dataGridView1.ScrollBars = ScrollBars.Vertical; // Ẩn chỉ thanh cuộn dọc
-
+            // Thêm dữ liệu vào DataGridView bằng vòng lặp
+            foreach (var person in people)
+            {
+                dataGridView1.Rows.Add(person.MaSo,person.Name, person.Age);
+            }
 
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
