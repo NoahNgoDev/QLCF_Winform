@@ -276,15 +276,48 @@ namespace QLCF
             panelList = new List<Panel>();
             for (int i = 0; i < 10; i++)
             {
+                // xem chi tiết
+                Label label11 = new Label();
+                label11.Text = "tên người dùng";
+                label11.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+                label11.Dock = DockStyle.Top;
+
                 Panel panel = new Panel();
+
                 panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
                 panel.Size = new System.Drawing.Size(429, 135);
+
+                panel.Controls.Add(label11);
+
                 panelList.Add(panel);
                 flowLayoutPnlDanhGia.Controls.Add(panel);
             }
 
+
+            // xem chi tiết
+            Label label1 = new Label();
+            label1.Text = "tên người dùng";
+            label1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+            label1.Dock = DockStyle.Top;
+
+            Label label2 = new Label();
+            label2.Text = "nội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
+            label2.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+            label2.Dock = DockStyle.Fill;
+
+            Panel panel1 = new Panel();
+            
+            panel1.BackColor = System.Drawing.Color.FromArgb(122, 0, 0);
+            panel1.Size = new System.Drawing.Size(429, 135);
+
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+
+            panelList.Add(panel1);
+            flowLayoutPnlDanhGia.Controls.Add(panel1);
         }
 
 
     }
 }
+
