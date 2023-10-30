@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongQuan));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlTongQuan_1 = new System.Windows.Forms.Panel();
@@ -44,7 +44,8 @@
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.flowLayoutPnl3 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlBieuDo = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.pnlDanhGia = new System.Windows.Forms.Panel();
+            this.flowLayoutPnlDanhGia = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -115,6 +116,7 @@
             this.pnlCenter.SuspendLayout();
             this.flowLayoutPnl3.SuspendLayout();
             this.pnlBieuDo.SuspendLayout();
+            this.pnlDanhGia.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -290,7 +292,7 @@
             // pnlBieuDo
             // 
             this.pnlBieuDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
-            this.pnlBieuDo.Controls.Add(this.panel10);
+            this.pnlBieuDo.Controls.Add(this.pnlDanhGia);
             this.pnlBieuDo.Controls.Add(this.panel8);
             this.pnlBieuDo.Location = new System.Drawing.Point(10, 2);
             this.pnlBieuDo.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
@@ -298,14 +300,24 @@
             this.pnlBieuDo.Size = new System.Drawing.Size(891, 482);
             this.pnlBieuDo.TabIndex = 0;
             // 
-            // panel10
+            // pnlDanhGia
             // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 341);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(891, 141);
-            this.panel10.TabIndex = 1;
+            this.pnlDanhGia.BackColor = System.Drawing.Color.White;
+            this.pnlDanhGia.Controls.Add(this.flowLayoutPnlDanhGia);
+            this.pnlDanhGia.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlDanhGia.Location = new System.Drawing.Point(0, 341);
+            this.pnlDanhGia.Name = "pnlDanhGia";
+            this.pnlDanhGia.Size = new System.Drawing.Size(891, 141);
+            this.pnlDanhGia.TabIndex = 1;
+            // 
+            // flowLayoutPnlDanhGia
+            // 
+            this.flowLayoutPnlDanhGia.AutoScroll = true;
+            this.flowLayoutPnlDanhGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPnlDanhGia.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPnlDanhGia.Name = "flowLayoutPnlDanhGia";
+            this.flowLayoutPnlDanhGia.Size = new System.Drawing.Size(891, 141);
+            this.flowLayoutPnlDanhGia.TabIndex = 0;
             // 
             // panel8
             // 
@@ -388,19 +400,19 @@
             // 
             this.chart1.BorderlineWidth = 0;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.DimGray;
-            chartArea3.BorderColor = System.Drawing.Color.Gray;
-            chartArea3.Name = "Khách hàng";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.BorderColor = System.Drawing.Color.Gray;
+            chartArea1.Name = "Khách hàng";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend3.Name = "Khách hàng";
-            this.chart1.Legends.Add(legend3);
+            legend1.Name = "Khách hàng";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 31);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series3.ChartArea = "Khách hàng";
-            series3.Legend = "Khách hàng";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "Khách hàng";
+            series1.Legend = "Khách hàng";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(891, 304);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
@@ -1050,6 +1062,7 @@
             this.pnlCenter.ResumeLayout(false);
             this.flowLayoutPnl3.ResumeLayout(false);
             this.pnlBieuDo.ResumeLayout(false);
+            this.pnlDanhGia.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
@@ -1181,7 +1194,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pnlDanhGia;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel14;
@@ -1190,5 +1203,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPnlDanhGia;
     }
 }

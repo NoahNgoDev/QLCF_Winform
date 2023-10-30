@@ -18,7 +18,8 @@ namespace QLCF
         private int userControlWidth;
         private int userControlHeight;
 
-        private Timer timer;
+        private Timer timer = new Timer();
+   
 
         public TongQuan()
         {
@@ -27,7 +28,10 @@ namespace QLCF
             KhoiTaoNgayThangHienTai();
             //GK
             dieuChinhKichThuoc4BoxPnl2();
-            
+
+
+
+         
         }
 
         private void TongQuan_Load(object sender, EventArgs e)
@@ -40,7 +44,11 @@ namespace QLCF
             
 
             ThemDuLieuVaoDataGridView();
-            
+
+
+            tammmm();
+
+
         }
 
 
@@ -255,6 +263,24 @@ namespace QLCF
             foreach (var person in people)
             {
                 dataGridView1.Rows.Add(person.MaSo,person.Name, person.Age);
+            }
+
+        }
+
+
+
+        private List<Panel> panelList;
+        
+        private void tammmm()
+        {       // Tạo danh sách Panel và thêm vào FlowLayoutPanel
+            panelList = new List<Panel>();
+            for (int i = 0; i < 10; i++)
+            {
+                Panel panel = new Panel();
+                panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
+                panel.Size = new System.Drawing.Size(429, 135);
+                panelList.Add(panel);
+                flowLayoutPnlDanhGia.Controls.Add(panel);
             }
 
         }
