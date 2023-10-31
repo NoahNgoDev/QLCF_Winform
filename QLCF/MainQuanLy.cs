@@ -17,13 +17,19 @@ namespace QLCF
         private int mouseX;
         private int mouseY;
         private Boolean enable = false;
-        private int userControlCurrenly = 0;
+        //private int userControlCurrenly = 0;
         private Button currentButton;
 
         // GK-Gọi userControl 
         TongQuan userControl_TongQuan = new TongQuan();
         DoanhThu userControl_DoanhThu = new DoanhThu();
-        
+        SanPham userControl_SanPham = new SanPham();
+        NhanVien userControl_NhanVien = new NhanVien();
+        KhachHang userControl_KhachHang = new KhachHang();
+        HoaDon userControl_HoaDon = new HoaDon();
+        TaiKhoan userControl_TaiKhoan = new TaiKhoan();
+        Kho userControl_Kho = new Kho();
+        CaiDat userControl_CaiDat = new CaiDat();
 
         public MainQuanLy()
         {
@@ -218,7 +224,6 @@ namespace QLCF
         // button tổng quan đổi màu và kích hoạt hiện form user control khi được lick vào
         private void btnTongQuan_Click(object sender, EventArgs e)
         {
-            userControlCurrenly = 0;
             ActivateButton(sender);
             addUserControlForPanel(userControl_TongQuan);
         }
@@ -226,12 +231,50 @@ namespace QLCF
         // button doanh thu đổi màu và kích hoạt hiện form user control khi được lick vào
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
-            userControlCurrenly = 1;
-            
             ActivateButton(sender);
             addUserControlForPanel(userControl_DoanhThu);
         }
 
-        
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_SanPham);
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_NhanVien);
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_KhachHang);
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_HoaDon);
+        }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_TaiKhoan);
+        }
+
+        private void btnKho_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_Kho);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_CaiDat);
+        }
     }
 }
