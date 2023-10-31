@@ -34,7 +34,8 @@ namespace QLCF
         {
             timer.Start();
             //GK
-            bieudo();
+            btnNgayThongke.PerformClick();
+            //bieudo();
 
             ThemDuLieuVaoDataGridView();
 
@@ -185,34 +186,25 @@ namespace QLCF
         // b.Chọn "Add" và sau đó chọn "Reference."
         // c.Trong cửa sổ Reference Manager, tìm và chọn "System.Windows.Forms.DataVisualization."
         // d.Nhấp vào nút "OK" để thêm thư viện này vào dự án
+        
 
-        public void bieudo()
+        
+        public void bieudo(String newSeries)
         {
-            // Lấy ra biểu đồ
-            var chart = chart1;
+            // Xóa dữ liệu cũ (nếu có)
+            chart1.Series.Clear();
 
-            // Tạo một chuỗi các giá trị trên trục X
-            string[] categories = { "ngày 1", "ngày 2", "ngày 3", "ngày 4", "ngày 5", "ngày 6", "ngày 7", "ngày 8", "ngày 9", "ngày 10", "ngày 11", "ngày 12", "ngày 13" };
+            // Thêm dữ liệu vào biểu đồ
+            chart1.Series.Add(newSeries);
 
-            // Tạo một mảng chứa giá trị trên trục Y
-            int[] values = { 10, 20, 15, 30, 125, 90, 10, 20, 15, 30, 125, 90, 34 };
+            // Cài đặt biểu đồ cột
+            chart1.Series[newSeries].ChartType = SeriesChartType.Column; 
 
-            string NameSeries = "Khách hàng";
-
-            // Tạo loạt dữ liệu (series) cho biểu đồ
-            chart.Series["Series1"].Name = NameSeries;
-            //chart.Series.Add("Data");
-            chart.Series[NameSeries].ChartType = SeriesChartType.Column; // Loại biểu đồ cột
             // hiện số trên mỗi cột
-            chart.Series[NameSeries].IsValueShownAsLabel = true;
+            chart1.Series[newSeries].IsValueShownAsLabel = true;
 
-            // Thêm dữ liệu vào biểu đồ bằng vòng lặp
-            for (int i = 0; i < categories.Length; i++)
-            {
-                chart.Series[NameSeries].Points.AddXY(categories[i], values[i]);
-            }
-
-            chart1.Legends["Khách hàng"].Position.Auto = false; // Vô hiệu hóa vị trí tự động
+            // Vô hiệu hóa vị trí tự động chú thích
+            chart1.Legends["Khách hàng"].Position.Auto = false; 
             
             //Đặt tên cho trục
             chart1.ChartAreas["Khách hàng"].AxisX.Title = "Ngày"; // Đặt tên trục X
@@ -337,10 +329,7 @@ namespace QLCF
             dataGridView1.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold); // Đặt font cho toàn bộ DataGridView
 
         }
-
-
-
-       
+              
         
         
 
@@ -400,7 +389,62 @@ namespace QLCF
             flowLayoutPnlDanhGia.Controls.Add(panel1);
         }
 
+        private void btnNgayThongke_Click(object sender, EventArgs e)
+        {
+            // Xóa dữ liệu cũ (nếu có)
+            chart1.Series.Clear();
 
+            // Tạo dữ liệu mẫu cho ngày
+            string[] days = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" };
+            int[] customers = { 10, 20, 15, 133, 12, 90, 10, 20, 133, 30, 12, 90, 34, 133, 15, 30, 12, 90, 133, 20, 15, 30, 12, 133, 34, 12, 90, 34, 133, 34, 65 };
+
+            // Thêm dữ liệu vào biểu đồ
+            //chart1.Series.Add("Khách hàng trong ngày");
+
+            bieudo("Khách hàng trong ngày");
+
+            chart1.Series["Khách hàng trong ngày"].Points.DataBindXY(days, customers);
+
+            lbTitleThongKe.Text = "Thống kê lượng khách hàng - trong ngày";
+        }
+
+        private void btnTuanThongke_Click(object sender, EventArgs e)
+        {
+            // Xóa dữ liệu cũ (nếu có)
+            chart1.Series.Clear();
+
+            // Tạo dữ liệu mẫu cho ngày
+            string[] days = { "tuần 1", "tuần 2", "tuần 3", "tuần 4" };
+            int[] customers = { 10, 34, 54, 12};
+
+            // Thêm dữ liệu vào biểu đồ
+            //chart1.Series.Add("Khách hàng trong ngày");
+
+            bieudo("Khách hàng trong Tuần");
+
+            chart1.Series["Khách hàng trong Tuần"].Points.DataBindXY(days, customers);
+
+            lbTitleThongKe.Text = "Thống kê lượng khách hàng - trong tuần";
+        }
+
+        private void btnThangThongke_Click(object sender, EventArgs e)
+        {
+            // Xóa dữ liệu cũ (nếu có)
+            chart1.Series.Clear();
+
+            // Tạo dữ liệu mẫu cho ngày
+            string[] days = { "tháng 1", "tháng 2", "tháng 3", "tháng 4", "tháng 5", "tháng 6", "tháng 7", "tháng 8", "tháng 9", "tháng 10", "tháng 11", "tháng 12" };
+            int[] customers = { 10, 34, 54, 12, 64, 10, 34, 54, 12, 64, 12, 64 };
+
+            // Thêm dữ liệu vào biểu đồ
+            //chart1.Series.Add("Khách hàng trong ngày");
+
+            bieudo("Khách hàng trong Tháng");
+
+            chart1.Series["Khách hàng trong Tháng"].Points.DataBindXY(days, customers);
+
+            lbTitleThongKe.Text = "Thống kê lượng khách hàng - trong tháng";
+        }
     }
 }
 

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongQuan));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.lbLoiChuc1 = new System.Windows.Forms.Label();
             this.pnlTongQuan_1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -40,6 +40,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtNgayThangHienTai = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbLoiChuc2 = new System.Windows.Forms.Label();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.flowLayoutPnl3 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlBieuDoAndDanhGia = new System.Windows.Forms.Panel();
@@ -47,10 +48,10 @@
             this.flowLayoutPnlDanhGia = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBieuDo = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnNgayThongke = new System.Windows.Forms.Button();
+            this.btnTuanThongke = new System.Windows.Forms.Button();
+            this.btnThangThongke = new System.Windows.Forms.Button();
+            this.lbTitleThongKe = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlMonBanChay = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -107,7 +108,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.lbLoiChuc = new System.Windows.Forms.Label();
             this.pnlTongQuan_1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -156,16 +156,16 @@
             this.flowLayoutPanel18.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lbLoiChuc1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(19, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Chúc ngày mới tốt lành";
+            this.lbLoiChuc1.AutoSize = true;
+            this.lbLoiChuc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbLoiChuc1.ForeColor = System.Drawing.Color.DimGray;
+            this.lbLoiChuc1.Location = new System.Drawing.Point(19, 15);
+            this.lbLoiChuc1.Name = "lbLoiChuc1";
+            this.lbLoiChuc1.Size = new System.Drawing.Size(211, 25);
+            this.lbLoiChuc1.TabIndex = 0;
+            this.lbLoiChuc1.Text = "Chúc ngày mới tốt lành";
             // 
             // pnlTongQuan_1
             // 
@@ -247,14 +247,25 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
-            this.panel2.Controls.Add(this.lbLoiChuc);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbLoiChuc2);
+            this.panel2.Controls.Add(this.lbLoiChuc1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(491, 82);
             this.panel2.TabIndex = 0;
+            // 
+            // lbLoiChuc2
+            // 
+            this.lbLoiChuc2.AutoSize = true;
+            this.lbLoiChuc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbLoiChuc2.ForeColor = System.Drawing.Color.DimGray;
+            this.lbLoiChuc2.Location = new System.Drawing.Point(23, 40);
+            this.lbLoiChuc2.Name = "lbLoiChuc2";
+            this.lbLoiChuc2.Size = new System.Drawing.Size(457, 25);
+            this.lbLoiChuc2.TabIndex = 1;
+            this.lbLoiChuc2.Text = "Hi vọng bạn sẽ có một ngày làm việc thật năng xuất";
             // 
             // pnlCenter
             // 
@@ -321,90 +332,93 @@
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.button3);
-            this.panel12.Controls.Add(this.button2);
-            this.panel12.Controls.Add(this.button1);
-            this.panel12.Controls.Add(this.label13);
+            this.panel12.Controls.Add(this.btnNgayThongke);
+            this.panel12.Controls.Add(this.btnTuanThongke);
+            this.panel12.Controls.Add(this.btnThangThongke);
+            this.panel12.Controls.Add(this.lbTitleThongKe);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(891, 31);
             this.panel12.TabIndex = 3;
             // 
-            // button3
+            // btnNgayThongke
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Navy;
-            this.button3.Location = new System.Drawing.Point(666, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Ngày";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnNgayThongke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnNgayThongke.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNgayThongke.FlatAppearance.BorderSize = 0;
+            this.btnNgayThongke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNgayThongke.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNgayThongke.ForeColor = System.Drawing.Color.Navy;
+            this.btnNgayThongke.Location = new System.Drawing.Point(666, 0);
+            this.btnNgayThongke.Name = "btnNgayThongke";
+            this.btnNgayThongke.Size = new System.Drawing.Size(75, 31);
+            this.btnNgayThongke.TabIndex = 4;
+            this.btnNgayThongke.Text = "Ngày";
+            this.btnNgayThongke.UseVisualStyleBackColor = false;
+            this.btnNgayThongke.Click += new System.EventHandler(this.btnNgayThongke_Click);
             // 
-            // button2
+            // btnTuanThongke
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Navy;
-            this.button2.Location = new System.Drawing.Point(741, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Tuần";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnTuanThongke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnTuanThongke.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTuanThongke.FlatAppearance.BorderSize = 0;
+            this.btnTuanThongke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTuanThongke.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTuanThongke.ForeColor = System.Drawing.Color.Navy;
+            this.btnTuanThongke.Location = new System.Drawing.Point(741, 0);
+            this.btnTuanThongke.Name = "btnTuanThongke";
+            this.btnTuanThongke.Size = new System.Drawing.Size(75, 31);
+            this.btnTuanThongke.TabIndex = 3;
+            this.btnTuanThongke.Text = "Tuần";
+            this.btnTuanThongke.UseVisualStyleBackColor = false;
+            this.btnTuanThongke.Click += new System.EventHandler(this.btnTuanThongke_Click);
             // 
-            // button1
+            // btnThangThongke
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Location = new System.Drawing.Point(816, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Tháng";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnThangThongke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnThangThongke.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnThangThongke.FlatAppearance.BorderSize = 0;
+            this.btnThangThongke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThangThongke.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThangThongke.ForeColor = System.Drawing.Color.Navy;
+            this.btnThangThongke.Location = new System.Drawing.Point(816, 0);
+            this.btnThangThongke.Name = "btnThangThongke";
+            this.btnThangThongke.Size = new System.Drawing.Size(75, 31);
+            this.btnThangThongke.TabIndex = 2;
+            this.btnThangThongke.Text = "Tháng";
+            this.btnThangThongke.UseVisualStyleBackColor = false;
+            this.btnThangThongke.Click += new System.EventHandler(this.btnThangThongke_Click);
             // 
-            // label13
+            // lbTitleThongKe
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(296, 28);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Thống kê lượng khách hàng";
+            this.lbTitleThongKe.AutoSize = true;
+            this.lbTitleThongKe.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbTitleThongKe.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTitleThongKe.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbTitleThongKe.Location = new System.Drawing.Point(0, 0);
+            this.lbTitleThongKe.Name = "lbTitleThongKe";
+            this.lbTitleThongKe.Size = new System.Drawing.Size(318, 28);
+            this.lbTitleThongKe.TabIndex = 1;
+            this.lbTitleThongKe.Text = "Thống kê lượng khách hàng - ";
             // 
             // chart1
             // 
             this.chart1.BorderlineWidth = 0;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.DimGray;
-            chartArea3.BorderColor = System.Drawing.Color.Gray;
-            chartArea3.Name = "Khách hàng";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.BorderColor = System.Drawing.Color.Gray;
+            chartArea1.Name = "Khách hàng";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend3.Name = "Khách hàng";
-            this.chart1.Legends.Add(legend3);
+            legend1.Name = "Khách hàng";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 31);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series3.ChartArea = "Khách hàng";
-            series3.Legend = "Khách hàng";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "Khách hàng";
+            series1.Legend = "Khách hàng";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(891, 304);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
@@ -1033,17 +1047,6 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Doanh thu";
             // 
-            // lbLoiChuc
-            // 
-            this.lbLoiChuc.AutoSize = true;
-            this.lbLoiChuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbLoiChuc.ForeColor = System.Drawing.Color.DimGray;
-            this.lbLoiChuc.Location = new System.Drawing.Point(23, 40);
-            this.lbLoiChuc.Name = "lbLoiChuc";
-            this.lbLoiChuc.Size = new System.Drawing.Size(457, 25);
-            this.lbLoiChuc.TabIndex = 1;
-            this.lbLoiChuc.Text = "Hi vọng bạn sẽ có một ngày làm việc thật năng xuất";
-            // 
             // TongQuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1131,7 +1134,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbLoiChuc1;
         private System.Windows.Forms.Panel pnlTongQuan_1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -1181,7 +1184,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPnl3;
         private System.Windows.Forms.Panel pnlBieuDoAndDanhGia;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbTitleThongKe;
         private System.Windows.Forms.Panel pnlMonBanChay;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel pnlLuotDanhGia;
@@ -1202,10 +1205,10 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNgayThongke;
+        private System.Windows.Forms.Button btnTuanThongke;
+        private System.Windows.Forms.Button btnThangThongke;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPnlDanhGia;
-        private System.Windows.Forms.Label lbLoiChuc;
+        private System.Windows.Forms.Label lbLoiChuc2;
     }
 }
