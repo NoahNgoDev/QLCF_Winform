@@ -50,7 +50,8 @@ namespace QLCF
 
             chart1.ChartAreas["chartArea"].AxisX.Title = "Categories";
             chart1.ChartAreas["chartArea"].AxisY.Title = "Values";
-        }   
+        }
 
+        
     }
 }

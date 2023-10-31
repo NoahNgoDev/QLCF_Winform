@@ -141,21 +141,10 @@ namespace QLCF
 
                             Label NameUser = (Label)control;
                             // Thực hiện các tác vụ với Label
-                            NameUser.AutoSize = false;
+                            
                             NameUser.Font = new Font("Arial", 15, FontStyle.Regular);
 
 
-
-
-                            if (NameUser.Tag.ToString() == "unique1")
-                            {
-                                // Thực hiện các thao tác với control1
-                                MessageBox.Show("8787899");
-                            }
-                            else if (NameUser.Tag.ToString() == "unique2")
-                            {
-                                // Thực hiện các thao tác với control2
-                            }
 
                         }
 
@@ -370,22 +359,22 @@ namespace QLCF
                 label11.Dock = DockStyle.Top;
 
                 Label label22 = new Label();
-                label22.Text = "\nnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
+                label22.Text = "\n\nnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
                 label22.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
                 label22.Dock = DockStyle.Fill;
+                label22.AutoSize = false;
 
                 Panel panel = new Panel();
 
                 panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
                 panel.Size = new System.Drawing.Size(429, 135);
 
-                label11.Tag = "label11unique1";
-                label22.Tag = "label22unique2";
+               
 
 
 
-                panel.Controls.Add(label22);
                 panel.Controls.Add(label11);
+                panel.Controls.Add(label22);
 
                 panelList.Add(panel);
                 flowLayoutPnlDanhGia.Controls.Add(panel);
@@ -397,19 +386,22 @@ namespace QLCF
             label1.Text = "tên người dùng";
             label1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
             label1.Dock = DockStyle.Top;
+            label1.AutoSize = true;
+            
 
             Label label2 = new Label();
             label2.Text = "nội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
             label2.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
             label2.Dock = DockStyle.Fill;
+            label2.AutoSize = false;
 
             Panel panel1 = new Panel();
             
             panel1.BackColor = System.Drawing.Color.FromArgb(122, 0, 0);
             panel1.Size = new System.Drawing.Size(429, 135);
 
-            panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
 
             panelList.Add(panel1);
             flowLayoutPnlDanhGia.Controls.Add(panel1);
