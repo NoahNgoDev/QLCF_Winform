@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongQuan));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlTongQuan_1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -108,6 +107,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
+            this.lbLoiChuc = new System.Windows.Forms.Label();
             this.pnlTongQuan_1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -161,22 +161,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(15, 11);
+            this.label1.Location = new System.Drawing.Point(19, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chúc ngày mới tốt lành";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label2.Location = new System.Drawing.Point(15, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(457, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Hi vọng bạn sẽ có một ngày làm việc thật năng xuất";
             // 
             // pnlTongQuan_1
             // 
@@ -258,7 +247,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lbLoiChuc);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -403,19 +392,19 @@
             // 
             this.chart1.BorderlineWidth = 0;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.DimGray;
-            chartArea1.BorderColor = System.Drawing.Color.Gray;
-            chartArea1.Name = "Khách hàng";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea3.BorderColor = System.Drawing.Color.Gray;
+            chartArea3.Name = "Khách hàng";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend1.Name = "Khách hàng";
-            this.chart1.Legends.Add(legend1);
+            legend3.Name = "Khách hàng";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(0, 31);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "Khách hàng";
-            series1.Legend = "Khách hàng";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "Khách hàng";
+            series3.Legend = "Khách hàng";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(891, 304);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
@@ -1044,6 +1033,17 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Doanh thu";
             // 
+            // lbLoiChuc
+            // 
+            this.lbLoiChuc.AutoSize = true;
+            this.lbLoiChuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbLoiChuc.ForeColor = System.Drawing.Color.DimGray;
+            this.lbLoiChuc.Location = new System.Drawing.Point(23, 40);
+            this.lbLoiChuc.Name = "lbLoiChuc";
+            this.lbLoiChuc.Size = new System.Drawing.Size(457, 25);
+            this.lbLoiChuc.TabIndex = 1;
+            this.lbLoiChuc.Text = "Hi vọng bạn sẽ có một ngày làm việc thật năng xuất";
+            // 
             // TongQuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1132,7 +1132,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlTongQuan_1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -1207,5 +1206,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPnlDanhGia;
+        private System.Windows.Forms.Label lbLoiChuc;
     }
 }

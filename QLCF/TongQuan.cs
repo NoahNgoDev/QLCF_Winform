@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
 namespace QLCF
@@ -20,9 +18,6 @@ namespace QLCF
         private int userControlHeight;
 
         private Timer timer = new Timer();
-
-        private int checkMax = 0;
-
         private List<Panel> panelList;
 
 
@@ -107,7 +102,7 @@ namespace QLCF
 
             if (userControlWidth == 1700)
             {
-                checkMax = 1;
+                
                 flowLayoutPnl3.Size = new Size(1700, 790);
 
                 pnlBieuDoAndDanhGia.Size = new Size(891 + 302, 730);
@@ -135,37 +130,17 @@ namespace QLCF
                         {
                             int widthItemDanhGia = control.Size.Width;
                             int heightItemDanhGia = control.Size.Height;
-
-                            
-
-
+                              
                             Label NameUser = (Label)control;
                             // Thực hiện các tác vụ với Label
-                            
                             NameUser.Font = new Font("Arial", 15, FontStyle.Regular);
-
-
-
                         }
-
-
-                       
-
                     }
-                        
-
-
-
-
                 }
-
-
-
-
             }
             else if (userControlWidth == 1395)
             {
-                checkMax = 0;
+                
                 flowLayoutPnl3.Size = new Size(1395, 490);
 
                 pnlBieuDoAndDanhGia.Size = new Size(891, 482);
@@ -174,8 +149,32 @@ namespace QLCF
                 pnlDanhGia.Size = new Size(891, 141);
                 pnlMonBanChay.Size = new Size(470, 482);
 
+                for (int i = 0; i < 10; i++)
+                {
+                    panelList[i].Size = new Size(429, 135);
 
 
+                    // Lấy danh sách các controls trong panel (chẳng hạn panel1 là tên của Panel của bạn)
+                    Control.ControlCollection controlCollection = panelList[i].Controls;
+
+
+                    // Lặp qua danh sách controls và làm việc với từng control
+                    foreach (Control control in controlCollection)
+                    {
+                        // Thực hiện các thao tác cần thiết với control ở đây
+                        // Ví dụ: 
+                        if (control is Label)
+                        {
+                            int widthItemDanhGia = control.Size.Width;
+                            int heightItemDanhGia = control.Size.Height;
+
+                            Label NameUser = (Label)control;
+                            // Thực hiện các tác vụ với Label
+                            NameUser.Font = new Font("Arial", 11, FontStyle.Regular);
+                            
+                        }
+                    }
+                }
             }
 
         }
@@ -369,7 +368,8 @@ namespace QLCF
                 panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
                 panel.Size = new System.Drawing.Size(429, 135);
 
-               
+                label11.Font = new Font("Arial", 11, FontStyle.Regular);
+                label22.Font = new Font("Arial", 11, FontStyle.Regular);
 
 
 
@@ -382,26 +382,19 @@ namespace QLCF
 
 
             // xem chi tiết
-            Label label1 = new Label();
-            label1.Text = "tên người dùng";
-            label1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
-            label1.Dock = DockStyle.Top;
-            label1.AutoSize = true;
-            
-
-            Label label2 = new Label();
-            label2.Text = "nội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
-            label2.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
-            label2.Dock = DockStyle.Fill;
-            label2.AutoSize = false;
+            Button btnXemChiTietDanhGia = new Button();
+            btnXemChiTietDanhGia.Text = "Xem chi tiết đánh giá";
+            btnXemChiTietDanhGia.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+            btnXemChiTietDanhGia.Dock = DockStyle.Fill;
+            btnXemChiTietDanhGia.AutoSize = true;
+            btnXemChiTietDanhGia.Size = new System.Drawing.Size(98, 49);
 
             Panel panel1 = new Panel();
             
             panel1.BackColor = System.Drawing.Color.FromArgb(122, 0, 0);
-            panel1.Size = new System.Drawing.Size(429, 135);
+            panel1.Size = new System.Drawing.Size(100, 50);
 
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(btnXemChiTietDanhGia);
 
             panelList.Add(panel1);
             flowLayoutPnlDanhGia.Controls.Add(panel1);
