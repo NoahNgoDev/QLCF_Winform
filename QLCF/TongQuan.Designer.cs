@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongQuan));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlTongQuan_1 = new System.Windows.Forms.Panel();
@@ -403,19 +403,19 @@
             // 
             this.chart1.BorderlineWidth = 0;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.DimGray;
-            chartArea4.BorderColor = System.Drawing.Color.Gray;
-            chartArea4.Name = "Khách hàng";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea5.BorderColor = System.Drawing.Color.Gray;
+            chartArea5.Name = "Khách hàng";
+            this.chart1.ChartAreas.Add(chartArea5);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend4.Name = "Khách hàng";
-            this.chart1.Legends.Add(legend4);
+            legend5.Name = "Khách hàng";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(0, 31);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series4.ChartArea = "Khách hàng";
-            series4.Legend = "Khách hàng";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series5.ChartArea = "Khách hàng";
+            series5.Legend = "Khách hàng";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(891, 304);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";

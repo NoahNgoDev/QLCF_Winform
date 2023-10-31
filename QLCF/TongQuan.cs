@@ -33,10 +33,6 @@ namespace QLCF
             KhoiTaoNgayThangHienTai();
             //GK
             dieuChinhKichThuoc4BoxPnl2();
-
-
-
-         
         }
 
         private void TongQuan_Load(object sender, EventArgs e)
@@ -45,15 +41,9 @@ namespace QLCF
             //GK
             bieudo();
 
-
-            
-
             ThemDuLieuVaoDataGridView();
 
-
-
             AddItemPanelDanhGia();
-
         }
 
 
@@ -131,6 +121,53 @@ namespace QLCF
                 for (int i = 0; i < 10; i++)
                 {
                     panelList[i].Size = new Size(429+150, 135*2);
+
+
+                    // Lấy danh sách các controls trong panel (chẳng hạn panel1 là tên của Panel của bạn)
+                    Control.ControlCollection controlCollection = panelList[i].Controls;
+
+                    // Lặp qua danh sách controls và làm việc với từng control
+                    foreach (Control control in controlCollection)
+                    {
+                        // Thực hiện các thao tác cần thiết với control ở đây
+                        // Ví dụ: 
+                        if (control is Label)
+                        {
+                            int widthItemDanhGia = control.Size.Width;
+                            int heightItemDanhGia = control.Size.Height;
+
+                            
+
+
+                            Label NameUser = (Label)control;
+                            // Thực hiện các tác vụ với Label
+                            NameUser.AutoSize = false;
+                            NameUser.Font = new Font("Arial", 15, FontStyle.Regular);
+
+
+
+
+                            if (NameUser.Tag.ToString() == "unique1")
+                            {
+                                // Thực hiện các thao tác với control1
+                                MessageBox.Show("8787899");
+                            }
+                            else if (NameUser.Tag.ToString() == "unique2")
+                            {
+                                // Thực hiện các thao tác với control2
+                            }
+
+                        }
+
+
+                       
+
+                    }
+                        
+
+
+
+
                 }
 
 
@@ -327,12 +364,13 @@ namespace QLCF
             {
                 // xem chi tiết
                 Label label11 = new Label();
+                label11.AutoSize = true;
                 label11.Text = "tên người dùng";
                 label11.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
                 label11.Dock = DockStyle.Top;
 
                 Label label22 = new Label();
-                label22.Text = "nội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
+                label22.Text = "\nnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
                 label22.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
                 label22.Dock = DockStyle.Fill;
 
@@ -340,6 +378,11 @@ namespace QLCF
 
                 panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
                 panel.Size = new System.Drawing.Size(429, 135);
+
+                label11.Tag = "label11unique1";
+                label22.Tag = "label22unique2";
+
+
 
                 panel.Controls.Add(label22);
                 panel.Controls.Add(label11);
