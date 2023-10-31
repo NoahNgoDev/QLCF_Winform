@@ -237,7 +237,7 @@ namespace QLCF
             //// Thêm dữ liệu vào DataGridView
             //dataGridView1.Rows.Add(user.MaSo, user.HoTen, user.SoDienThoai);
 
-            dataGridView1.ScrollBars = ScrollBars.Vertical; // Ẩn chỉ thanh cuộn ngan
+            dataGridView_MonBanChay.ScrollBars = ScrollBars.Vertical; // Ẩn chỉ thanh cuộn ngan
 
 
 
@@ -274,20 +274,20 @@ namespace QLCF
 
 
             // Đặt tên cột <Biến tên cột>,<name cột>
-            dataGridView1.Columns.Add("Ten", "Tên");
-            dataGridView1.Columns.Add("Tuoi", "Tuổi");
-            dataGridView1.Columns.Add("aga", "agr");
+            dataGridView_MonBanChay.Columns.Add("Ten", "Tên");
+            dataGridView_MonBanChay.Columns.Add("Tuoi", "Tuổi");
+            dataGridView_MonBanChay.Columns.Add("aga", "agr");
 
 
             // Điều chỉnh độ rộng của cột 1 thành 100 pixels    
-            dataGridView1.Columns[0].Width = 100;
+            dataGridView_MonBanChay.Columns[0].Width = 100;
 
             // Điều chỉnh độ rộng của cột 2 thành 150 pixels
-            dataGridView1.Columns[1].Width = 150;
+            dataGridView_MonBanChay.Columns[1].Width = 150;
             // Điều chỉnh độ rộng của cột 3 thành 150 pixels
-            dataGridView1.Columns[2].Width = 150;
+            dataGridView_MonBanChay.Columns[2].Width = 150;
 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dataGridView_MonBanChay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
 
 
             // Tạo một danh sách dữ liệu (ví dụ: List of objects)
@@ -321,12 +321,12 @@ namespace QLCF
             // Thêm dữ liệu vào DataGridView bằng vòng lặp
             foreach (var person in people)
             {
-                dataGridView1.Rows.Add(person.MaSo,person.Name, person.Age);
+                dataGridView_MonBanChay.Rows.Add(person.MaSo,person.Name, person.Age);
             }
 
 
-            dataGridView1.RowTemplate.Height = 90; // Đặt độ cao dòng thành 30 pixel
-            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold); // Đặt font cho toàn bộ DataGridView
+            dataGridView_MonBanChay.RowTemplate.Height = 90; // Đặt độ cao dòng thành 30 pixel
+            dataGridView_MonBanChay.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold); // Đặt font cho toàn bộ DataGridView
 
         }
               

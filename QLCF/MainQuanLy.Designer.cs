@@ -52,7 +52,6 @@
             this.TitleBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.TitleCurently = new System.Windows.Forms.Label();
             this.pnlContainAvarta = new System.Windows.Forms.Panel();
             this.pnlNameAvarta = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -61,21 +60,17 @@
             this.lbNameAvarta = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.PanelContainSearchBox = new System.Windows.Forms.Panel();
-            this.SearchBox = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TitleCurently = new System.Windows.Forms.Button();
             this.pnlHeadBar.SuspendLayout();
             this.LeftBarControll.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.TitleBar.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.pnlContainAvarta.SuspendLayout();
             this.pnlNameAvarta.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PanelContainSearchBox.SuspendLayout();
-            this.SearchBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeadBar
@@ -447,31 +442,19 @@
             // 
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(409, 0);
+            this.panel1.Location = new System.Drawing.Point(320, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(456, 65);
+            this.panel1.Size = new System.Drawing.Size(545, 65);
             this.panel1.TabIndex = 6;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.TitleCurently);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 65);
             this.panel5.TabIndex = 0;
-            // 
-            // TitleCurently
-            // 
-            this.TitleCurently.AutoSize = true;
-            this.TitleCurently.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TitleCurently.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TitleCurently.Location = new System.Drawing.Point(27, 19);
-            this.TitleCurently.Name = "TitleCurently";
-            this.TitleCurently.Size = new System.Drawing.Size(142, 29);
-            this.TitleCurently.TabIndex = 0;
-            this.TitleCurently.Text = "Ten cua so";
             // 
             // pnlContainAvarta
             // 
@@ -555,46 +538,33 @@
             // PanelContainSearchBox
             // 
             this.PanelContainSearchBox.BackColor = System.Drawing.Color.White;
-            this.PanelContainSearchBox.Controls.Add(this.SearchBox);
+            this.PanelContainSearchBox.Controls.Add(this.TitleCurently);
             this.PanelContainSearchBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelContainSearchBox.Location = new System.Drawing.Point(0, 0);
             this.PanelContainSearchBox.Name = "PanelContainSearchBox";
-            this.PanelContainSearchBox.Size = new System.Drawing.Size(409, 65);
+            this.PanelContainSearchBox.Size = new System.Drawing.Size(320, 65);
             this.PanelContainSearchBox.TabIndex = 4;
             // 
-            // SearchBox
+            // TitleCurently
             // 
-            this.SearchBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.SearchBox.Controls.Add(this.button12);
-            this.SearchBox.Controls.Add(this.textBox1);
-            this.SearchBox.Location = new System.Drawing.Point(7, 13);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(390, 35);
-            this.SearchBox.TabIndex = 1;
-            // 
-            // button12
-            // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(0, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(34, 35);
-            this.button12.TabIndex = 1;
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(40, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 31);
-            this.textBox1.TabIndex = 0;
+            this.TitleCurently.BackColor = System.Drawing.Color.Transparent;
+            this.TitleCurently.Enabled = false;
+            this.TitleCurently.FlatAppearance.BorderSize = 0;
+            this.TitleCurently.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TitleCurently.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleCurently.ForeColor = System.Drawing.Color.Black;
+            this.TitleCurently.Image = ((System.Drawing.Image)(resources.GetObject("TitleCurently.Image")));
+            this.TitleCurently.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TitleCurently.Location = new System.Drawing.Point(8, 4);
+            this.TitleCurently.Margin = new System.Windows.Forms.Padding(4);
+            this.TitleCurently.Name = "TitleCurently";
+            this.TitleCurently.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.TitleCurently.Size = new System.Drawing.Size(282, 55);
+            this.TitleCurently.TabIndex = 10;
+            this.TitleCurently.Text = "  ";
+            this.TitleCurently.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TitleCurently.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.TitleCurently.UseVisualStyleBackColor = false;
             // 
             // MainQuanLy
             // 
@@ -620,8 +590,6 @@
             this.pnlCenter.ResumeLayout(false);
             this.TitleBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.pnlContainAvarta.ResumeLayout(false);
             this.pnlNameAvarta.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -629,8 +597,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.PanelContainSearchBox.ResumeLayout(false);
-            this.SearchBox.ResumeLayout(false);
-            this.SearchBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -657,9 +623,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Panel pnlCenter;
         private System.Windows.Forms.Panel TitleBar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel SearchBox;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label lbNameAvarta;
         private System.Windows.Forms.Panel PanelContainSearchBox;
         private System.Windows.Forms.Panel pnlContainAvarta;
@@ -669,9 +632,9 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label TitleCurently;
         private System.Windows.Forms.Panel pnlForUserControl;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button TitleCurently;
     }
 }
 

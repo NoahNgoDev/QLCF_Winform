@@ -198,8 +198,10 @@ namespace QLCF
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = Color.FromArgb(0, 119, 179);
                     currentButton.ForeColor = Color.Honeydew;
-                    //currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    TitleCurently.Text = currentButton.Text;
+                    TitleCurently.Font = new System.Drawing.Font("Tahoma", 15.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    TitleCurently.Image = currentButton.Image;
+                    TitleCurently.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    TitleCurently.Text = "  "+currentButton.Text;
                 }
             }
         }

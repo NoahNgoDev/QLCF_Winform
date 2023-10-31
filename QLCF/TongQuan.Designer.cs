@@ -54,7 +54,7 @@
             this.lbTitleThongKe = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlMonBanChay = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_MonBanChay = new System.Windows.Forms.DataGridView();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.flowLayoutPnl2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -121,7 +121,7 @@
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.pnlMonBanChay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MonBanChay)).BeginInit();
             this.panel14.SuspendLayout();
             this.flowLayoutPnl2.SuspendLayout();
             this.pnlDatcho.SuspendLayout();
@@ -426,7 +426,7 @@
             // pnlMonBanChay
             // 
             this.pnlMonBanChay.BackColor = System.Drawing.Color.White;
-            this.pnlMonBanChay.Controls.Add(this.dataGridView1);
+            this.pnlMonBanChay.Controls.Add(this.dataGridView_MonBanChay);
             this.pnlMonBanChay.Controls.Add(this.panel14);
             this.pnlMonBanChay.Location = new System.Drawing.Point(909, 2);
             this.pnlMonBanChay.Margin = new System.Windows.Forms.Padding(5, 2, 3, 2);
@@ -434,26 +434,26 @@
             this.pnlMonBanChay.Size = new System.Drawing.Size(470, 482);
             this.pnlMonBanChay.TabIndex = 1;
             // 
-            // dataGridView1
+            // dataGridView_MonBanChay
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 10;
-            this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(470, 451);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView_MonBanChay.AllowUserToOrderColumns = true;
+            this.dataGridView_MonBanChay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_MonBanChay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView_MonBanChay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_MonBanChay.ColumnHeadersHeight = 30;
+            this.dataGridView_MonBanChay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView_MonBanChay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_MonBanChay.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dataGridView_MonBanChay.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dataGridView_MonBanChay.Location = new System.Drawing.Point(0, 31);
+            this.dataGridView_MonBanChay.Name = "dataGridView_MonBanChay";
+            this.dataGridView_MonBanChay.ReadOnly = true;
+            this.dataGridView_MonBanChay.RowHeadersVisible = false;
+            this.dataGridView_MonBanChay.RowHeadersWidth = 10;
+            this.dataGridView_MonBanChay.RowTemplate.Height = 50;
+            this.dataGridView_MonBanChay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_MonBanChay.Size = new System.Drawing.Size(470, 451);
+            this.dataGridView_MonBanChay.TabIndex = 1;
             // 
             // panel14
             // 
@@ -1074,7 +1074,7 @@
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.pnlMonBanChay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MonBanChay)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.flowLayoutPnl2.ResumeLayout(false);
@@ -1204,7 +1204,7 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_MonBanChay;
         private System.Windows.Forms.Button btnNgayThongke;
         private System.Windows.Forms.Button btnTuanThongke;
         private System.Windows.Forms.Button btnThangThongke;
