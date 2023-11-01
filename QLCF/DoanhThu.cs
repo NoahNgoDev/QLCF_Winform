@@ -13,6 +13,9 @@ namespace QLCF
 {
     public partial class DoanhThu : UserControl
     {
+        private int userControlWidth;
+        private int userControlHeight;
+
         public DoanhThu()
         {
             InitializeComponent();
@@ -54,5 +57,24 @@ namespace QLCF
         }
 
         
+        //respontive form
+        public void responsive_DoanhThu(int newWidthForm)
+        {
+            
+            if (newWidthForm == 1920)
+            {
+                pnlReponsive.Size = new Size(445+310, 100);
+                pnlContainTableDoanhThu.Size = new Size(1389+300, 589+265);
+            }
+            else if (newWidthForm == 1615)
+            {
+                pnlReponsive.Size = new Size(445, 100);
+                pnlContainTableDoanhThu.Size = new Size(1389, 589);
+
+            }
+
+        }
+
+
     }
 }

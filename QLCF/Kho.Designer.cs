@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kho));
             this.dataGridView_Kho = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlReponsiveKho = new System.Windows.Forms.Panel();
             this.PanelContainSearchBox = new System.Windows.Forms.Panel();
             this.SearchBox = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,15 +41,15 @@
             this.btnThemKho = new System.Windows.Forms.Button();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlContainTableKho = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Kho)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlReponsiveKho.SuspendLayout();
             this.PanelContainSearchBox.SuspendLayout();
             this.SearchBox.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlFill.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlContainTableKho.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView_Kho
@@ -73,15 +73,15 @@
             this.dataGridView_Kho.Size = new System.Drawing.Size(1389, 632);
             this.dataGridView_Kho.TabIndex = 3;
             // 
-            // panel1
+            // pnlReponsiveKho
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
-            this.panel1.Controls.Add(this.PanelContainSearchBox);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1395, 71);
-            this.panel1.TabIndex = 2;
+            this.pnlReponsiveKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
+            this.pnlReponsiveKho.Controls.Add(this.PanelContainSearchBox);
+            this.pnlReponsiveKho.Controls.Add(this.panel3);
+            this.pnlReponsiveKho.Location = new System.Drawing.Point(3, 3);
+            this.pnlReponsiveKho.Name = "pnlReponsiveKho";
+            this.pnlReponsiveKho.Size = new System.Drawing.Size(1395, 71);
+            this.pnlReponsiveKho.TabIndex = 2;
             // 
             // PanelContainSearchBox
             // 
@@ -193,21 +193,21 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.pnlReponsiveKho);
+            this.flowLayoutPanel1.Controls.Add(this.pnlContainTableKho);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1395, 715);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel2
+            // pnlContainTableKho
             // 
-            this.panel2.Controls.Add(this.dataGridView_Kho);
-            this.panel2.Location = new System.Drawing.Point(3, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1389, 632);
-            this.panel2.TabIndex = 3;
+            this.pnlContainTableKho.Controls.Add(this.dataGridView_Kho);
+            this.pnlContainTableKho.Location = new System.Drawing.Point(3, 80);
+            this.pnlContainTableKho.Name = "pnlContainTableKho";
+            this.pnlContainTableKho.Size = new System.Drawing.Size(1389, 632);
+            this.pnlContainTableKho.TabIndex = 3;
             // 
             // Kho
             // 
@@ -217,14 +217,14 @@
             this.Name = "Kho";
             this.Size = new System.Drawing.Size(1395, 715);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Kho)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnlReponsiveKho.ResumeLayout(false);
             this.PanelContainSearchBox.ResumeLayout(false);
             this.SearchBox.ResumeLayout(false);
             this.SearchBox.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.pnlFill.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlContainTableKho.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -232,7 +232,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView_Kho;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlReponsiveKho;
         private System.Windows.Forms.Panel PanelContainSearchBox;
         private System.Windows.Forms.Panel SearchBox;
         private System.Windows.Forms.Button button1;
@@ -243,6 +243,6 @@
         private System.Windows.Forms.Button btnThemKho;
         private System.Windows.Forms.Panel pnlFill;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlContainTableKho;
     }
 }

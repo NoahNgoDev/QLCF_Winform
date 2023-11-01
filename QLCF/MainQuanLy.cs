@@ -30,10 +30,13 @@ namespace QLCF
         TaiKhoan userControl_TaiKhoan = new TaiKhoan();
         Kho userControl_Kho = new Kho();
         CaiDat userControl_CaiDat = new CaiDat();
+        private int newWidthForm;
 
         public MainQuanLy()
         {
             InitializeComponent();
+            this.SizeChanged += MainQuanLy_SizeChanged;
+            
         }
 
         private void MainQuanLy_Load(object sender, EventArgs e)
@@ -49,6 +52,42 @@ namespace QLCF
 
             //GK-cửa sổ mặc định sẽ ở trang tổng quan
             addUserControlForPanel(userControl_TongQuan);
+
+            
+        }
+
+
+        // kiểm tra reponsive 
+        private void MainQuanLy_SizeChanged(object sender, EventArgs e)
+        {
+            //lấy độ rộng của form mỗi khi thay đổi kích thức của form
+            newWidthForm = this.Width;
+            //Console.WriteLine(newWidthForm.ToString());
+            // Gọi phương thức Invalidate để vẽ lại giao diện
+            //this.Invalidate();
+
+            if (newWidthForm == 1920)
+            {
+                reponsive(newWidthForm);
+            }
+            else if (newWidthForm == 1615)
+            {
+                reponsive(newWidthForm);
+            }
+        }
+
+
+        private void reponsive(int newWidthForm)
+        {
+            userControl_TongQuan.responsive_TongQuan(newWidthForm);
+            userControl_DoanhThu.responsive_DoanhThu(newWidthForm);
+            userControl_NhanVien.responsive_NhanVien(newWidthForm);
+            userControl_SanPham.responsive_SanPham(newWidthForm);
+            userControl_TaiKhoan.responsive_TaiKhoan(newWidthForm);
+            userControl_KhachHang.responsive_KhachHang(newWidthForm);
+            userControl_HoaDon.responsive_HoaDon(newWidthForm);
+            userControl_Kho.responsive_Kho(newWidthForm);
+            userControl_CaiDat.responsive_CaiDat(newWidthForm);
         }
 
 
@@ -68,15 +107,11 @@ namespace QLCF
             {
                 // Nếu cửa sổ đang ở trạng thái bình thường, thì chuyển sang trạng thái phóng to (maximized).
                 this.WindowState = FormWindowState.Maximized;
-                userControl_TongQuan.dieuChinhKichThuoc4BoxPnl2();
-                userControl_TongQuan.dieuChinhKichThuoc3BoxPnl3();
             }
             else if (this.WindowState == FormWindowState.Maximized)
             {
                 // Nếu cửa sổ đang ở trạng thái phóng to, thì chuyển về trạng thái bình thường.
                 this.WindowState = FormWindowState.Normal;
-                userControl_TongQuan.dieuChinhKichThuoc4BoxPnl2();
-                userControl_TongQuan.dieuChinhKichThuoc3BoxPnl3();
             }
         }
 
@@ -278,5 +313,8 @@ namespace QLCF
             ActivateButton(sender);
             addUserControlForPanel(userControl_CaiDat);
         }
+
+
+        
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Xml.Linq;
 
 
 namespace QLCF
@@ -18,7 +19,7 @@ namespace QLCF
         private int userControlHeight;
 
         private Timer timer = new Timer();
-        private List<Panel> panelList;
+        public List<Panel> panelList;
 
 
         public TongQuan()
@@ -26,8 +27,11 @@ namespace QLCF
             InitializeComponent();
             //Gk
             KhoiTaoNgayThangHienTai();
-            //GK
-            dieuChinhKichThuoc4BoxPnl2();
+            //GK (nếu tham số là 1920 sẽ phóng to (max) cửa sổ - nếu không thì cửa sô loại nhỏ(min))
+            dieuChinhKichThuoc4BoxPnl2(1);
+            //khỏi tạo các item panel trong list đánh giá
+            AddItemPanelDanhGia();
+
         }
 
         private void TongQuan_Load(object sender, EventArgs e)
@@ -35,11 +39,9 @@ namespace QLCF
             timer.Start();
             //GK
             btnNgayThongke.PerformClick();
-            //bieudo();
 
             ThemDuLieuVaoDataGridView();
 
-            AddItemPanelDanhGia();
         }
 
 
@@ -62,16 +64,16 @@ namespace QLCF
         }
 
         //Gk - điều chỉnh kích thức khi thu-phóng cửa sổ của flowLayoutPanel 2
-        public void dieuChinhKichThuoc4BoxPnl2()
+        public void dieuChinhKichThuoc4BoxPnl2(int newWidthForm)
         {
-            Size userControlSize = this.Size;
-            userControlWidth = userControlSize.Width;
-            userControlHeight = userControlSize.Height;
+            //Size userControlSize = this.Size;
+            //userControlWidth = userControlSize.Width;
+            //userControlHeight = userControlSize.Height;
 
 
             //MessageBox.Show(userControlWidth + " - " + userControlHeight);
 
-            if (userControlWidth == 1700)
+            if (newWidthForm == 1920)
             {
                 flowLayoutPnl2.Size = new Size(1700, 156);
 
@@ -81,7 +83,7 @@ namespace QLCF
                 pnlDonHang.Size = new Size(240 + 60, 150);
                 pnlDoanhThu.Size = new Size(336 + 65, 150);
 
-            }else if (userControlWidth == 1395)
+            }else //if (userControlWidth == 1395)
             {
                 flowLayoutPnl2.Size = new Size(1395, 143);
 
@@ -93,15 +95,72 @@ namespace QLCF
             }
         }
 
-        //Gk - điều chỉnh kích thức khi thu-phóng cửa sổ của flowLayoutPanel 3
-        public void dieuChinhKichThuoc3BoxPnl3()
+
+        private void AddItemPanelDanhGia()
         {
-            Size userControlSize = this.Size;
-            userControlWidth = userControlSize.Width;
-            userControlHeight = userControlSize.Height;
+            // Tạo danh sách Panel và thêm vào FlowLayoutPanel
+            panelList = new List<Panel>();
+            for (int i = 0; i < 10; i++)
+            {
+                // xem chi tiết
+                Label label11 = new Label();
+                label11.AutoSize = true;
+                label11.Text = "tên người dùng";
+                label11.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+                label11.Dock = DockStyle.Top;
+
+                Label label22 = new Label();
+                label22.Text = "\n\nnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
+                label22.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+                label22.Dock = DockStyle.Fill;
+                label22.AutoSize = false;
+
+                Panel panel = new Panel();
+
+                panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
+                panel.Size = new System.Drawing.Size(429, 135);
+
+                label11.Font = new Font("Arial", 11, FontStyle.Regular);
+                label22.Font = new Font("Arial", 11, FontStyle.Regular);
+
+
+
+                panel.Controls.Add(label11);
+                panel.Controls.Add(label22);
+
+                panelList.Add(panel);
+                flowLayoutPnlDanhGia.Controls.Add(panel);
+            }
+
+
+            // xem chi tiết
+            Button btnXemChiTietDanhGia = new Button();
+            btnXemChiTietDanhGia.Text = "Xem chi tiết đánh giá";
+            btnXemChiTietDanhGia.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+            btnXemChiTietDanhGia.Dock = DockStyle.Fill;
+            btnXemChiTietDanhGia.AutoSize = true;
+            btnXemChiTietDanhGia.Size = new System.Drawing.Size(98, 49);
+
+            Panel panel1 = new Panel();
+
+            panel1.BackColor = System.Drawing.Color.FromArgb(122, 0, 0);
+            panel1.Size = new System.Drawing.Size(100, 50);
+
+            panel1.Controls.Add(btnXemChiTietDanhGia);
+
+            panelList.Add(panel1);
+            flowLayoutPnlDanhGia.Controls.Add(panel1);
+        }
+
+        //Gk - điều chỉnh kích thức khi thu-phóng cửa sổ của flowLayoutPanel 3
+        public void dieuChinhKichThuoc3BoxPnl3(int newWidthForm)
+        {
+            //Size userControlSize = this.Size;
+            //userControlWidth = userControlSize.Width;
+            //userControlHeight = userControlSize.Height;
             //MessageBox.Show(userControlWidth +"--"+ userControlHeight);
 
-            if (userControlWidth == 1700)
+            if (newWidthForm == 1920)
             {
                 
                 flowLayoutPnl3.Size = new Size(1700, 790);
@@ -139,7 +198,7 @@ namespace QLCF
                     }
                 }
             }
-            else if (userControlWidth == 1395)
+            else if (newWidthForm == 1615)
             {
                 
                 flowLayoutPnl3.Size = new Size(1395, 490);
@@ -149,6 +208,13 @@ namespace QLCF
                 chart1.Size = new Size(891, 304);
                 pnlDanhGia.Size = new Size(891, 141);
                 pnlMonBanChay.Size = new Size(470, 482);
+
+                if (panelList == null)
+                {
+                    MessageBox.Show("rõng");
+                }
+
+
 
                 for (int i = 0; i < 10; i++)
                 {
@@ -179,14 +245,14 @@ namespace QLCF
             }
 
         }
-        //GK - biểu đồ barchart
-        // thêm thư viện System.Windows.Forms.DataVisualization vào dự án của mình.
-        // Để làm điều này, cần thực hiện các bước sau:
-        // a.Nhấp chuột phải vào tên dự án trong Solution Explorer.
-        // b.Chọn "Add" và sau đó chọn "Reference."
-        // c.Trong cửa sổ Reference Manager, tìm và chọn "System.Windows.Forms.DataVisualization."
-        // d.Nhấp vào nút "OK" để thêm thư viện này vào dự án
-               
+        
+        
+        public void responsive_TongQuan(int newWidthForm)
+        {
+            dieuChinhKichThuoc4BoxPnl2(newWidthForm);
+            dieuChinhKichThuoc3BoxPnl3(newWidthForm);
+        }
+
 
         //private List<UserInfo> userList = new List<UserInfo>();
         public class Person
@@ -255,11 +321,17 @@ namespace QLCF
             dataGridView_MonBanChay.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold); // Đặt font cho toàn bộ DataGridView
 
         }
-        
 
 
 
 
+        //GK - biểu đồ barchart
+        // thêm thư viện System.Windows.Forms.DataVisualization vào dự án của mình.
+        // Để làm điều này, cần thực hiện các bước sau:
+        // a.Nhấp chuột phải vào tên dự án trong Solution Explorer.
+        // b.Chọn "Add" và sau đó chọn "Reference."
+        // c.Trong cửa sổ Reference Manager, tìm và chọn "System.Windows.Forms.DataVisualization."
+        // d.Nhấp vào nút "OK" để thêm thư viện này vào dự án
         public void bieudo(String newSeries)
         {
             // Xóa dữ liệu cũ (nếu có)
@@ -341,61 +413,6 @@ namespace QLCF
             lbTitleThongKe.Text = "Thống kê lượng khách hàng - trong tháng";
         }
 
-        private void AddItemPanelDanhGia()
-        {
-            // Tạo danh sách Panel và thêm vào FlowLayoutPanel
-            panelList = new List<Panel>();
-            for (int i = 0; i < 10; i++)
-            {
-                // xem chi tiết
-                Label label11 = new Label();
-                label11.AutoSize = true;
-                label11.Text = "tên người dùng";
-                label11.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
-                label11.Dock = DockStyle.Top;
-
-                Label label22 = new Label();
-                label22.Text = "\n\nnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
-                label22.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
-                label22.Dock = DockStyle.Fill;
-                label22.AutoSize = false;
-
-                Panel panel = new Panel();
-
-                panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
-                panel.Size = new System.Drawing.Size(429, 135);
-
-                label11.Font = new Font("Arial", 11, FontStyle.Regular);
-                label22.Font = new Font("Arial", 11, FontStyle.Regular);
-
-
-
-                panel.Controls.Add(label11);
-                panel.Controls.Add(label22);
-
-                panelList.Add(panel);
-                flowLayoutPnlDanhGia.Controls.Add(panel);
-            }
-
-
-            // xem chi tiết
-            Button btnXemChiTietDanhGia = new Button();
-            btnXemChiTietDanhGia.Text = "Xem chi tiết đánh giá";
-            btnXemChiTietDanhGia.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
-            btnXemChiTietDanhGia.Dock = DockStyle.Fill;
-            btnXemChiTietDanhGia.AutoSize = true;
-            btnXemChiTietDanhGia.Size = new System.Drawing.Size(98, 49);
-
-            Panel panel1 = new Panel();
-            
-            panel1.BackColor = System.Drawing.Color.FromArgb(122, 0, 0);
-            panel1.Size = new System.Drawing.Size(100, 50);
-
-            panel1.Controls.Add(btnXemChiTietDanhGia);
-
-            panelList.Add(panel1);
-            flowLayoutPnlDanhGia.Controls.Add(panel1);
-        }
     }
 }
 

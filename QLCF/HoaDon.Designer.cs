@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDon));
             this.dataGridView_HoaDon = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlReponsiveHoaDon = new System.Windows.Forms.Panel();
             this.PanelContainSearchBox = new System.Windows.Forms.Panel();
             this.SearchBox = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,15 +41,15 @@
             this.btnThemHoaDon = new System.Windows.Forms.Button();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlContainTableHoaDon = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HoaDon)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlReponsiveHoaDon.SuspendLayout();
             this.PanelContainSearchBox.SuspendLayout();
             this.SearchBox.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlFill.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlContainTableHoaDon.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView_HoaDon
@@ -73,15 +73,15 @@
             this.dataGridView_HoaDon.Size = new System.Drawing.Size(1389, 632);
             this.dataGridView_HoaDon.TabIndex = 3;
             // 
-            // panel1
+            // pnlReponsiveHoaDon
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
-            this.panel1.Controls.Add(this.PanelContainSearchBox);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1395, 71);
-            this.panel1.TabIndex = 2;
+            this.pnlReponsiveHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
+            this.pnlReponsiveHoaDon.Controls.Add(this.PanelContainSearchBox);
+            this.pnlReponsiveHoaDon.Controls.Add(this.panel3);
+            this.pnlReponsiveHoaDon.Location = new System.Drawing.Point(3, 3);
+            this.pnlReponsiveHoaDon.Name = "pnlReponsiveHoaDon";
+            this.pnlReponsiveHoaDon.Size = new System.Drawing.Size(1395, 71);
+            this.pnlReponsiveHoaDon.TabIndex = 2;
             // 
             // PanelContainSearchBox
             // 
@@ -193,21 +193,21 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.pnlReponsiveHoaDon);
+            this.flowLayoutPanel1.Controls.Add(this.pnlContainTableHoaDon);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1395, 715);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel2
+            // pnlContainTableHoaDon
             // 
-            this.panel2.Controls.Add(this.dataGridView_HoaDon);
-            this.panel2.Location = new System.Drawing.Point(3, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1389, 632);
-            this.panel2.TabIndex = 3;
+            this.pnlContainTableHoaDon.Controls.Add(this.dataGridView_HoaDon);
+            this.pnlContainTableHoaDon.Location = new System.Drawing.Point(3, 80);
+            this.pnlContainTableHoaDon.Name = "pnlContainTableHoaDon";
+            this.pnlContainTableHoaDon.Size = new System.Drawing.Size(1389, 632);
+            this.pnlContainTableHoaDon.TabIndex = 3;
             // 
             // HoaDon
             // 
@@ -217,14 +217,14 @@
             this.Name = "HoaDon";
             this.Size = new System.Drawing.Size(1395, 715);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HoaDon)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnlReponsiveHoaDon.ResumeLayout(false);
             this.PanelContainSearchBox.ResumeLayout(false);
             this.SearchBox.ResumeLayout(false);
             this.SearchBox.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.pnlFill.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlContainTableHoaDon.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -232,7 +232,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView_HoaDon;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlReponsiveHoaDon;
         private System.Windows.Forms.Panel PanelContainSearchBox;
         private System.Windows.Forms.Panel SearchBox;
         private System.Windows.Forms.Button button1;
@@ -243,6 +243,6 @@
         private System.Windows.Forms.Button btnThemHoaDon;
         private System.Windows.Forms.Panel pnlFill;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlContainTableHoaDon;
     }
 }

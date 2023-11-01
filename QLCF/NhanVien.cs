@@ -17,6 +17,23 @@ namespace QLCF
             InitializeComponent();
         }
 
-       
+        //respontive form
+        public void responsive_NhanVien(int newWidthForm)
+        {
+
+            if (newWidthForm == 1920)
+            {
+                pnlReponsiveNhanVien.Size = new Size(1395+310, 71);
+                pnlContainTableNhanVien.Size = new Size(1389 + 300, 589 + 305);
+            }
+            else if (newWidthForm == 1615)
+            {
+                pnlReponsiveNhanVien.Size = new Size(1395, 71);
+                pnlContainTableNhanVien.Size = new Size(1389, 632);
+
+            }
+
+        }
+
     }
 }
