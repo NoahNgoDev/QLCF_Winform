@@ -16,5 +16,7 @@ namespace QLCF
         {
             InitializeComponent();
         }
+
+        
     }
 }
