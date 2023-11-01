@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongQuan));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lbLoiChuc1 = new System.Windows.Forms.Label();
             this.pnlTongQuan_1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -261,7 +261,7 @@
             this.lbLoiChuc2.AutoSize = true;
             this.lbLoiChuc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbLoiChuc2.ForeColor = System.Drawing.Color.DimGray;
-            this.lbLoiChuc2.Location = new System.Drawing.Point(23, 40);
+            this.lbLoiChuc2.Location = new System.Drawing.Point(19, 40);
             this.lbLoiChuc2.Name = "lbLoiChuc2";
             this.lbLoiChuc2.Size = new System.Drawing.Size(457, 25);
             this.lbLoiChuc2.TabIndex = 1;
@@ -406,19 +406,19 @@
             // 
             this.chart1.BorderlineWidth = 0;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.DimGray;
-            chartArea1.BorderColor = System.Drawing.Color.Gray;
-            chartArea1.Name = "Khách hàng";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea2.BorderColor = System.Drawing.Color.Gray;
+            chartArea2.Name = "Khách hàng";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend1.Name = "Khách hàng";
-            this.chart1.Legends.Add(legend1);
+            legend2.Name = "Khách hàng";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(0, 31);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "Khách hàng";
-            series1.Legend = "Khách hàng";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "Khách hàng";
+            series2.Legend = "Khách hàng";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(891, 304);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
@@ -574,7 +574,8 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Location = new System.Drawing.Point(3, 5);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 18);
             this.label8.TabIndex = 3;
@@ -596,7 +597,8 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Location = new System.Drawing.Point(3, 3);
+            this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 24);
             this.label3.TabIndex = 0;
@@ -686,7 +688,8 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(3, 0);
+            this.label22.Location = new System.Drawing.Point(3, 5);
+            this.label22.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(111, 18);
             this.label22.TabIndex = 3;
@@ -708,7 +711,8 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label23.Location = new System.Drawing.Point(3, 0);
+            this.label23.Location = new System.Drawing.Point(3, 3);
+            this.label23.Margin = new System.Windows.Forms.Padding(3);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(90, 24);
             this.label23.TabIndex = 0;
@@ -798,7 +802,8 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Location = new System.Drawing.Point(3, 5);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 18);
             this.label12.TabIndex = 2;
@@ -819,7 +824,8 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Location = new System.Drawing.Point(3, 3);
+            this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 24);
             this.label7.TabIndex = 1;
@@ -909,7 +915,8 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label16.Location = new System.Drawing.Point(3, 0);
+            this.label16.Location = new System.Drawing.Point(3, 5);
+            this.label16.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(111, 18);
             this.label16.TabIndex = 2;
@@ -930,7 +937,8 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Location = new System.Drawing.Point(3, 3);
+            this.label4.Margin = new System.Windows.Forms.Padding(3);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 24);
             this.label4.TabIndex = 2;
@@ -1020,7 +1028,8 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(3, 0);
+            this.label20.Location = new System.Drawing.Point(3, 5);
+            this.label20.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(111, 18);
             this.label20.TabIndex = 2;
@@ -1041,7 +1050,8 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Margin = new System.Windows.Forms.Padding(3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 24);
             this.label5.TabIndex = 3;

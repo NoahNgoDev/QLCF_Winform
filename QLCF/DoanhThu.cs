@@ -19,6 +19,11 @@ namespace QLCF
             
         }
 
+        private void DoanhThu_Load(object sender, EventArgs e)
+        {
+            btnHomNay.PerformClick();
+        }
+
         private void dateTimePicker_NgayBatDau_ValueChanged(object sender, EventArgs e)
         {
             dateTimePicker_NgayBatDau.Format = DateTimePickerFormat.Short; // Chỉ hiển thị ngày không hiển thị giờ
@@ -47,5 +52,7 @@ namespace QLCF
             lb_NgayBatDau.Text = dateText;
             lb_NgayKetThuc.Text = dateText;
         }
+
+        
     }
 }

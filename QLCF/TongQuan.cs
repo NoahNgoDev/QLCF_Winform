@@ -186,34 +186,7 @@ namespace QLCF
         // b.Chọn "Add" và sau đó chọn "Reference."
         // c.Trong cửa sổ Reference Manager, tìm và chọn "System.Windows.Forms.DataVisualization."
         // d.Nhấp vào nút "OK" để thêm thư viện này vào dự án
-        
-
-        
-        public void bieudo(String newSeries)
-        {
-            // Xóa dữ liệu cũ (nếu có)
-            chart1.Series.Clear();
-
-            // Thêm dữ liệu vào biểu đồ
-            chart1.Series.Add(newSeries);
-
-            // Cài đặt biểu đồ cột
-            chart1.Series[newSeries].ChartType = SeriesChartType.Column; 
-
-            // hiện số trên mỗi cột
-            chart1.Series[newSeries].IsValueShownAsLabel = true;
-
-            // Vô hiệu hóa vị trí tự động chú thích
-            chart1.Legends["Khách hàng"].Position.Auto = false; 
-            
-            //Đặt tên cho trục
-            chart1.ChartAreas["Khách hàng"].AxisX.Title = "Ngày"; // Đặt tên trục X
-            chart1.ChartAreas["Khách hàng"].AxisY.Title = "Số lượng khách"; // Đặt tên trục Y
-
-
-        }
-
-
+               
 
         //private List<UserInfo> userList = new List<UserInfo>();
         public class Person
@@ -224,63 +197,16 @@ namespace QLCF
         }
         private void ThemDuLieuVaoDataGridView()//(int maSo, string hoTen, string soDienThoai)
         {
-            //UserInfo user = new UserInfo
-            //{
-            //    MaSo = maSo,
-            //    HoTen = hoTen,
-            //    SoDienThoai = soDienThoai
-            //};
-
-            //userList.Add(user);
-
-
-            //// Thêm dữ liệu vào DataGridView
-            //dataGridView1.Rows.Add(user.MaSo, user.HoTen, user.SoDienThoai);
-
             dataGridView_MonBanChay.ScrollBars = ScrollBars.Vertical; // Ẩn chỉ thanh cuộn ngan
 
-
-
-            // Đặt tên cột
-            //dataGridView1.Columns.Add("Tên", "Tên");
-            //dataGridView1.Columns.Add("Tuổi", "Tuổi");
-
-            //dataGridView1.Rows.Add("MaSo", "HoTen", "SoDienThoai");
-
-
-            //// Thêm dữ liệu vào DataGridView bằng vòng lặp
-            //foreach (var person in userList)
-            //{
-            //    dataGridView1.Rows.Add(person.MaSo, person.HoTen, person.SoDienThoai);
-            //}
-
-
-            //DataGridViewTextBoxColumn column1 = new DataGridViewTextBoxColumn();
-            //column1.Name = "ColumnName1";
-            //column1.HeaderText = "Mã số";
-
-            //DataGridViewTextBoxColumn column2 = new DataGridViewTextBoxColumn();
-            //column2.Name = "ColumnName2";
-            //column2.HeaderText = "họ và tên";
-
-            //DataGridViewTextBoxColumn column3 = new DataGridViewTextBoxColumn();
-            //column3.Name = "ColumnName3";
-            //column3.HeaderText = "hsodt";
-
-            //dataGridView1.Columns.Add(column1);
-            //dataGridView1.Columns.Add(column2);
-            //dataGridView1.Columns.Add(column3);
-
-
-
             // Đặt tên cột <Biến tên cột>,<name cột>
-            dataGridView_MonBanChay.Columns.Add("Ten", "Tên");
-            dataGridView_MonBanChay.Columns.Add("Tuoi", "Tuổi");
-            dataGridView_MonBanChay.Columns.Add("aga", "agr");
+            dataGridView_MonBanChay.Columns.Add("maMon", "Mã món");
+            dataGridView_MonBanChay.Columns.Add("tenMon", "Tên món");
+            dataGridView_MonBanChay.Columns.Add("slBan", "Số lượng bán");
 
 
             // Điều chỉnh độ rộng của cột 1 thành 100 pixels    
-            dataGridView_MonBanChay.Columns[0].Width = 100;
+            dataGridView_MonBanChay.Columns[0].Width = 30;
 
             // Điều chỉnh độ rộng của cột 2 thành 150 pixels
             dataGridView_MonBanChay.Columns[1].Width = 150;
@@ -329,64 +255,33 @@ namespace QLCF
             dataGridView_MonBanChay.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold); // Đặt font cho toàn bộ DataGridView
 
         }
-              
-        
         
 
-        private void AddItemPanelDanhGia()
+
+
+
+        public void bieudo(String newSeries)
         {
-            // Tạo danh sách Panel và thêm vào FlowLayoutPanel
-            panelList = new List<Panel>();
-            for (int i = 0; i < 10; i++)
-            {
-                // xem chi tiết
-                Label label11 = new Label();
-                label11.AutoSize = true;
-                label11.Text = "tên người dùng";
-                label11.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
-                label11.Dock = DockStyle.Top;
+            // Xóa dữ liệu cũ (nếu có)
+            chart1.Series.Clear();
 
-                Label label22 = new Label();
-                label22.Text = "\n\nnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
-                label22.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
-                label22.Dock = DockStyle.Fill;
-                label22.AutoSize = false;
+            // Thêm dữ liệu vào biểu đồ
+            chart1.Series.Add(newSeries);
 
-                Panel panel = new Panel();
+            // Cài đặt biểu đồ cột
+            chart1.Series[newSeries].ChartType = SeriesChartType.Column; 
 
-                panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
-                panel.Size = new System.Drawing.Size(429, 135);
+            // hiện số trên mỗi cột
+            chart1.Series[newSeries].IsValueShownAsLabel = true;
 
-                label11.Font = new Font("Arial", 11, FontStyle.Regular);
-                label22.Font = new Font("Arial", 11, FontStyle.Regular);
-
-
-
-                panel.Controls.Add(label11);
-                panel.Controls.Add(label22);
-
-                panelList.Add(panel);
-                flowLayoutPnlDanhGia.Controls.Add(panel);
-            }
-
-
-            // xem chi tiết
-            Button btnXemChiTietDanhGia = new Button();
-            btnXemChiTietDanhGia.Text = "Xem chi tiết đánh giá";
-            btnXemChiTietDanhGia.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
-            btnXemChiTietDanhGia.Dock = DockStyle.Fill;
-            btnXemChiTietDanhGia.AutoSize = true;
-            btnXemChiTietDanhGia.Size = new System.Drawing.Size(98, 49);
-
-            Panel panel1 = new Panel();
+            // Vô hiệu hóa vị trí tự động chú thích
+            chart1.Legends["Khách hàng"].Position.Auto = false; 
             
-            panel1.BackColor = System.Drawing.Color.FromArgb(122, 0, 0);
-            panel1.Size = new System.Drawing.Size(100, 50);
+            //Đặt tên cho trục
+            chart1.ChartAreas["Khách hàng"].AxisX.Title = "Ngày"; // Đặt tên trục X
+            chart1.ChartAreas["Khách hàng"].AxisY.Title = "Số lượng khách"; // Đặt tên trục Y
 
-            panel1.Controls.Add(btnXemChiTietDanhGia);
 
-            panelList.Add(panel1);
-            flowLayoutPnlDanhGia.Controls.Add(panel1);
         }
 
         private void btnNgayThongke_Click(object sender, EventArgs e)
@@ -444,6 +339,62 @@ namespace QLCF
             chart1.Series["Khách hàng trong Tháng"].Points.DataBindXY(days, customers);
 
             lbTitleThongKe.Text = "Thống kê lượng khách hàng - trong tháng";
+        }
+
+        private void AddItemPanelDanhGia()
+        {
+            // Tạo danh sách Panel và thêm vào FlowLayoutPanel
+            panelList = new List<Panel>();
+            for (int i = 0; i < 10; i++)
+            {
+                // xem chi tiết
+                Label label11 = new Label();
+                label11.AutoSize = true;
+                label11.Text = "tên người dùng";
+                label11.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+                label11.Dock = DockStyle.Top;
+
+                Label label22 = new Label();
+                label22.Text = "\n\nnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dungnội dung";
+                label22.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+                label22.Dock = DockStyle.Fill;
+                label22.AutoSize = false;
+
+                Panel panel = new Panel();
+
+                panel.BackColor = System.Drawing.Color.FromArgb(i * 25, 0, 0);
+                panel.Size = new System.Drawing.Size(429, 135);
+
+                label11.Font = new Font("Arial", 11, FontStyle.Regular);
+                label22.Font = new Font("Arial", 11, FontStyle.Regular);
+
+
+
+                panel.Controls.Add(label11);
+                panel.Controls.Add(label22);
+
+                panelList.Add(panel);
+                flowLayoutPnlDanhGia.Controls.Add(panel);
+            }
+
+
+            // xem chi tiết
+            Button btnXemChiTietDanhGia = new Button();
+            btnXemChiTietDanhGia.Text = "Xem chi tiết đánh giá";
+            btnXemChiTietDanhGia.ForeColor = System.Drawing.Color.FromArgb(255, 255, 0);
+            btnXemChiTietDanhGia.Dock = DockStyle.Fill;
+            btnXemChiTietDanhGia.AutoSize = true;
+            btnXemChiTietDanhGia.Size = new System.Drawing.Size(98, 49);
+
+            Panel panel1 = new Panel();
+            
+            panel1.BackColor = System.Drawing.Color.FromArgb(122, 0, 0);
+            panel1.Size = new System.Drawing.Size(100, 50);
+
+            panel1.Controls.Add(btnXemChiTietDanhGia);
+
+            panelList.Add(panel1);
+            flowLayoutPnlDanhGia.Controls.Add(panel1);
         }
     }
 }
