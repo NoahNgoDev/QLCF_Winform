@@ -37,14 +37,18 @@
             this.label20 = new System.Windows.Forms.Label();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker_NgayBatDau = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker_NgayKetThuc = new System.Windows.Forms.DateTimePicker();
-            this.lb_NgayBatDau = new System.Windows.Forms.Label();
             this.lb_NgayKetThuc = new System.Windows.Forms.Label();
+            this.lb_NgayBatDau = new System.Windows.Forms.Label();
+            this.dateTimePicker_NgayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker_NgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.btnSuaHoaDon = new System.Windows.Forms.Button();
+            this.btnHomNay = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlDoanhThu.SuspendLayout();
             this.flowLayoutPanel15.SuspendLayout();
@@ -52,6 +56,8 @@
             this.flowLayoutPanel17.SuspendLayout();
             this.flowLayoutPanel18.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -140,7 +146,7 @@
             this.flowLayoutPanel18.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
-            this.flowLayoutPanel18.Size = new System.Drawing.Size(113, 34);
+            this.flowLayoutPanel18.Size = new System.Drawing.Size(176, 34);
             this.flowLayoutPanel18.TabIndex = 6;
             // 
             // label5
@@ -150,90 +156,140 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 24);
+            this.label5.Size = new System.Drawing.Size(151, 24);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Doanh thu";
-            // 
-            // dateTimePicker_NgayBatDau
-            // 
-            this.dateTimePicker_NgayBatDau.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_NgayBatDau.Location = new System.Drawing.Point(236, 6);
-            this.dateTimePicker_NgayBatDau.Name = "dateTimePicker_NgayBatDau";
-            this.dateTimePicker_NgayBatDau.Size = new System.Drawing.Size(19, 35);
-            this.dateTimePicker_NgayBatDau.TabIndex = 9;
-            this.dateTimePicker_NgayBatDau.ValueChanged += new System.EventHandler(this.dateTimePicker_NgayBatDau_ValueChanged);
+            this.label5.Text = "Tổng doanh thu";
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(366, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(10);
+            this.panel1.Location = new System.Drawing.Point(361, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 10, 5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 100);
+            this.panel1.Size = new System.Drawing.Size(531, 100);
             this.panel1.TabIndex = 10;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lb_NgayKetThuc);
-            this.panel2.Controls.Add(this.lb_NgayBatDau);
-            this.panel2.Controls.Add(this.dateTimePicker_NgayKetThuc);
+            this.panel2.Controls.Add(this.btnHomNay);
+            this.panel2.Controls.Add(this.btnSuaHoaDon);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.dateTimePicker_NgayBatDau);
-            this.panel2.Location = new System.Drawing.Point(800, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10);
+            this.panel2.Location = new System.Drawing.Point(902, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 10, 5, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(585, 100);
+            this.panel2.Size = new System.Drawing.Size(461, 100);
             this.panel2.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 28);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Từ ngày";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 28);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Đến ngày";
-            // 
-            // dateTimePicker_NgayKetThuc
-            // 
-            this.dateTimePicker_NgayKetThuc.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_NgayKetThuc.Location = new System.Drawing.Point(236, 54);
-            this.dateTimePicker_NgayKetThuc.Name = "dateTimePicker_NgayKetThuc";
-            this.dateTimePicker_NgayKetThuc.Size = new System.Drawing.Size(19, 35);
-            this.dateTimePicker_NgayKetThuc.TabIndex = 14;
-            // 
-            // lb_NgayBatDau
-            // 
-            this.lb_NgayBatDau.AutoSize = true;
-            this.lb_NgayBatDau.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NgayBatDau.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lb_NgayBatDau.Location = new System.Drawing.Point(282, 11);
-            this.lb_NgayBatDau.Name = "lb_NgayBatDau";
-            this.lb_NgayBatDau.Size = new System.Drawing.Size(129, 28);
-            this.lb_NgayBatDau.TabIndex = 15;
-            this.lb_NgayBatDau.Text = "Ngày tháng";
             // 
             // lb_NgayKetThuc
             // 
             this.lb_NgayKetThuc.AutoSize = true;
             this.lb_NgayKetThuc.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_NgayKetThuc.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lb_NgayKetThuc.Location = new System.Drawing.Point(282, 59);
+            this.lb_NgayKetThuc.Location = new System.Drawing.Point(25, 6);
             this.lb_NgayKetThuc.Name = "lb_NgayKetThuc";
             this.lb_NgayKetThuc.Size = new System.Drawing.Size(129, 28);
             this.lb_NgayKetThuc.TabIndex = 16;
             this.lb_NgayKetThuc.Text = "Ngày tháng";
+            // 
+            // lb_NgayBatDau
+            // 
+            this.lb_NgayBatDau.AutoSize = true;
+            this.lb_NgayBatDau.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_NgayBatDau.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lb_NgayBatDau.Location = new System.Drawing.Point(28, 5);
+            this.lb_NgayBatDau.Name = "lb_NgayBatDau";
+            this.lb_NgayBatDau.Size = new System.Drawing.Size(129, 28);
+            this.lb_NgayBatDau.TabIndex = 15;
+            this.lb_NgayBatDau.Text = "Ngày tháng";
+            // 
+            // dateTimePicker_NgayKetThuc
+            // 
+            this.dateTimePicker_NgayKetThuc.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_NgayKetThuc.Location = new System.Drawing.Point(0, 1);
+            this.dateTimePicker_NgayKetThuc.Name = "dateTimePicker_NgayKetThuc";
+            this.dateTimePicker_NgayKetThuc.Size = new System.Drawing.Size(18, 35);
+            this.dateTimePicker_NgayKetThuc.TabIndex = 14;
+            this.dateTimePicker_NgayKetThuc.ValueChanged += new System.EventHandler(this.dateTimePicker_NgayKetThuc_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 28);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Đến ngày";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 28);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Từ ngày";
+            // 
+            // dateTimePicker_NgayBatDau
+            // 
+            this.dateTimePicker_NgayBatDau.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_NgayBatDau.Location = new System.Drawing.Point(0, 1);
+            this.dateTimePicker_NgayBatDau.Name = "dateTimePicker_NgayBatDau";
+            this.dateTimePicker_NgayBatDau.Size = new System.Drawing.Size(18, 35);
+            this.dateTimePicker_NgayBatDau.TabIndex = 9;
+            this.dateTimePicker_NgayBatDau.ValueChanged += new System.EventHandler(this.dateTimePicker_NgayBatDau_ValueChanged);
+            // 
+            // btnSuaHoaDon
+            // 
+            this.btnSuaHoaDon.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnSuaHoaDon.FlatAppearance.BorderSize = 0;
+            this.btnSuaHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaHoaDon.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaHoaDon.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnSuaHoaDon.Location = new System.Drawing.Point(299, 49);
+            this.btnSuaHoaDon.Name = "btnSuaHoaDon";
+            this.btnSuaHoaDon.Size = new System.Drawing.Size(159, 43);
+            this.btnSuaHoaDon.TabIndex = 17;
+            this.btnSuaHoaDon.Text = "Lọc thông tin";
+            this.btnSuaHoaDon.UseVisualStyleBackColor = false;
+            // 
+            // btnHomNay
+            // 
+            this.btnHomNay.BackColor = System.Drawing.Color.Coral;
+            this.btnHomNay.FlatAppearance.BorderSize = 0;
+            this.btnHomNay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomNay.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomNay.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnHomNay.Location = new System.Drawing.Point(299, 3);
+            this.btnHomNay.Name = "btnHomNay";
+            this.btnHomNay.Size = new System.Drawing.Size(159, 43);
+            this.btnHomNay.TabIndex = 18;
+            this.btnHomNay.Text = "Ngày hôm nay";
+            this.btnHomNay.UseVisualStyleBackColor = false;
+            this.btnHomNay.Click += new System.EventHandler(this.btnHomNay_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.dateTimePicker_NgayBatDau);
+            this.panel3.Controls.Add(this.lb_NgayBatDau);
+            this.panel3.Location = new System.Drawing.Point(116, 10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(177, 37);
+            this.panel3.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.dateTimePicker_NgayKetThuc);
+            this.panel4.Controls.Add(this.lb_NgayKetThuc);
+            this.panel4.Location = new System.Drawing.Point(116, 53);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(177, 37);
+            this.panel4.TabIndex = 16;
             // 
             // DoanhThu
             // 
@@ -254,6 +310,10 @@
             this.flowLayoutPanel18.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -277,5 +337,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_NgayKetThuc;
         private System.Windows.Forms.Label lb_NgayKetThuc;
         private System.Windows.Forms.Label lb_NgayBatDau;
+        private System.Windows.Forms.Button btnSuaHoaDon;
+        private System.Windows.Forms.Button btnHomNay;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
