@@ -23,12 +23,12 @@ namespace QLCF
 
             if (newWidthForm == 1920)
             {
-                pnlReponsiveHoaDon.Size = new Size(1395 + 310, 71);
+                pnlReponsiveHoaDon.Size = new Size(1395 + 310, 105);
                 pnlContainTableHoaDon.Size = new Size(1389 + 300, 589 + 305);
             }
             else if (newWidthForm == 1615)
             {
-                pnlReponsiveHoaDon.Size = new Size(1395, 71);
+                pnlReponsiveHoaDon.Size = new Size(1395, 105);
                 pnlContainTableHoaDon.Size = new Size(1389, 632);
 
             }
