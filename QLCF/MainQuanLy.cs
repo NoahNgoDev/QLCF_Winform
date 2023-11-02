@@ -32,6 +32,9 @@ namespace QLCF
         CaiDat userControl_CaiDat = new CaiDat();
         private int newWidthForm;
 
+        //gọi form đăng nhập
+        DangNhap Form_DangNhap = new DangNhap();
+
         public MainQuanLy()
         {
             InitializeComponent();
@@ -41,7 +44,11 @@ namespace QLCF
 
         private void MainQuanLy_Load(object sender, EventArgs e)
         {
-            //GK
+
+
+            FormDangNhap();
+
+            // cài đặt vị trí cho name avarta khi thay đổi độ dài
             caiDatViTriChoNameAvarta();
 
             // Kích hoạt Button có tên là button1 khi Form được tải
@@ -54,6 +61,27 @@ namespace QLCF
             addUserControlForPanel(userControl_TongQuan);
 
             
+        }
+
+
+
+        //form đăng nhập
+        public void FormDangNhap()
+        {
+            // Hiển thị form đăng nhập và kiểm tra kết quả trả về
+            DialogResult result = Form_DangNhap.ShowDialog();
+            // Kiểm tra kết quả trả về của form đăng nhập
+            if (result == DialogResult.OK) // Đăng nhập thành công
+            {
+                // Hiển thị form MainQuanLy
+                this.Show();
+            }
+            else
+            {
+                // Người dùng có thể đã hủy đăng nhập hoặc đăng nhập không thành công
+                // Thực hiện xử lý tùy thuộc vào trường hợp cụ thể của bạn.
+                this.Close(); // Đóng form MainQuanLy nếu không đăng nhập thành công.
+            }
         }
 
 
