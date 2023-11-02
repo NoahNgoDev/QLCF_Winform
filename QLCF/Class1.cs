@@ -8,5 +8,6 @@ namespace QLCF
 {
     internal class Class1
     {
+
     }
 }
