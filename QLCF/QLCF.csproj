@@ -56,24 +56,11 @@
     <Compile Include="CaiDat.Designer.cs">
       <DependentUpon>CaiDat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
-    <Compile Include="DangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DangNhap.Designer.cs">
-      <DependentUpon>DangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DoanhThu.Designer.cs">
       <DependentUpon>DoanhThu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="6784658743567834534.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="6784658743567834534.Designer.cs">
-      <DependentUpon>6784658743567834534.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <SubType>UserControl</SubType>
@@ -127,9 +114,6 @@
     </Compile>
     <EmbeddedResource Include="CaiDat.resx">
       <DependentUpon>CaiDat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DangNhap.resx">
-      <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
