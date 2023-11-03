@@ -68,7 +68,7 @@ namespace QLCF
         //form đăng nhập
         public void FormDangNhap()
         {
-            // Hiển thị form đăng nhập và kiểm tra kết quả trả về
+            // Hiển thị form đăng nhập và kiểm tra kết quả trả về...
             DialogResult result = Form_DangNhap.ShowDialog();
             // Kiểm tra kết quả trả về của form đăng nhập
             if (result == DialogResult.OK) // Đăng nhập thành công
