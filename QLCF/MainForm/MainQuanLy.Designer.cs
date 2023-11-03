@@ -374,7 +374,7 @@
             this.pnlCenter.Controls.Add(this.TitleBar);
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCenter.Location = new System.Drawing.Point(165, 28);
-            this.pnlCenter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlCenter.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Size = new System.Drawing.Size(875, 612);
             this.pnlCenter.TabIndex = 4;
@@ -384,7 +384,7 @@
             this.pnlForUserControl.BackColor = System.Drawing.Color.LightSeaGreen;
             this.pnlForUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForUserControl.Location = new System.Drawing.Point(0, 53);
-            this.pnlForUserControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlForUserControl.Margin = new System.Windows.Forms.Padding(2);
             this.pnlForUserControl.Name = "pnlForUserControl";
             this.pnlForUserControl.Size = new System.Drawing.Size(875, 559);
             this.pnlForUserControl.TabIndex = 1;
@@ -397,7 +397,7 @@
             this.TitleBar.Controls.Add(this.PanelContainSearchBox);
             this.TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar.Location = new System.Drawing.Point(0, 0);
-            this.TitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.TitleBar.Name = "TitleBar";
             this.TitleBar.Size = new System.Drawing.Size(875, 53);
             this.TitleBar.TabIndex = 0;
@@ -407,7 +407,7 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(240, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(237, 53);
             this.panel1.TabIndex = 6;
@@ -417,7 +417,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(150, 53);
             this.panel5.TabIndex = 0;
@@ -428,7 +428,7 @@
             this.pnlContainAvarta.Controls.Add(this.pnlNameAvarta);
             this.pnlContainAvarta.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlContainAvarta.Location = new System.Drawing.Point(477, 0);
-            this.pnlContainAvarta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContainAvarta.Margin = new System.Windows.Forms.Padding(2);
             this.pnlContainAvarta.Name = "pnlContainAvarta";
             this.pnlContainAvarta.Size = new System.Drawing.Size(398, 53);
             this.pnlContainAvarta.TabIndex = 5;
@@ -441,7 +441,7 @@
             this.pnlNameAvarta.Controls.Add(this.panel6);
             this.pnlNameAvarta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlNameAvarta.Location = new System.Drawing.Point(0, 0);
-            this.pnlNameAvarta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlNameAvarta.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNameAvarta.Name = "pnlNameAvarta";
             this.pnlNameAvarta.Size = new System.Drawing.Size(398, 53);
             this.pnlNameAvarta.TabIndex = 1;
@@ -452,7 +452,7 @@
             this.panel4.Controls.Add(this.lbchucvu);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 30);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(380, 23);
             this.panel4.TabIndex = 1;
@@ -477,7 +477,7 @@
             this.panel3.Controls.Add(this.lbNameAvarta);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(380, 32);
             this.panel3.TabIndex = 0;
@@ -503,7 +503,7 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(380, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(18, 53);
             this.panel6.TabIndex = 4;
@@ -514,7 +514,7 @@
             this.PanelContainSearchBox.Controls.Add(this.TitleCurently);
             this.PanelContainSearchBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelContainSearchBox.Location = new System.Drawing.Point(0, 0);
-            this.PanelContainSearchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelContainSearchBox.Margin = new System.Windows.Forms.Padding(2);
             this.PanelContainSearchBox.Name = "PanelContainSearchBox";
             this.PanelContainSearchBox.Size = new System.Drawing.Size(240, 53);
             this.PanelContainSearchBox.TabIndex = 4;

@@ -98,6 +98,12 @@
     <Compile Include="MainForm\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVienForm\userdonban.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVienForm\userdonban.Designer.cs">
+      <DependentUpon>userdonban.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainForm\SanPham.cs">
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienForm\userdonban.resx">
+      <DependentUpon>userdonban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
