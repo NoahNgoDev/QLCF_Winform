@@ -125,6 +125,12 @@
     <Compile Include="TongQuan.Designer.cs">
       <DependentUpon>TongQuan.cs</DependentUpon>
     </Compile>
+    <Compile Include="userkhachgoimon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userkhachgoimon.Designer.cs">
+      <DependentUpon>userkhachgoimon.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CaiDat.resx">
       <DependentUpon>CaiDat.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TongQuan.resx">
       <DependentUpon>TongQuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userkhachgoimon.resx">
+      <DependentUpon>userkhachgoimon.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
