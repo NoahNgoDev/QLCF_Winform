@@ -86,7 +86,7 @@
             // 
             this.lbPass.AutoSize = true;
             this.lbPass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPass.Location = new System.Drawing.Point(98, 141);
+            this.lbPass.Location = new System.Drawing.Point(75, 134);
             this.lbPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPass.Name = "lbPass";
             this.lbPass.Size = new System.Drawing.Size(82, 19);
