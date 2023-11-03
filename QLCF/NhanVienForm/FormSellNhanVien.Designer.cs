@@ -54,7 +54,7 @@
             this.pnlForUserControl.BackColor = System.Drawing.Color.LightSeaGreen;
             this.pnlForUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForUserControl.Location = new System.Drawing.Point(0, 0);
-            this.pnlForUserControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlForUserControl.Margin = new System.Windows.Forms.Padding(2);
             this.pnlForUserControl.Name = "pnlForUserControl";
             this.pnlForUserControl.Size = new System.Drawing.Size(1040, 595);
             this.pnlForUserControl.TabIndex = 1;
@@ -205,6 +205,9 @@
             this.btnmove.TabIndex = 4;
             this.btnmove.UseCompatibleTextRendering = true;
             this.btnmove.UseVisualStyleBackColor = true;
+            this.btnmove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnmove_MouseMown);
+            this.btnmove.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnmove_MouseMove);
+            this.btnmove.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnmove_MouseUp);
             // 
             // btnmin
             // 
@@ -218,6 +221,7 @@
             this.btnmin.TabIndex = 3;
             this.btnmin.UseCompatibleTextRendering = true;
             this.btnmin.UseVisualStyleBackColor = true;
+            this.btnmin.Click += new System.EventHandler(this.btnmin_Click);
             // 
             // btnmax
             // 
@@ -231,6 +235,7 @@
             this.btnmax.TabIndex = 2;
             this.btnmax.UseCompatibleTextRendering = true;
             this.btnmax.UseVisualStyleBackColor = true;
+            this.btnmax.Click += new System.EventHandler(this.btnmax_Click);
             // 
             // btnclose
             // 
@@ -244,6 +249,7 @@
             this.btnclose.TabIndex = 1;
             this.btnclose.UseCompatibleTextRendering = true;
             this.btnclose.UseVisualStyleBackColor = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // pnlCenter
             // 
@@ -251,7 +257,7 @@
             this.pnlCenter.Controls.Add(this.pnlForUserControl);
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCenter.Location = new System.Drawing.Point(0, 28);
-            this.pnlCenter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlCenter.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Size = new System.Drawing.Size(1040, 595);
             this.pnlCenter.TabIndex = 7;
@@ -280,9 +286,12 @@
             this.Controls.Add(this.pnlCenter);
             this.Controls.Add(this.pnlHeadBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormSellNhanVien";
             this.Text = "FormSellNhanVien";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseUp);
             this.LeftBarControll.ResumeLayout(false);
             this.LeftBarControll.PerformLayout();
             this.pnlCenter.ResumeLayout(false);
