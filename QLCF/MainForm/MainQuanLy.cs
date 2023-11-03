@@ -28,7 +28,6 @@ namespace QLCF
         KhachHang userControl_KhachHang = new KhachHang();
         HoaDon userControl_HoaDon = new HoaDon();
         TaiKhoan userControl_TaiKhoan = new TaiKhoan();
-        Kho userControl_Kho = new Kho();
         CaiDat userControl_CaiDat = new CaiDat();
         private int newWidthForm;
 
@@ -114,7 +113,6 @@ namespace QLCF
             userControl_TaiKhoan.responsive_TaiKhoan(newWidthForm);
             userControl_KhachHang.responsive_KhachHang(newWidthForm);
             userControl_HoaDon.responsive_HoaDon(newWidthForm);
-            userControl_Kho.responsive_Kho(newWidthForm);
             userControl_CaiDat.responsive_CaiDat(newWidthForm);
         }
 
@@ -328,12 +326,6 @@ namespace QLCF
         {
             ActivateButton(sender);
             addUserControlForPanel(userControl_TaiKhoan);
-        }
-
-        private void btnKho_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            addUserControlForPanel(userControl_Kho);
         }
 
         private void button11_Click(object sender, EventArgs e)
