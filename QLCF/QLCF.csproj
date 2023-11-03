@@ -63,11 +63,23 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatBan.Designer.cs">
+      <DependentUpon>DatBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DoanhThu.Designer.cs">
       <DependentUpon>DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangKyBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKyBan.Designer.cs">
+      <DependentUpon>FormDangKyBan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSellNhanVien.cs">
       <SubType>Form</SubType>
@@ -137,8 +149,14 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DatBan.resx">
+      <DependentUpon>DatBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKyBan.resx">
+      <DependentUpon>FormDangKyBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSellNhanVien.resx">
       <DependentUpon>FormSellNhanVien.cs</DependentUpon>
