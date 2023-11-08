@@ -98,11 +98,29 @@
     <Compile Include="MainForm\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVienForm\userdonban.cs">
+    <Compile Include="NhanVienForm\User_Donban.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NhanVienForm\userdonban.Designer.cs">
-      <DependentUpon>userdonban.cs</DependentUpon>
+    <Compile Include="NhanVienForm\User_Donban.Designer.cs">
+      <DependentUpon>User_Donban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienForm\User_DatBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVienForm\User_DatBan.Designer.cs">
+      <DependentUpon>User_DatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienForm\User_Sell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVienForm\User_Sell.Designer.cs">
+      <DependentUpon>User_Sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienForm\User_Setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVienForm\User_Setting.Designer.cs">
+      <DependentUpon>User_Setting.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,8 +166,17 @@
     <EmbeddedResource Include="MainForm\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanVienForm\userdonban.resx">
-      <DependentUpon>userdonban.cs</DependentUpon>
+    <EmbeddedResource Include="NhanVienForm\User_DatBan.resx">
+      <DependentUpon>User_DatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienForm\User_Donban.resx">
+      <DependentUpon>User_Donban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienForm\User_Sell.resx">
+      <DependentUpon>User_Sell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienForm\User_Setting.resx">
+      <DependentUpon>User_Setting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

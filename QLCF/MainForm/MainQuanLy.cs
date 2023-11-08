@@ -236,7 +236,7 @@ namespace QLCF
 
 
 
-        // GK-Thêm usercontrol vào panel để hiển thị
+        // Thêm usercontrol vào panel để hiển thị
         private void addUserControlForPanel(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;

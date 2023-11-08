@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCF.NhanVienForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,10 +22,76 @@ namespace QLCF
         private Button currentButton;
 
 
+        User_DatBan userControl_DatBan = new User_DatBan();
+        User_Donban userControl_Donban = new User_Donban();
+        User_Sell userControl_Sell = new User_Sell();
+        User_Setting userControl_Setting = new User_Setting();
+
         public FormSellNhanVien()
         {
             InitializeComponent();
         }
+
+
+        private void FormSellNhanVien_Load(object sender, EventArgs e)
+        {
+            addUserControlForPanel(userControl_Sell);
+        }
+
+
+        // Thêm usercontrol vào panel để hiển thị
+        private void addUserControlForPanel(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            pnlContainUserControl.Controls.Clear();
+            pnlContainUserControl.Controls.Add(userControl);
+            userControl.BackColor = Color.FromArgb(205, 245, 253);
+            //userControl.Location = new Point(157, 34);
+            userControl.BringToFront();
+
+        }
+
+
+
+
+
+
+        // đổi màu button cửa sổ đang bật
+        private void ActivateButton(object btnSender)
+        {
+            if (btnSender != null)
+            {
+                if (currentButton != (Button)btnSender)
+                {
+                    DisableButton();
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = Color.FromArgb(0, 119, 179);
+                    currentButton.ForeColor = Color.Honeydew;
+                }
+            }
+        }
+
+        // trả lại màu cũ khi button không còn được kích hoạt
+        private void DisableButton()
+        {
+            foreach (Control previousBtn in LeftBarControll.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.ForeColor = Color.Black;
+                    previousBtn.BackColor = Color.DarkSeaGreen;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
 
 
         // GK-đóng cửa sổ chương trình 
@@ -94,6 +161,8 @@ namespace QLCF
 
 
 
+
+
         // GK-di chuyển cửa sổ (btn move)
         private void btnmove_MouseMown(object sender, MouseEventArgs e)
         {
@@ -115,5 +184,35 @@ namespace QLCF
             FormSellNhanVien_MouseUp(sender, e);
         }
 
+
+
+
+
+        // button usercontrol
+        private void btnKhachGoiMon_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_Sell);
+        }
+
+        private void btnDatBan_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_DatBan);
+
+        }
+
+        private void btnDonBan_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_Donban);
+
+        }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            addUserControlForPanel(userControl_Setting);
+        }
     }
 }

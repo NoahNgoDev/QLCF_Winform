@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLCF.NhanVienForm
 {
-    public partial class userdonban : UserControl
+    public partial class User_DatBan : UserControl
     {
-        public userdonban()
+        public User_DatBan()
         {
             InitializeComponent();
         }

@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSellNhanVien));
             this.pnlForUserControl = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.btnSanPham = new System.Windows.Forms.Button();
-            this.btnDoanhThu = new System.Windows.Forms.Button();
-            this.btnTongQuan = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnlContainUserControl = new System.Windows.Forms.Panel();
             this.LeftBarControll = new System.Windows.Forms.Panel();
+            this.btnSetting = new System.Windows.Forms.Button();
+            this.btnDonBan = new System.Windows.Forms.Button();
+            this.btnDatBan = new System.Windows.Forms.Button();
+            this.btnKhachGoiMon = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnmove = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.btnclose = new System.Windows.Forms.Button();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.pnlHeadBar = new System.Windows.Forms.Panel();
+            this.pnlForUserControl.SuspendLayout();
             this.LeftBarControll.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.pnlHeadBar.SuspendLayout();
@@ -52,114 +54,134 @@
             // pnlForUserControl
             // 
             this.pnlForUserControl.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pnlForUserControl.Controls.Add(this.pnlContainUserControl);
+            this.pnlForUserControl.Controls.Add(this.LeftBarControll);
             this.pnlForUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForUserControl.Location = new System.Drawing.Point(0, 0);
-            this.pnlForUserControl.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlForUserControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlForUserControl.Name = "pnlForUserControl";
-            this.pnlForUserControl.Size = new System.Drawing.Size(1040, 595);
+            this.pnlForUserControl.Size = new System.Drawing.Size(1387, 733);
             this.pnlForUserControl.TabIndex = 1;
             // 
-            // button11
+            // pnlContainUserControl
             // 
-            this.button11.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(0, 550);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(165, 45);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "  Cài đặt";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = false;
+            this.pnlContainUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainUserControl.Location = new System.Drawing.Point(220, 0);
+            this.pnlContainUserControl.Name = "pnlContainUserControl";
+            this.pnlContainUserControl.Size = new System.Drawing.Size(1167, 733);
+            this.pnlContainUserControl.TabIndex = 7;
             // 
-            // btnSanPham
+            // LeftBarControll
             // 
-            this.btnSanPham.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnSanPham.FlatAppearance.BorderSize = 0;
-            this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSanPham.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSanPham.ForeColor = System.Drawing.Color.Black;
-            this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
-            this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.Location = new System.Drawing.Point(0, 138);
-            this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSanPham.Size = new System.Drawing.Size(165, 45);
-            this.btnSanPham.TabIndex = 3;
-            this.btnSanPham.Text = "  Đơn bán";
-            this.btnSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSanPham.UseVisualStyleBackColor = false;
+            this.LeftBarControll.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.LeftBarControll.Controls.Add(this.btnSetting);
+            this.LeftBarControll.Controls.Add(this.btnDonBan);
+            this.LeftBarControll.Controls.Add(this.btnDatBan);
+            this.LeftBarControll.Controls.Add(this.btnKhachGoiMon);
+            this.LeftBarControll.Controls.Add(this.label1);
+            this.LeftBarControll.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LeftBarControll.Location = new System.Drawing.Point(0, 0);
+            this.LeftBarControll.Margin = new System.Windows.Forms.Padding(4);
+            this.LeftBarControll.Name = "LeftBarControll";
+            this.LeftBarControll.Size = new System.Drawing.Size(220, 733);
+            this.LeftBarControll.TabIndex = 6;
             // 
-            // btnDoanhThu
+            // btnSetting
             // 
-            this.btnDoanhThu.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnDoanhThu.FlatAppearance.BorderSize = 0;
-            this.btnDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoanhThu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoanhThu.ForeColor = System.Drawing.Color.Black;
-            this.btnDoanhThu.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.Image")));
-            this.btnDoanhThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoanhThu.Location = new System.Drawing.Point(0, 92);
-            this.btnDoanhThu.Name = "btnDoanhThu";
-            this.btnDoanhThu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnDoanhThu.Size = new System.Drawing.Size(165, 45);
-            this.btnDoanhThu.TabIndex = 2;
-            this.btnDoanhThu.Text = "  Đặt bàn";
-            this.btnDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoanhThu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDoanhThu.UseVisualStyleBackColor = false;
+            this.btnSetting.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.Black;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.Location = new System.Drawing.Point(0, 678);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnSetting.Size = new System.Drawing.Size(220, 55);
+            this.btnSetting.TabIndex = 9;
+            this.btnSetting.Text = "  Cài đặt";
+            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
-            // btnTongQuan
+            // btnDonBan
             // 
-            this.btnTongQuan.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnTongQuan.FlatAppearance.BorderSize = 0;
-            this.btnTongQuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTongQuan.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTongQuan.ForeColor = System.Drawing.Color.Black;
-            this.btnTongQuan.Image = ((System.Drawing.Image)(resources.GetObject("btnTongQuan.Image")));
-            this.btnTongQuan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTongQuan.Location = new System.Drawing.Point(0, 47);
-            this.btnTongQuan.Name = "btnTongQuan";
-            this.btnTongQuan.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnTongQuan.Size = new System.Drawing.Size(165, 45);
-            this.btnTongQuan.TabIndex = 1;
-            this.btnTongQuan.Text = "  Khách gọi món";
-            this.btnTongQuan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTongQuan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTongQuan.UseVisualStyleBackColor = false;
+            this.btnDonBan.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnDonBan.FlatAppearance.BorderSize = 0;
+            this.btnDonBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDonBan.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonBan.ForeColor = System.Drawing.Color.Black;
+            this.btnDonBan.Image = ((System.Drawing.Image)(resources.GetObject("btnDonBan.Image")));
+            this.btnDonBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDonBan.Location = new System.Drawing.Point(0, 170);
+            this.btnDonBan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDonBan.Name = "btnDonBan";
+            this.btnDonBan.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnDonBan.Size = new System.Drawing.Size(220, 55);
+            this.btnDonBan.TabIndex = 3;
+            this.btnDonBan.Text = "  Đơn bán";
+            this.btnDonBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDonBan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDonBan.UseVisualStyleBackColor = false;
+            this.btnDonBan.Click += new System.EventHandler(this.btnDonBan_Click);
+            // 
+            // btnDatBan
+            // 
+            this.btnDatBan.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnDatBan.FlatAppearance.BorderSize = 0;
+            this.btnDatBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDatBan.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatBan.ForeColor = System.Drawing.Color.Black;
+            this.btnDatBan.Image = ((System.Drawing.Image)(resources.GetObject("btnDatBan.Image")));
+            this.btnDatBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDatBan.Location = new System.Drawing.Point(0, 113);
+            this.btnDatBan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDatBan.Name = "btnDatBan";
+            this.btnDatBan.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnDatBan.Size = new System.Drawing.Size(220, 55);
+            this.btnDatBan.TabIndex = 2;
+            this.btnDatBan.Text = "  Đặt bàn";
+            this.btnDatBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDatBan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDatBan.UseVisualStyleBackColor = false;
+            this.btnDatBan.Click += new System.EventHandler(this.btnDatBan_Click);
+            // 
+            // btnKhachGoiMon
+            // 
+            this.btnKhachGoiMon.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnKhachGoiMon.FlatAppearance.BorderSize = 0;
+            this.btnKhachGoiMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhachGoiMon.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachGoiMon.ForeColor = System.Drawing.Color.Black;
+            this.btnKhachGoiMon.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachGoiMon.Image")));
+            this.btnKhachGoiMon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachGoiMon.Location = new System.Drawing.Point(0, 58);
+            this.btnKhachGoiMon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKhachGoiMon.Name = "btnKhachGoiMon";
+            this.btnKhachGoiMon.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.btnKhachGoiMon.Size = new System.Drawing.Size(220, 55);
+            this.btnKhachGoiMon.TabIndex = 1;
+            this.btnKhachGoiMon.Text = "  Khách gọi món";
+            this.btnKhachGoiMon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachGoiMon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKhachGoiMon.UseVisualStyleBackColor = false;
+            this.btnKhachGoiMon.Click += new System.EventHandler(this.btnKhachGoiMon_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Location = new System.Drawing.Point(4, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 22);
+            this.label1.Size = new System.Drawing.Size(71, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Menu";
-            // 
-            // LeftBarControll
-            // 
-            this.LeftBarControll.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.LeftBarControll.Controls.Add(this.button11);
-            this.LeftBarControll.Controls.Add(this.btnSanPham);
-            this.LeftBarControll.Controls.Add(this.btnDoanhThu);
-            this.LeftBarControll.Controls.Add(this.btnTongQuan);
-            this.LeftBarControll.Controls.Add(this.label1);
-            this.LeftBarControll.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LeftBarControll.Location = new System.Drawing.Point(0, 28);
-            this.LeftBarControll.Name = "LeftBarControll";
-            this.LeftBarControll.Size = new System.Drawing.Size(165, 595);
-            this.LeftBarControll.TabIndex = 6;
             // 
             // button6
             // 
@@ -169,10 +191,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(28, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.button6.Location = new System.Drawing.Point(37, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(0, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 28);
+            this.button6.Size = new System.Drawing.Size(139, 34);
             this.button6.TabIndex = 6;
             this.button6.Text = "MiFaCoffee";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,8 +209,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(28, 28);
+            this.button5.Size = new System.Drawing.Size(37, 34);
             this.button5.TabIndex = 5;
             this.button5.UseCompatibleTextRendering = true;
             this.button5.UseVisualStyleBackColor = true;
@@ -199,9 +222,10 @@
             this.btnmove.FlatAppearance.BorderSize = 0;
             this.btnmove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmove.Image = ((System.Drawing.Image)(resources.GetObject("btnmove.Image")));
-            this.btnmove.Location = new System.Drawing.Point(928, 0);
+            this.btnmove.Location = new System.Drawing.Point(1239, 0);
+            this.btnmove.Margin = new System.Windows.Forms.Padding(4);
             this.btnmove.Name = "btnmove";
-            this.btnmove.Size = new System.Drawing.Size(28, 28);
+            this.btnmove.Size = new System.Drawing.Size(37, 34);
             this.btnmove.TabIndex = 4;
             this.btnmove.UseCompatibleTextRendering = true;
             this.btnmove.UseVisualStyleBackColor = true;
@@ -215,9 +239,10 @@
             this.btnmin.FlatAppearance.BorderSize = 0;
             this.btnmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmin.Image = ((System.Drawing.Image)(resources.GetObject("btnmin.Image")));
-            this.btnmin.Location = new System.Drawing.Point(956, 0);
+            this.btnmin.Location = new System.Drawing.Point(1276, 0);
+            this.btnmin.Margin = new System.Windows.Forms.Padding(4);
             this.btnmin.Name = "btnmin";
-            this.btnmin.Size = new System.Drawing.Size(28, 28);
+            this.btnmin.Size = new System.Drawing.Size(37, 34);
             this.btnmin.TabIndex = 3;
             this.btnmin.UseCompatibleTextRendering = true;
             this.btnmin.UseVisualStyleBackColor = true;
@@ -229,9 +254,10 @@
             this.btnmax.FlatAppearance.BorderSize = 0;
             this.btnmax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmax.Image = ((System.Drawing.Image)(resources.GetObject("btnmax.Image")));
-            this.btnmax.Location = new System.Drawing.Point(984, 0);
+            this.btnmax.Location = new System.Drawing.Point(1313, 0);
+            this.btnmax.Margin = new System.Windows.Forms.Padding(4);
             this.btnmax.Name = "btnmax";
-            this.btnmax.Size = new System.Drawing.Size(28, 28);
+            this.btnmax.Size = new System.Drawing.Size(37, 34);
             this.btnmax.TabIndex = 2;
             this.btnmax.UseCompatibleTextRendering = true;
             this.btnmax.UseVisualStyleBackColor = true;
@@ -243,9 +269,10 @@
             this.btnclose.FlatAppearance.BorderSize = 0;
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclose.Image = ((System.Drawing.Image)(resources.GetObject("btnclose.Image")));
-            this.btnclose.Location = new System.Drawing.Point(1012, 0);
+            this.btnclose.Location = new System.Drawing.Point(1350, 0);
+            this.btnclose.Margin = new System.Windows.Forms.Padding(4);
             this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(28, 28);
+            this.btnclose.Size = new System.Drawing.Size(37, 34);
             this.btnclose.TabIndex = 1;
             this.btnclose.UseCompatibleTextRendering = true;
             this.btnclose.UseVisualStyleBackColor = true;
@@ -256,10 +283,10 @@
             this.pnlCenter.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlCenter.Controls.Add(this.pnlForUserControl);
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCenter.Location = new System.Drawing.Point(0, 28);
-            this.pnlCenter.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCenter.Location = new System.Drawing.Point(0, 34);
+            this.pnlCenter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(1040, 595);
+            this.pnlCenter.Size = new System.Drawing.Size(1387, 733);
             this.pnlCenter.TabIndex = 7;
             // 
             // pnlHeadBar
@@ -273,25 +300,27 @@
             this.pnlHeadBar.Controls.Add(this.btnclose);
             this.pnlHeadBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeadBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeadBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeadBar.Name = "pnlHeadBar";
-            this.pnlHeadBar.Size = new System.Drawing.Size(1040, 28);
+            this.pnlHeadBar.Size = new System.Drawing.Size(1387, 34);
             this.pnlHeadBar.TabIndex = 5;
             // 
             // FormSellNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 623);
-            this.Controls.Add(this.LeftBarControll);
+            this.ClientSize = new System.Drawing.Size(1387, 767);
             this.Controls.Add(this.pnlCenter);
             this.Controls.Add(this.pnlHeadBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormSellNhanVien";
             this.Text = "FormSellNhanVien";
+            this.Load += new System.EventHandler(this.FormSellNhanVien_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseUp);
+            this.pnlForUserControl.ResumeLayout(false);
             this.LeftBarControll.ResumeLayout(false);
             this.LeftBarControll.PerformLayout();
             this.pnlCenter.ResumeLayout(false);
@@ -303,10 +332,10 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlForUserControl;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button btnSanPham;
-        private System.Windows.Forms.Button btnDoanhThu;
-        private System.Windows.Forms.Button btnTongQuan;
+        private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button btnDonBan;
+        private System.Windows.Forms.Button btnDatBan;
+        private System.Windows.Forms.Button btnKhachGoiMon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel LeftBarControll;
         private System.Windows.Forms.Button button6;
@@ -317,5 +346,6 @@
         private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Panel pnlCenter;
         private System.Windows.Forms.Panel pnlHeadBar;
+        private System.Windows.Forms.Panel pnlContainUserControl;
     }
 }
