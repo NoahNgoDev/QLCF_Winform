@@ -110,6 +110,18 @@
     <Compile Include="NhanVienForm\User_DatBan.Designer.cs">
       <DependentUpon>User_DatBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVienForm\user_SanPham\User_MonDuocChon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVienForm\user_SanPham\User_MonDuocChon.Designer.cs">
+      <DependentUpon>User_MonDuocChon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienForm\user_SanPham\User_SanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVienForm\user_SanPham\User_SanPham.Designer.cs">
+      <DependentUpon>User_SanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVienForm\User_Sell.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVienForm\User_Donban.resx">
       <DependentUpon>User_Donban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienForm\user_SanPham\User_MonDuocChon.resx">
+      <DependentUpon>User_MonDuocChon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienForm\user_SanPham\User_SanPham.resx">
+      <DependentUpon>User_SanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVienForm\User_Sell.resx">
       <DependentUpon>User_Sell.cs</DependentUpon>
