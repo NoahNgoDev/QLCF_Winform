@@ -77,6 +77,7 @@
             // flowLayoutPanel_Contain_SanPham
             // 
             this.flowLayoutPanel_Contain_SanPham.AutoScroll = true;
+            this.flowLayoutPanel_Contain_SanPham.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel_Contain_SanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_Contain_SanPham.Location = new System.Drawing.Point(0, 79);
             this.flowLayoutPanel_Contain_SanPham.Name = "flowLayoutPanel_Contain_SanPham";

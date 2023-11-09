@@ -30,13 +30,14 @@ namespace QLCF
         public FormSellNhanVien()
         {
             InitializeComponent();
-            this.SizeChanged += FormSellNhanVien_SizeChanged;
+            
         }
 
 
         private void FormSellNhanVien_Load(object sender, EventArgs e)
         {
             addUserControlForPanel(userControl_Sell);
+            this.SizeChanged += FormSellNhanVien_SizeChanged;
         }
 
 

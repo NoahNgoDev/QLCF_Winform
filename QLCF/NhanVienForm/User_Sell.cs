@@ -24,6 +24,8 @@ namespace QLCF.NhanVienForm
 
         private void User_Sell_Load(object sender, EventArgs e)
         {
+
+
             for (int i = 0; i < 40; i++)
             {
                 // trong mỗi đối tượng của layout sản phẩm sẽ có 1 tag ví dụ: trà chanh có tag là trà
@@ -53,12 +55,13 @@ namespace QLCF.NhanVienForm
             }
 
 
-           
         }
 
 
         public void responsive(int newWidthForm)
         {
+            
+
             if (newWidthForm == 1920)
             {
                 //flowLayoutPnl2.Size = new Size(1700, 156);
@@ -71,7 +74,7 @@ namespace QLCF.NhanVienForm
             {
                 //flowLayoutPnl2.Size = new Size(1395, 143);
 
-                pnlContain_ThanhToan.Size = new Size(410, 733);
+                pnlContain_ThanhToan.Size = new Size(210, 733);
                 
             }
         }

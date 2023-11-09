@@ -97,7 +97,7 @@ namespace QLCF
             {
                 reponsive(newWidthForm);
             }
-            else if (newWidthForm == 1615)
+            else// if (newWidthForm == 1615)
             {
                 reponsive(newWidthForm);
             }
