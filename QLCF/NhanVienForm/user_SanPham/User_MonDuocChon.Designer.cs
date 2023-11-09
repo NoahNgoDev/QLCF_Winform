@@ -34,7 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnGiam = new System.Windows.Forms.Button();
             this.btnTang = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbSoLuong = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             this.panel2.Controls.Add(this.btnGiam);
             this.panel2.Controls.Add(this.btnTang);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lbSoLuong);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(234, 0);
             this.panel2.Name = "panel2";
@@ -83,42 +83,48 @@
             // 
             // btnGiam
             // 
-            this.btnGiam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnGiam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(227)))), ((int)(((byte)(200)))));
             this.btnGiam.FlatAppearance.BorderSize = 0;
+            this.btnGiam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(125)))), ((int)(((byte)(157)))));
+            this.btnGiam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnGiam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGiam.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiam.ForeColor = System.Drawing.Color.White;
-            this.btnGiam.Location = new System.Drawing.Point(12, 19);
+            this.btnGiam.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiam.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnGiam.Location = new System.Drawing.Point(12, 13);
             this.btnGiam.Name = "btnGiam";
-            this.btnGiam.Size = new System.Drawing.Size(36, 23);
+            this.btnGiam.Size = new System.Drawing.Size(36, 36);
             this.btnGiam.TabIndex = 9;
             this.btnGiam.Text = "-";
             this.btnGiam.UseVisualStyleBackColor = false;
+            this.btnGiam.Click += new System.EventHandler(this.btnGiam_Click);
             // 
             // btnTang
             // 
-            this.btnTang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnTang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(227)))), ((int)(((byte)(200)))));
             this.btnTang.FlatAppearance.BorderSize = 0;
+            this.btnTang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(125)))), ((int)(((byte)(157)))));
+            this.btnTang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnTang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTang.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTang.ForeColor = System.Drawing.Color.White;
-            this.btnTang.Location = new System.Drawing.Point(102, 19);
+            this.btnTang.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTang.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnTang.Location = new System.Drawing.Point(102, 13);
             this.btnTang.Name = "btnTang";
-            this.btnTang.Size = new System.Drawing.Size(36, 23);
+            this.btnTang.Size = new System.Drawing.Size(36, 36);
             this.btnTang.TabIndex = 8;
             this.btnTang.Text = "+";
             this.btnTang.UseVisualStyleBackColor = false;
+            this.btnTang.Click += new System.EventHandler(this.btnTang_Click);
             // 
-            // label3
+            // lbSoLuong
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(65, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "3";
+            this.lbSoLuong.AutoSize = true;
+            this.lbSoLuong.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbSoLuong.Location = new System.Drawing.Point(56, 19);
+            this.lbSoLuong.Name = "lbSoLuong";
+            this.lbSoLuong.Size = new System.Drawing.Size(40, 25);
+            this.lbSoLuong.TabIndex = 7;
+            this.lbSoLuong.Text = "38";
             // 
             // User_MonDuocChon
             // 
@@ -146,6 +152,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnGiam;
         private System.Windows.Forms.Button btnTang;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbSoLuong;
     }
 }

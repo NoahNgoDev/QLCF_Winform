@@ -37,6 +37,7 @@
             // 
             // pictureBox_Mon
             // 
+            this.pictureBox_Mon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_Mon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Mon.Image")));
             this.pictureBox_Mon.Location = new System.Drawing.Point(3, 3);
             this.pictureBox_Mon.Name = "pictureBox_Mon";
@@ -47,20 +48,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(122, 16);
+            this.label1.Location = new System.Drawing.Point(122, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 28);
+            this.label1.Size = new System.Drawing.Size(228, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tên món nước";
+            this.label1.Text = "Cà phê truyền thống ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(228, 98);
+            this.label2.Location = new System.Drawing.Point(214, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 34);
             this.label2.TabIndex = 2;
@@ -74,7 +75,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox_Mon);
             this.Name = "User_SanPham";
-            this.Size = new System.Drawing.Size(363, 135);
+            this.Size = new System.Drawing.Size(358, 135);
             this.Load += new System.EventHandler(this.User_SanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Mon)).EndInit();
             this.ResumeLayout(false);
