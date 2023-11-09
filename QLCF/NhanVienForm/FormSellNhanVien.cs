@@ -20,7 +20,7 @@ namespace QLCF
         private Boolean enable = false;
         //private int userControlCurrenly = 0;
         private Button currentButton;
-
+        private int newWidthForm = 0;
 
         User_DatBan userControl_DatBan = new User_DatBan();
         User_Donban userControl_Donban = new User_Donban();
@@ -30,6 +30,7 @@ namespace QLCF
         public FormSellNhanVien()
         {
             InitializeComponent();
+            this.SizeChanged += FormSellNhanVien_SizeChanged;
         }
 
 
@@ -87,7 +88,29 @@ namespace QLCF
 
 
 
+        public void reponsive(int newWidthForm)
+        {
+            //pnlContain_ThanhToan
+            userControl_Sell.responsive(newWidthForm);
+        }
 
+        private void FormSellNhanVien_SizeChanged(object sender, EventArgs e)
+        {
+            //lấy độ rộng của form mỗi khi thay đổi kích thức của form
+            newWidthForm = this.Width;
+            Console.WriteLine(newWidthForm.ToString());
+            // Gọi phương thức Invalidate để vẽ lại giao diện
+            //this.Invalidate();
+
+            if (newWidthForm == 1920)
+            {
+                reponsive(newWidthForm);
+            }
+            else if (newWidthForm == 1615)
+            {
+                reponsive(newWidthForm);
+            }
+        }
 
 
 
@@ -214,5 +237,7 @@ namespace QLCF
             ActivateButton(sender);
             addUserControlForPanel(userControl_Setting);
         }
+
+        
     }
 }

@@ -60,7 +60,7 @@
             this.pnlForUserControl.Location = new System.Drawing.Point(0, 0);
             this.pnlForUserControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlForUserControl.Name = "pnlForUserControl";
-            this.pnlForUserControl.Size = new System.Drawing.Size(1387, 733);
+            this.pnlForUserControl.Size = new System.Drawing.Size(1387, 754);
             this.pnlForUserControl.TabIndex = 1;
             // 
             // pnlContainUserControl
@@ -68,7 +68,7 @@
             this.pnlContainUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainUserControl.Location = new System.Drawing.Point(220, 0);
             this.pnlContainUserControl.Name = "pnlContainUserControl";
-            this.pnlContainUserControl.Size = new System.Drawing.Size(1167, 733);
+            this.pnlContainUserControl.Size = new System.Drawing.Size(1167, 754);
             this.pnlContainUserControl.TabIndex = 7;
             // 
             // LeftBarControll
@@ -83,7 +83,7 @@
             this.LeftBarControll.Location = new System.Drawing.Point(0, 0);
             this.LeftBarControll.Margin = new System.Windows.Forms.Padding(4);
             this.LeftBarControll.Name = "LeftBarControll";
-            this.LeftBarControll.Size = new System.Drawing.Size(220, 733);
+            this.LeftBarControll.Size = new System.Drawing.Size(220, 754);
             this.LeftBarControll.TabIndex = 6;
             // 
             // btnSetting
@@ -96,7 +96,7 @@
             this.btnSetting.ForeColor = System.Drawing.Color.Black;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 678);
+            this.btnSetting.Location = new System.Drawing.Point(0, 699);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
@@ -222,10 +222,10 @@
             this.btnmove.FlatAppearance.BorderSize = 0;
             this.btnmove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmove.Image = ((System.Drawing.Image)(resources.GetObject("btnmove.Image")));
-            this.btnmove.Location = new System.Drawing.Point(1239, 0);
+            this.btnmove.Location = new System.Drawing.Point(184, 0);
             this.btnmove.Margin = new System.Windows.Forms.Padding(4);
             this.btnmove.Name = "btnmove";
-            this.btnmove.Size = new System.Drawing.Size(37, 34);
+            this.btnmove.Size = new System.Drawing.Size(1092, 34);
             this.btnmove.TabIndex = 4;
             this.btnmove.UseCompatibleTextRendering = true;
             this.btnmove.UseVisualStyleBackColor = true;
@@ -286,7 +286,7 @@
             this.pnlCenter.Location = new System.Drawing.Point(0, 34);
             this.pnlCenter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(1387, 733);
+            this.pnlCenter.Size = new System.Drawing.Size(1387, 754);
             this.pnlCenter.TabIndex = 7;
             // 
             // pnlHeadBar
@@ -309,7 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1387, 767);
+            this.ClientSize = new System.Drawing.Size(1387, 788);
             this.Controls.Add(this.pnlCenter);
             this.Controls.Add(this.pnlHeadBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -317,6 +317,7 @@
             this.Name = "FormSellNhanVien";
             this.Text = "FormSellNhanVien";
             this.Load += new System.EventHandler(this.FormSellNhanVien_Load);
+            this.SizeChanged += new System.EventHandler(this.FormSellNhanVien_SizeChanged);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FormSellNhanVien_MouseUp);
