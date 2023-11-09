@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbDonGia = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnGiam = new System.Windows.Forms.Button();
@@ -50,16 +50,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên món nước";
             // 
-            // label2
+            // lbDonGia
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(158, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "50.000";
+            this.lbDonGia.AutoSize = true;
+            this.lbDonGia.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDonGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbDonGia.Location = new System.Drawing.Point(169, 19);
+            this.lbDonGia.Name = "lbDonGia";
+            this.lbDonGia.Size = new System.Drawing.Size(31, 20);
+            this.lbDonGia.TabIndex = 3;
+            this.lbDonGia.Text = "50";
             // 
             // panel1
             // 
@@ -122,9 +122,10 @@
             this.lbSoLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbSoLuong.Location = new System.Drawing.Point(56, 19);
             this.lbSoLuong.Name = "lbSoLuong";
-            this.lbSoLuong.Size = new System.Drawing.Size(40, 25);
+            this.lbSoLuong.Size = new System.Drawing.Size(26, 25);
             this.lbSoLuong.TabIndex = 7;
-            this.lbSoLuong.Text = "38";
+            this.lbSoLuong.Text = "1";
+            this.lbSoLuong.TextChanged += new System.EventHandler(this.lbSoLuong_TextChanged);
             // 
             // User_MonDuocChon
             // 
@@ -132,7 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbDonGia);
             this.Name = "User_MonDuocChon";
             this.Size = new System.Drawing.Size(385, 60);
             this.panel1.ResumeLayout(false);
@@ -147,7 +148,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbDonGia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnGiam;

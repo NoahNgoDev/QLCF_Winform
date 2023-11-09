@@ -19,7 +19,7 @@ namespace QLCF.NhanVienForm
         private List<User_SanPham> user_SanPhamList;
         public List<User_MonDuocChon> user_MonDuocChonList;
 
-
+        
 
         public User_Sell()
         {
@@ -27,10 +27,13 @@ namespace QLCF.NhanVienForm
             
         }
 
+
+
+        int a = 0;
         private void User_Sell_Load(object sender, EventArgs e)
         {
+            //int giatienmoisanpham = 0;
             user_SanPhamList = new List<User_SanPham>();
-
             for (int i = 0; i < 40; i++)
             {
                 // trong mỗi đối tượng của layout sản phẩm sẽ có 1 tag ví dụ: trà chanh có tag là trà
@@ -49,7 +52,6 @@ namespace QLCF.NhanVienForm
 
 
             user_MonDuocChonList = new List<User_MonDuocChon>();
-
             for (int i = 0; i < 17; i++)
             {
                 // trong mỗi đối tượng của layout sản phẩm sẽ có 1 tag ví dụ: trà chanh có tag là trà
@@ -65,9 +67,19 @@ namespace QLCF.NhanVienForm
                 flowLayoutPanel_MonSelect.Controls.Add(mdc);
             }
 
-            Console.WriteLine(user_MonDuocChonList.Count());
-        }
 
+
+
+            for (int i = 0; i < user_MonDuocChonList.Count; i++)
+            {
+                a += user_MonDuocChonList[i].LaySoLuongXDonGia();
+                
+            }
+            lbSoTienCanThanhToan.Text = a.ToString();
+
+
+
+        }
 
         public void responsive(int newWidthForm)
         {
@@ -103,6 +115,15 @@ namespace QLCF.NhanVienForm
             }
         }
 
-       
+
+
+        private void lbSoTienCanThanhToan_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < user_MonDuocChonList.Count; i++)
+            {
+                a += user_MonDuocChonList[i].LaySoLuongXDonGia();
+            }
+            lbSoTienCanThanhToan.Text = a.ToString();
+        }
     }
 }

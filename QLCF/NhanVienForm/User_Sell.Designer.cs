@@ -52,9 +52,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
@@ -337,26 +337,6 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(121, 38);
             this.flowLayoutPanel4.TabIndex = 11;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Số lượng";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.label3);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(287, 0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(121, 38);
-            this.flowLayoutPanel3.TabIndex = 11;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -367,6 +347,26 @@
             this.label5.Size = new System.Drawing.Size(48, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "Giá";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label3);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(287, 0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(121, 38);
+            this.flowLayoutPanel3.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Số lượng";
             // 
             // flowLayoutPanel2
             // 

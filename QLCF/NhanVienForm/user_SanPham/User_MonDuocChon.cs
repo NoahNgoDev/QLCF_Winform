@@ -12,6 +12,7 @@ namespace QLCF.NhanVienForm.user_SanPham
 {
     public partial class User_MonDuocChon : UserControl
     {
+        public int getSoluongXDonGia = 0;
         private int soluong = 1;
 
 
@@ -25,7 +26,7 @@ namespace QLCF.NhanVienForm.user_SanPham
             soluong += 1;
             lbSoLuong.Text = soluong.ToString();
 
-            
+
 
         }
 
@@ -47,9 +48,18 @@ namespace QLCF.NhanVienForm.user_SanPham
 
             lbSoLuong.Text = soluong.ToString();
         }
-    
-    
-        
-    
+
+
+        private void lbSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            getSoluongXDonGia = int.Parse(lbSoLuong.Text) * int.Parse(lbDonGia.Text); ;
+            Console.WriteLine(getSoluongXDonGia);
+        }
+
+        public int LaySoLuongXDonGia()
+        {
+            getSoluongXDonGia = soluong * int.Parse(lbDonGia.Text); ;
+            return getSoluongXDonGia;
+        }
     }
 }
