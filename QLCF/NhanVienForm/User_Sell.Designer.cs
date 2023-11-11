@@ -58,6 +58,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -120,6 +121,7 @@
             this.button8.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(94, 13);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(93, 52);
@@ -132,11 +134,12 @@
             this.button10.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(376, 13);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(93, 52);
             this.button10.TabIndex = 13;
-            this.button10.Text = " Nước khác";
+            this.button10.Text = " Nước ngọt";
             this.button10.UseVisualStyleBackColor = false;
             // 
             // button9
@@ -144,6 +147,7 @@
             this.button9.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(0, 13);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(93, 52);
@@ -156,6 +160,7 @@
             this.button6.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(282, 13);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 52);
@@ -168,6 +173,7 @@
             this.button7.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(188, 13);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(93, 52);
@@ -250,9 +256,9 @@
             this.lbSoTienCanThanhToan.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lbSoTienCanThanhToan.Location = new System.Drawing.Point(315, 13);
             this.lbSoTienCanThanhToan.Name = "lbSoTienCanThanhToan";
-            this.lbSoTienCanThanhToan.Size = new System.Drawing.Size(81, 25);
+            this.lbSoTienCanThanhToan.Size = new System.Drawing.Size(40, 25);
             this.lbSoTienCanThanhToan.TabIndex = 4;
-            this.lbSoTienCanThanhToan.Text = "1000k";
+            this.lbSoTienCanThanhToan.Text = "10";
             // 
             // label1
             // 
@@ -330,6 +336,7 @@
             // 
             // flowLayoutPanel4
             // 
+            this.flowLayoutPanel4.Controls.Add(this.panel7);
             this.flowLayoutPanel4.Controls.Add(this.label5);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(166, 0);
@@ -342,7 +349,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Location = new System.Drawing.Point(33, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 25);
             this.label5.TabIndex = 7;
@@ -401,6 +408,13 @@
             this.button11.TabIndex = 1;
             this.button11.Text = "xóa tất cả";
             this.button11.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(24, 20);
+            this.panel7.TabIndex = 8;
             // 
             // User_Sell
             // 
@@ -462,5 +476,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Panel panel7;
     }
 }

@@ -14,7 +14,8 @@ namespace QLCF.NhanVienForm
 {
     public partial class User_Sell : UserControl
     {
-        private User_SanPham sp = new User_SanPham();
+        
+        
         private User_MonDuocChon mdc = new User_MonDuocChon();
         private List<User_SanPham> user_SanPhamList;
         public List<User_MonDuocChon> user_MonDuocChonList;
@@ -34,25 +35,38 @@ namespace QLCF.NhanVienForm
         {
             //int giatienmoisanpham = 0;
             user_SanPhamList = new List<User_SanPham>();
-            for (int i = 0; i < 40; i++)
+            for (int i = 1; i <= 7; i++)
             {
                 // trong mỗi đối tượng của layout sản phẩm sẽ có 1 tag ví dụ: trà chanh có tag là trà
-
-                sp = new User_SanPham
+                if (i % 2 == 0)
                 {
-                    Margin = new Padding(5,5,0,0),
-                    BackColor = System.Drawing.Color.FromArgb(147, 177, 166),
-                    Size = new System.Drawing.Size(363-5, 135)
-                    
-                };
+                   
+                    User_SanPham sp = new User_SanPham()
+                    {
+                        Margin = new Padding(5, 5, 0, 0),
+                        BackColor = System.Drawing.Color.FromArgb(147, 177, 166),
+                        Size = new System.Drawing.Size(363 - 5, 135)
 
+                    };
 
-                flowLayoutPanel_Contain_SanPham.Controls.Add(sp);
+                    flowLayoutPanel_Contain_SanPham.Controls.Add(sp);
+                }
+                else
+                {
+                    User_SanPham sp1 = new User_SanPham();
+
+                    sp1.lbNameSP.Text = "222";
+                    sp1.Margin = new Padding(5, 5, 0, 0);
+                    sp1.BackColor = System.Drawing.Color.FromArgb(10, 111, 29);
+                    sp1.Size = new System.Drawing.Size(363 - 5, 135);
+                    flowLayoutPanel_Contain_SanPham.Controls.Add(sp1);
+
+                }
+                
             }
 
-
             user_MonDuocChonList = new List<User_MonDuocChon>();
-            for (int i = 0; i < 17; i++)
+            for (int i = 0; i < 10; i++)
             {
                 // trong mỗi đối tượng của layout sản phẩm sẽ có 1 tag ví dụ: trà chanh có tag là trà
 
@@ -68,12 +82,10 @@ namespace QLCF.NhanVienForm
             }
 
 
-
-
             for (int i = 0; i < user_MonDuocChonList.Count; i++)
             {
                 a += user_MonDuocChonList[i].LaySoLuongXDonGia();
-                
+
             }
             lbSoTienCanThanhToan.Text = a.ToString();
 
@@ -83,19 +95,19 @@ namespace QLCF.NhanVienForm
 
         public void responsive(int newWidthForm)
         {
-           
+
 
             if (newWidthForm == 1920)
             {
                 //flowLayoutPnl2.Size = new Size(1700, 156);
 
-                pnlContain_ThanhToan.Size = new Size(410+100, 1080);
+                pnlContain_ThanhToan.Size = new Size(410 + 170, 1080);
 
                 for (int i = 0; i < 17; i++)
                 {
-                    user_MonDuocChonList[i].Size = new Size(385 + 100, 60);
+                    user_MonDuocChonList[i].Size = new Size(385 + 170, 60);
                 }
-                
+
             }
             else //if (newWidthForm == 1395)
             {
@@ -109,21 +121,14 @@ namespace QLCF.NhanVienForm
                     {
                         user_MonDuocChonList[i].Size = new Size(385, 60);
                     }
-                    
+
+                    //}
+                    //Console.WriteLine(user_MonDuocChonList.Count());
                 }
-                //Console.WriteLine(user_MonDuocChonList.Count());
             }
+
+
         }
-
-
-
-        private void lbSoTienCanThanhToan_TextChanged(object sender, EventArgs e)
-        {
-            for (int i = 0; i < user_MonDuocChonList.Count; i++)
-            {
-                a += user_MonDuocChonList[i].LaySoLuongXDonGia();
-            }
-            lbSoTienCanThanhToan.Text = a.ToString();
-        }
+        
     }
 }

@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User_SanPham));
             this.pictureBox_Mon = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbNameSP = new System.Windows.Forms.Label();
+            this.lbDonGia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Mon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,39 +44,44 @@
             this.pictureBox_Mon.Size = new System.Drawing.Size(113, 129);
             this.pictureBox_Mon.TabIndex = 0;
             this.pictureBox_Mon.TabStop = false;
+            this.pictureBox_Mon.Click += new System.EventHandler(this.pictureBox_Mon_Click);
             // 
-            // label1
+            // lbNameSP
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(122, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Cà phê truyền thống ";
+            this.lbNameSP.AutoSize = true;
+            this.lbNameSP.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbNameSP.Location = new System.Drawing.Point(122, 12);
+            this.lbNameSP.Name = "lbNameSP";
+            this.lbNameSP.Size = new System.Drawing.Size(228, 25);
+            this.lbNameSP.TabIndex = 1;
+            this.lbNameSP.Text = "Cà phê truyền thống ";
+            this.lbNameSP.Click += new System.EventHandler(this.lbNameSP_Click);
             // 
-            // label2
+            // lbDonGia
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(214, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 34);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "23.000đ";
+            this.lbDonGia.AutoSize = true;
+            this.lbDonGia.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDonGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbDonGia.Location = new System.Drawing.Point(214, 98);
+            this.lbDonGia.Name = "lbDonGia";
+            this.lbDonGia.Size = new System.Drawing.Size(132, 34);
+            this.lbDonGia.TabIndex = 2;
+            this.lbDonGia.Text = "23.000đ";
+            this.lbDonGia.Click += new System.EventHandler(this.label2_Click);
             // 
             // User_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.Controls.Add(this.lbDonGia);
+            this.Controls.Add(this.lbNameSP);
             this.Controls.Add(this.pictureBox_Mon);
             this.Name = "User_SanPham";
             this.Size = new System.Drawing.Size(358, 135);
             this.Load += new System.EventHandler(this.User_SanPham_Load);
+            this.Click += new System.EventHandler(this.User_SanPham_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Mon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,7 +91,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox_Mon;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbDonGia;
+        public System.Windows.Forms.Label lbNameSP;
     }
 }
