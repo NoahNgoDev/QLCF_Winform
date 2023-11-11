@@ -66,27 +66,27 @@ namespace QLCF.NhanVienForm
             }
 
             user_MonDuocChonList = new List<User_MonDuocChon>();
-            for (int i = 0; i < 10; i++)
-            {
-                // trong mỗi đối tượng của layout sản phẩm sẽ có 1 tag ví dụ: trà chanh có tag là trà
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    // trong mỗi đối tượng của layout sản phẩm sẽ có 1 tag ví dụ: trà chanh có tag là trà
 
-                User_MonDuocChon mdc = new User_MonDuocChon();
-                mdc.Margin = new Padding(1);
-                mdc.BackColor = System.Drawing.Color.FromArgb(178, 200, 186);
-                mdc.Size = new System.Drawing.Size(385, 60);
-                mdc.BorderStyle = BorderStyle.FixedSingle;
+            //    User_MonDuocChon mdc = new User_MonDuocChon();
+            //    mdc.Margin = new Padding(1);
+            //    mdc.BackColor = System.Drawing.Color.FromArgb(178, 200, 186);
+            //    mdc.Size = new System.Drawing.Size(385, 60);
+            //    mdc.BorderStyle = BorderStyle.FixedSingle;
 
-                user_MonDuocChonList.Add(mdc);
+            //    user_MonDuocChonList.Add(mdc);
 
-                flowLayoutPanel_MonSelect.Controls.Add(mdc);
-            }
+            //    flowLayoutPanel_MonSelect.Controls.Add(mdc);
+            //}
 
 
-            for (int i = 0; i < user_MonDuocChonList.Count; i++)
-            {
-                a += user_MonDuocChonList[i].LaySoLuongXDonGia();
+            //for (int i = 0; i < user_MonDuocChonList.Count; i++)
+            //{
+            //    a += user_MonDuocChonList[i].LaySoLuongXDonGia();
 
-            }
+            //}
             lbSoTienCanThanhToan.Text = a.ToString();
 
 

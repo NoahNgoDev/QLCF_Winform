@@ -52,13 +52,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -344,6 +344,13 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(121, 38);
             this.flowLayoutPanel4.TabIndex = 11;
             // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(24, 20);
+            this.panel7.TabIndex = 8;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -391,9 +398,9 @@
             this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 25);
+            this.label4.Size = new System.Drawing.Size(145, 25);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Tên món";
+            this.label4.Text = "[0]Tên món";
             // 
             // button11
             // 
@@ -408,13 +415,6 @@
             this.button11.TabIndex = 1;
             this.button11.Text = "xóa tất cả";
             this.button11.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(24, 20);
-            this.panel7.TabIndex = 8;
             // 
             // User_Sell
             // 
@@ -453,7 +453,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Contain_SanPham;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_MonSelect;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -477,5 +476,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel7;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_MonSelect;
     }
 }
