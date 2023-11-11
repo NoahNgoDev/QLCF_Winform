@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbNameSP = new System.Windows.Forms.Label();
             this.lbDonGia = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -39,16 +39,16 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lbNameSP
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(6, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tên món nước";
+            this.lbNameSP.AutoSize = true;
+            this.lbNameSP.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbNameSP.Location = new System.Drawing.Point(6, 21);
+            this.lbNameSP.Name = "lbNameSP";
+            this.lbNameSP.Size = new System.Drawing.Size(131, 20);
+            this.lbNameSP.TabIndex = 2;
+            this.lbNameSP.Text = "Tên món nước";
             // 
             // lbDonGia
             // 
@@ -63,7 +63,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbNameSP);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -146,13 +146,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbDonGia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnGiam;
         private System.Windows.Forms.Button btnTang;
-        private System.Windows.Forms.Label lbSoLuong;
+        public System.Windows.Forms.Label lbNameSP;
+        public System.Windows.Forms.Label lbSoLuong;
     }
 }

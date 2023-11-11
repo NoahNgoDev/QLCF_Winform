@@ -44,6 +44,8 @@
             this.pnlContain_ThanhToan = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_MonSelect = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbTongSoLuong = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lbSoTienCanThanhToan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -58,7 +60,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnClearAll_ItemSelect = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -233,28 +235,54 @@
             this.flowLayoutPanel_MonSelect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_MonSelect.Location = new System.Drawing.Point(0, 79);
             this.flowLayoutPanel_MonSelect.Name = "flowLayoutPanel_MonSelect";
-            this.flowLayoutPanel_MonSelect.Size = new System.Drawing.Size(408, 465);
+            this.flowLayoutPanel_MonSelect.Size = new System.Drawing.Size(408, 453);
             this.flowLayoutPanel_MonSelect.TabIndex = 3;
+            this.flowLayoutPanel_MonSelect.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.flowLayoutPanel_MonSelect_ControlAdded);
+            this.flowLayoutPanel_MonSelect.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.flowLayoutPanel_MonSelect_ControlRemoved);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lbTongSoLuong);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.lbSoTienCanThanhToan);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 544);
+            this.panel2.Location = new System.Drawing.Point(0, 532);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(408, 187);
+            this.panel2.Size = new System.Drawing.Size(408, 199);
             this.panel2.TabIndex = 2;
+            // 
+            // lbTongSoLuong
+            // 
+            this.lbTongSoLuong.AutoSize = true;
+            this.lbTongSoLuong.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongSoLuong.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lbTongSoLuong.Location = new System.Drawing.Point(352, 8);
+            this.lbTongSoLuong.Name = "lbTongSoLuong";
+            this.lbTongSoLuong.Size = new System.Drawing.Size(40, 25);
+            this.lbTongSoLuong.TabIndex = 6;
+            this.lbTongSoLuong.Text = "10";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label6.Location = new System.Drawing.Point(20, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 25);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Số lượng";
             // 
             // lbSoTienCanThanhToan
             // 
             this.lbSoTienCanThanhToan.AutoSize = true;
             this.lbSoTienCanThanhToan.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSoTienCanThanhToan.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lbSoTienCanThanhToan.Location = new System.Drawing.Point(315, 13);
+            this.lbSoTienCanThanhToan.Location = new System.Drawing.Point(352, 37);
             this.lbSoTienCanThanhToan.Name = "lbSoTienCanThanhToan";
             this.lbSoTienCanThanhToan.Size = new System.Drawing.Size(40, 25);
             this.lbSoTienCanThanhToan.TabIndex = 4;
@@ -265,7 +293,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(20, 13);
+            this.label1.Location = new System.Drawing.Point(20, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 25);
             this.label1.TabIndex = 3;
@@ -278,7 +306,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button4.Location = new System.Drawing.Point(241, 60);
+            this.button4.Location = new System.Drawing.Point(241, 70);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(155, 40);
             this.button4.TabIndex = 2;
@@ -292,7 +320,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.button1.Location = new System.Drawing.Point(11, 109);
+            this.button1.Location = new System.Drawing.Point(11, 119);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(385, 75);
             this.button1.TabIndex = 0;
@@ -306,7 +334,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button3.Location = new System.Drawing.Point(11, 60);
+            this.button3.Location = new System.Drawing.Point(11, 70);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(155, 40);
             this.button3.TabIndex = 1;
@@ -316,7 +344,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.panel3);
-            this.panel5.Controls.Add(this.button11);
+            this.panel5.Controls.Add(this.btnClearAll_ItemSelect);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -398,23 +426,24 @@
             this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 25);
+            this.label4.Size = new System.Drawing.Size(109, 25);
             this.label4.TabIndex = 6;
-            this.label4.Text = "[0]Tên món";
+            this.label4.Text = "Tên món";
             // 
-            // button11
+            // btnClearAll_ItemSelect
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(309, 12);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(87, 23);
-            this.button11.TabIndex = 1;
-            this.button11.Text = "xóa tất cả";
-            this.button11.UseVisualStyleBackColor = false;
+            this.btnClearAll_ItemSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClearAll_ItemSelect.FlatAppearance.BorderSize = 0;
+            this.btnClearAll_ItemSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearAll_ItemSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearAll_ItemSelect.ForeColor = System.Drawing.Color.White;
+            this.btnClearAll_ItemSelect.Location = new System.Drawing.Point(309, 12);
+            this.btnClearAll_ItemSelect.Name = "btnClearAll_ItemSelect";
+            this.btnClearAll_ItemSelect.Size = new System.Drawing.Size(87, 23);
+            this.btnClearAll_ItemSelect.TabIndex = 1;
+            this.btnClearAll_ItemSelect.Text = "xóa tất cả";
+            this.btnClearAll_ItemSelect.UseVisualStyleBackColor = false;
+            this.btnClearAll_ItemSelect.Click += new System.EventHandler(this.btnClearAll_ItemSelect_Click);
             // 
             // User_Sell
             // 
@@ -464,7 +493,7 @@
         private System.Windows.Forms.Panel SearchBox;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnClearAll_ItemSelect;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button10;
@@ -477,5 +506,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_MonSelect;
+        private System.Windows.Forms.Label lbTongSoLuong;
+        private System.Windows.Forms.Label label6;
     }
 }

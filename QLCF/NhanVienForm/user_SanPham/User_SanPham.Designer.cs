@@ -59,6 +59,7 @@
             this.lbDonGia.Size = new System.Drawing.Size(132, 34);
             this.lbDonGia.TabIndex = 5;
             this.lbDonGia.Text = "23.000đ";
+            this.lbDonGia.Click += new System.EventHandler(this.lbDonGia_Click);
             // 
             // lbNameSP
             // 
@@ -70,16 +71,18 @@
             this.lbNameSP.Size = new System.Drawing.Size(228, 25);
             this.lbNameSP.TabIndex = 4;
             this.lbNameSP.Text = "Cà phê truyền thống ";
+            this.lbNameSP.Click += new System.EventHandler(this.lbNameSP_Click);
             // 
             // pictureBox_Mon
             // 
             this.pictureBox_Mon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_Mon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Mon.Image")));
-            this.pictureBox_Mon.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox_Mon.Location = new System.Drawing.Point(3, 3);
             this.pictureBox_Mon.Name = "pictureBox_Mon";
             this.pictureBox_Mon.Size = new System.Drawing.Size(113, 129);
             this.pictureBox_Mon.TabIndex = 3;
             this.pictureBox_Mon.TabStop = false;
+            this.pictureBox_Mon.Click += new System.EventHandler(this.pictureBox_Mon_Click);
             // 
             // User_SanPham
             // 
