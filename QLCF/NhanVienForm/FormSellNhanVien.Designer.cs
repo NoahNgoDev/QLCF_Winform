@@ -65,6 +65,7 @@
             // 
             // pnlContainUserControl
             // 
+            this.pnlContainUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlContainUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainUserControl.Location = new System.Drawing.Point(220, 0);
             this.pnlContainUserControl.Name = "pnlContainUserControl";

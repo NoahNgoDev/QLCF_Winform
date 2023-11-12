@@ -27,27 +27,31 @@ namespace QLCF
             if (result == DialogResult.OK)
             {
                 this.Close();
-                Console.WriteLine("dnag nhap78709");
             }
-            else if (result == DialogResult.Cancel)
-            {
-                //MessageBox.Show("Bạn đã nhấn nút Cancel.");
-            }
+            else if (result == DialogResult.Cancel){}
         }
 
         private void btnDN_Click(object sender, EventArgs e)
         {
-            if ((this.txtUser.Text == "") || (this.txtUser.Text == ""))
-                MessageBox.Show("Vui lòng nhập tên người dùng hoặc mật khẩu");
-            else if ((this.txtUser.Text == "11") && (this.txtPass.Text == "11"))
+
+            string username = txtUser.Text.Trim();
+            string password = txtPass.Text; // Không cần Trim ở đây vì mật khẩu có thể có khoảng trắng
+
+            // Kiểm tra tên đăng nhập và mật khẩu
+            if (username.Equals("AA") && password.Equals("AA"))
             {
-                //Application.Exit();
-                //MessageBox.Show("Đăng nhập thành công", "Thông báo");
-                // Hiện Form 2 (MainForm)
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-                
+                FormSellNhanVien formA = new FormSellNhanVien();
+                formA.Show();
+                this.Hide(); // Ẩn form đăng nhập
             }
+            else if (username.Equals("BB") && password.Equals("BB"))
+            {
+                MainQuanLy formB = new MainQuanLy();
+                formB.Show();
+                this.Hide(); // Ẩn form đăng nhập
+            }
+            
+
             else
             {
                 MessageBox.Show("Tên và mật khẩu không đúng, hãy nhập lại", "Thông báo");

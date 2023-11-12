@@ -27,6 +27,9 @@ namespace QLCF
         User_Sell userControl_Sell = new User_Sell();
         User_Setting userControl_Setting = new User_Setting();
 
+        //gọi form đăng nhập
+        DangNhap Form_DangNhap = new DangNhap();
+
         public FormSellNhanVien()
         {
             InitializeComponent();
@@ -38,7 +41,36 @@ namespace QLCF
         {
             addUserControlForPanel(userControl_Sell);
             this.SizeChanged += FormSellNhanVien_SizeChanged;
+            //formDangNhap();
         }
+
+
+
+        //form đăng nhập
+        public void formDangNhap()
+        {
+            // Hiển thị form đăng nhập và kiểm tra kết quả trả về...
+            DialogResult result = Form_DangNhap.ShowDialog();
+            // Kiểm tra kết quả trả về của form đăng nhập
+            if (result == DialogResult.Yes) // Đăng nhập thành công
+            {
+                // Hiển thị form MainQuanLy
+                this.Show();
+            }
+            else
+            {
+                // Người dùng có thể đã hủy đăng nhập hoặc đăng nhập không thành công
+                // Thực hiện xử lý tùy thuộc vào trường hợp cụ thể của bạn.
+                this.Close(); // Đóng form MainQuanLy nếu không đăng nhập thành công.
+            }
+        }
+
+
+
+
+
+
+
 
 
         // Thêm usercontrol vào panel để hiển thị
@@ -105,10 +137,12 @@ namespace QLCF
 
             if (newWidthForm == 1920)
             {
+                this.Size = new Size(1920, 1080);
                 reponsive(newWidthForm);
             }
             else //if (newWidthForm == 1615)
             {
+                this.Size = new Size(1387, 788);
                 reponsive(newWidthForm);
             }
         }
@@ -121,7 +155,7 @@ namespace QLCF
         // GK-đóng cửa sổ chương trình 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
 

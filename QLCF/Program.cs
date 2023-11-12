@@ -11,12 +11,16 @@ namespace QLCF
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+
+
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSellNhanVien());//FormSellNhanVien_MainQuanLy());
+            Application.Run(new DangNhap());//FormSellNhanVien_MainQuanLy());
         }
     }
 }

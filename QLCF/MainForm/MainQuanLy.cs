@@ -17,7 +17,6 @@ namespace QLCF
         private int mouseX;
         private int mouseY;
         private Boolean enable = false;
-        //private int userControlCurrenly = 0;
         private Button currentButton;
 
         // GK-Gọi userControl 
@@ -31,8 +30,7 @@ namespace QLCF
         CaiDat userControl_CaiDat = new CaiDat();
         private int newWidthForm;
 
-        //gọi form đăng nhập
-        DangNhap Form_DangNhap = new DangNhap();
+
 
         public MainQuanLy()
         {
@@ -43,10 +41,6 @@ namespace QLCF
 
         private void MainQuanLy_Load(object sender, EventArgs e)
         {
-
-
-            FormDangNhap();
-
             // cài đặt vị trí cho name avarta khi thay đổi độ dài
             caiDatViTriChoNameAvarta();
 
@@ -61,28 +55,6 @@ namespace QLCF
 
             
         }
-
-
-
-        //form đăng nhập
-        public void FormDangNhap()
-        {
-            // Hiển thị form đăng nhập và kiểm tra kết quả trả về...
-            DialogResult result = Form_DangNhap.ShowDialog();
-            // Kiểm tra kết quả trả về của form đăng nhập
-            if (result == DialogResult.OK) // Đăng nhập thành công
-            {
-                // Hiển thị form MainQuanLy
-                this.Show();
-            }
-            else
-            {
-                // Người dùng có thể đã hủy đăng nhập hoặc đăng nhập không thành công
-                // Thực hiện xử lý tùy thuộc vào trường hợp cụ thể của bạn.
-                this.Close(); // Đóng form MainQuanLy nếu không đăng nhập thành công.
-            }
-        }
-
 
         // kiểm tra reponsive 
         private void MainQuanLy_SizeChanged(object sender, EventArgs e)
@@ -120,7 +92,7 @@ namespace QLCF
         // GK-đóng cửa sổ chương trình 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
 

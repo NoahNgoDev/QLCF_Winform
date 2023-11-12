@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.AccessControl;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -74,8 +75,7 @@ namespace QLCF.NhanVienForm
 
             lbTongSoLuong.Text = count.ToString();
 
-            
-            
+
         }
 
         public void responsive(int newWidthForm)
@@ -122,16 +122,64 @@ namespace QLCF.NhanVienForm
             count = flowLayoutPanel_MonSelect.Controls.Count;
             
 
-            foreach (Control control in flowLayoutPanel_MonSelect.Controls)
-            {
-                if (nameSP_Selected == control.Name)
-                {
-                    flowLayoutPanel_MonSelect.Controls.RemoveAt(count);
-                    mdc.lbSoLuong.Text = (int.Parse(mdc.lbSoLuong.Text) + 1).ToString();
-                }
-            }
 
             lbTongSoLuong.Text = count.ToString();
+
+
+            //foreach (Control control in flowLayoutPanel_MonSelect.Controls)
+            //{
+            //    if (control is Label && control.Name == "lbNameSP")
+            //    {
+            //        Label labelName = (Label)control;
+            //        Console.WriteLine(labelName.Text);
+            //    }
+
+            //}
+
+
+            // Lấy đối tượng Label từ Item trong FlowLayoutPanel
+            //Chúng ta sử dụng phương thức OfType<ItemType>() để lấy tất cả các đối tượng Item trong FlowLayoutPanel.
+            //Sau đó, chúng ta sử dụng phương thức FirstOrDefault() để lấy Item đầu tiên trong danh sách.
+            //Tiếp theo, chúng ta truy cập đến đối tượng Label trong Item bằng cách sử dụng phương thức OfType<Label>().
+            Label label = flowLayoutPanel_MonSelect.Controls
+                .OfType<User_MonDuocChon>()
+                .FirstOrDefault()?
+                .Controls
+                .OfType<Label>()
+                .ElementAtOrDefault(0);
+
+            if (label != null )
+            {
+                // Lấy giá trị trong Label
+               //label.Name == "lbNameSP"
+                string value = label.Text;
+                Console.WriteLine(label.Name);
+            }
+            else
+            {
+                Console.WriteLine("Null");
+            }
+
+
+            //// Truy cập đến item thứ nhất trong FlowLayoutPanel
+            //for (int i = 1; i < count; i++)
+            //{
+            //    Control item = flowLayoutPanel_MonSelect.Controls[i];
+
+            //    // Kiểm tra nếu item là một đối tượng Label
+            //    if (item is Label && item.Name == "lbNameSP")
+            //    {
+            //        // Ép kiểu item thành đối tượng Label để truy cập đến giá trị của label A
+            //        Label labelA = (Label)item;
+
+            //        // Lấy giá trị của label A
+            //        string valueA = labelA.Text;
+
+            //        // Sử dụng giá trị của label A theo nhu cầu của bạn
+            //        Console.WriteLine(valueA);
+            //    }
+            //}
+
         }
 
         private void flowLayoutPanel_MonSelect_ControlRemoved(object sender, ControlEventArgs e)

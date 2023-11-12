@@ -105,52 +105,16 @@ namespace QLCF.NhanVienForm.user_SanPham
         private void pictureBox_Mon_Click(object sender, EventArgs e)
         {
             objectClick(sender, e);
-            Console.WriteLine(lbNameSP.Text + " " + lbDonGia.Text);
         }
 
         private void lbNameSP_Click(object sender, EventArgs e)
         {
             objectClick(sender, e);
-            Console.WriteLine(lbNameSP.Text + " " + lbDonGia.Text);
         }
 
         private void pnlBoXSanPham_Click(object sender, EventArgs e)
         {
             objectClick(sender, e);
-            //Panel clickedObject = (Panel)sender;// đối tượng sender để xác định object đã được nhấp vào
-            //string Name = "";
-            //string NameGia = "";
-
-            ////lấy name và giá của từng sản phâm được chọn 
-            //foreach (Control control in clickedObject.Controls)
-            //{
-
-            //    if (control is Label && control.Name == "lbNameSP")
-            //    {
-            //        Label labelName = (Label)control;
-            //        Name += labelName.Text + " ";
-            //    }
-            //    if (control is Label && control.Name == "lbDonGia")
-            //    {
-            //        Label labelDonGia = (Label)control;
-            //        NameGia += labelDonGia.Text;
-            //    }
-            //}
-
-
-            //// Thêm user_Sanpham vào FlowLayoutPanel của user_Sell
-            //User_Sell userControlB = this.ParentForm.Controls.Find("User_Sell", true).FirstOrDefault() as User_Sell;
-            //if (userControlB != null)
-            //{
-            //    User_MonDuocChon mdc = new User_MonDuocChon();
-            //    mdc.Margin = new Padding(1);
-            //    mdc.BackColor = System.Drawing.Color.FromArgb(178, 200, 186);
-            //    mdc.Size = new System.Drawing.Size(385, 60);
-            //    mdc.BorderStyle = BorderStyle.FixedSingle;
-            //    mdc.lbNameSp.Text = Name;
-            //    userControlB.flowLayoutPanel_MonSelect.Controls.Add(mdc);
-            //}
-
         }
 
         private void lbDonGia_Click(object sender, EventArgs e)
