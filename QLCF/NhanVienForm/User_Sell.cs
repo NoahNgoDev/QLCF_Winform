@@ -11,6 +11,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QLCF.NhanVienForm
@@ -151,6 +152,8 @@ namespace QLCF.NhanVienForm
                .OfType<Label>() // đó đó phải là Last. trong panel lấy đối tượng có kiểu là Label
                .FirstOrDefault();// lấy đôi tượng cần tìm thôi
 
+            label_SoLuong.Text = 1.ToString();
+            Console.WriteLine("nameSPList: " + nameSPList.Count);
 
 
             if (label_SanPham != null && label_DonGia != null && label_SoLuong != null)
@@ -159,23 +162,27 @@ namespace QLCF.NhanVienForm
                 //Console.WriteLine(label_SanPham.Name);
                 //Console.WriteLine(label_DonGia.Name);
                 //Console.WriteLine(label_SoLuong.Name);
+
+                
                 foreach (string name in nameSPList)
                 {
+                    Console.WriteLine(name);
                     if (label_SanPham.Text == name)
                     {
-                        label_SoLuong.Text = (int.Parse(label_SoLuong.Text)+1).ToString();
                         removeItemSelected_FlowLayoutPanel();
+                        label_SoLuong.Text = (int.Parse(label_SoLuong.Text)+1).ToString();
                         
                         //Console.WriteLine("đã xóa món : "+label_SanPham.Text);
                     }
                     else
                     {
+                        nameSPList.Add(label_SanPham.Text);
                         Console.WriteLine("themm 22");
                     }
                 }
 
-
                 nameSPList.Add(label_SanPham.Text);
+
             }
             else
             {
@@ -206,8 +213,8 @@ namespace QLCF.NhanVienForm
                 int lastIndex =  count - 1;
 
                 // Xóa phần tử cuối cùng
-                //flowLayoutPanel_MonSelect.Controls.RemoveAt(lastIndex);
-                Console.WriteLine("remove at a " + lastIndex);
+                flowLayoutPanel_MonSelect.Controls.RemoveAt(lastIndex);
+                //Console.WriteLine("remove at a " + lastIndex);
 
 
                 // Hoặc sử dụng phương thức Remove
