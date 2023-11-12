@@ -115,45 +115,67 @@ namespace QLCF.NhanVienForm
 
 
 
-
+        List<string> nameSPList = new List<string>();
 
         private void flowLayoutPanel_MonSelect_ControlAdded(object sender, ControlEventArgs e)
         {
             count = flowLayoutPanel_MonSelect.Controls.Count;
-            
-
-
             lbTongSoLuong.Text = count.ToString();
-
-
-            //foreach (Control control in flowLayoutPanel_MonSelect.Controls)
-            //{
-            //    if (control is Label && control.Name == "lbNameSP")
-            //    {
-            //        Label labelName = (Label)control;
-            //        Console.WriteLine(labelName.Text);
-            //    }
-
-            //}
 
 
             // Lấy đối tượng Label từ Item trong FlowLayoutPanel
             //Chúng ta sử dụng phương thức OfType<ItemType>() để lấy tất cả các đối tượng Item trong FlowLayoutPanel.
             //Sau đó, chúng ta sử dụng phương thức FirstOrDefault() để lấy Item đầu tiên trong danh sách.
             //Tiếp theo, chúng ta truy cập đến đối tượng Label trong Item bằng cách sử dụng phương thức OfType<Label>().
-            Label label = flowLayoutPanel_MonSelect.Controls
-                .OfType<User_MonDuocChon>()
-                .FirstOrDefault()?
-                .Controls
-                .OfType<Label>()
-                .ElementAtOrDefault(0);
+            Label label_SanPham = flowLayoutPanel_MonSelect.Controls// gọi các đối tượng trong flowLayoutPanel
+                .OfType<User_MonDuocChon>() // các đối tượng có kiểu là user_MonDuocChon
+                .FirstOrDefault()?.Controls // lấy đối tượng con đầu tiên trong user_MonDuocChon mà nó tìm thấy
+                .OfType<Panel>() // đối tượng con trong đó là kiểu panel
+                .LastOrDefault()?.Controls // lấy đối tượng cuối (bên trái). tương tự như stack. đối tượng nào thêm sau cùng sẽ lấy ra trước... nếu FirstrDefault thì sẽ lấy lbSoluong
+                .OfType<Label>() // đó đó phải là Last. trong panel lấy đối tượng có kiểu là Label
+                .FirstOrDefault();// lấy đôi tượng cần tìm thôi
 
-            if (label != null )
+            Label label_DonGia = flowLayoutPanel_MonSelect.Controls// gọi các đối tượng trong flowLayoutPanel
+               .OfType<User_MonDuocChon>() // các đối tượng có kiểu là user_MonDuocChon
+               .FirstOrDefault()?.Controls // lấy đối tượng con đầu tiên trong user_MonDuocChon mà nó tìm thấy
+               .OfType<Label>() // đối tượng con trong đó là kiểu panel
+               .LastOrDefault();// lấy đối tượng ==>đơn giá
+                // đó đó phải là Last. trong panel lấy đối tượng có kiểu là Label
+               // lấy đôi tượng cần tìm thôi
+
+            Label label_SoLuong = flowLayoutPanel_MonSelect.Controls// gọi các đối tượng trong flowLayoutPanel
+               .OfType<User_MonDuocChon>() // các đối tượng có kiểu là user_MonDuocChon
+               .FirstOrDefault()?.Controls // lấy đối tượng con đầu tiên trong user_MonDuocChon mà nó tìm thấy
+               .OfType<Panel>() // đối tượng con trong đó là kiểu panel
+               .FirstOrDefault()?.Controls // lấy đối tượng   ==> số lượng
+               .OfType<Label>() // đó đó phải là Last. trong panel lấy đối tượng có kiểu là Label
+               .FirstOrDefault();// lấy đôi tượng cần tìm thôi
+
+
+
+            if (label_SanPham != null && label_DonGia != null && label_SoLuong != null)
             {
-                // Lấy giá trị trong Label
-               //label.Name == "lbNameSP"
-                string value = label.Text;
-                Console.WriteLine(label.Name);
+                string value = label_SanPham.Text;
+                //Console.WriteLine(label_SanPham.Name);
+                //Console.WriteLine(label_DonGia.Name);
+                //Console.WriteLine(label_SoLuong.Name);
+                foreach (string name in nameSPList)
+                {
+                    if (label_SanPham.Text == name)
+                    {
+                        label_SoLuong.Text = (int.Parse(label_SoLuong.Text)+1).ToString();
+                        removeItemSelected_FlowLayoutPanel();
+                        
+                        //Console.WriteLine("đã xóa món : "+label_SanPham.Text);
+                    }
+                    else
+                    {
+                        Console.WriteLine("themm 22");
+                    }
+                }
+
+
+                nameSPList.Add(label_SanPham.Text);
             }
             else
             {
@@ -161,24 +183,7 @@ namespace QLCF.NhanVienForm
             }
 
 
-            //// Truy cập đến item thứ nhất trong FlowLayoutPanel
-            //for (int i = 1; i < count; i++)
-            //{
-            //    Control item = flowLayoutPanel_MonSelect.Controls[i];
 
-            //    // Kiểm tra nếu item là một đối tượng Label
-            //    if (item is Label && item.Name == "lbNameSP")
-            //    {
-            //        // Ép kiểu item thành đối tượng Label để truy cập đến giá trị của label A
-            //        Label labelA = (Label)item;
-
-            //        // Lấy giá trị của label A
-            //        string valueA = labelA.Text;
-
-            //        // Sử dụng giá trị của label A theo nhu cầu của bạn
-            //        Console.WriteLine(valueA);
-            //    }
-            //}
 
         }
 
@@ -190,6 +195,25 @@ namespace QLCF.NhanVienForm
 
 
 
+
+        private void removeItemSelected_FlowLayoutPanel()
+        {
+            // Kiểm tra xem có ít nhất một phần tử trong FlowLayoutPanel hay không
+            if (flowLayoutPanel_MonSelect.Controls.Count > 1)
+            {
+                
+                // Lấy chỉ số của phần tử cuối cùng
+                int lastIndex =  count - 1;
+
+                // Xóa phần tử cuối cùng
+                //flowLayoutPanel_MonSelect.Controls.RemoveAt(lastIndex);
+                Console.WriteLine("remove at a " + lastIndex);
+
+
+                // Hoặc sử dụng phương thức Remove
+                // flowLayoutPanel1.Controls.Remove(flowLayoutPanel1.Controls[lastIndex]);
+            }
+        }
 
 
         private void btnClearAll_ItemSelect_Click(object sender, EventArgs e)

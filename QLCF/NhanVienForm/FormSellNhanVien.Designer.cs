@@ -65,7 +65,6 @@
             // 
             // pnlContainUserControl
             // 
-            this.pnlContainUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlContainUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainUserControl.Location = new System.Drawing.Point(220, 0);
             this.pnlContainUserControl.Name = "pnlContainUserControl";
@@ -316,6 +315,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormSellNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSellNhanVien";
             this.Load += new System.EventHandler(this.FormSellNhanVien_Load);
             this.SizeChanged += new System.EventHandler(this.FormSellNhanVien_SizeChanged);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
             this.btnThoat = new System.Windows.Forms.Button();
             this.chkGhi = new System.Windows.Forms.CheckBox();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -71,6 +72,7 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(216, 35);
             this.txtPass.TabIndex = 20;
+            this.txtPass.Text = "1";
             // 
             // txtUser
             // 
@@ -80,7 +82,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(216, 35);
             this.txtUser.TabIndex = 19;
-            this.txtUser.Text = "kmk3434343";
+            this.txtUser.Text = "1";
             // 
             // lbPass
             // 
@@ -138,9 +140,11 @@
             this.Controls.Add(this.lbTenDN);
             this.Controls.Add(this.lbDangNhap);
             this.Controls.Add(this.btnDN);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DangNhap";
-            this.Text = "DangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MIFA COFFEE";
             this.ResumeLayout(false);
             this.PerformLayout();
 
