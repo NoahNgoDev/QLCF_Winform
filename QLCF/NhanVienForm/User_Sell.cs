@@ -1,5 +1,6 @@
 ﻿using QLCF.NhanVienForm.user_SanPham;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +34,26 @@ namespace QLCF.NhanVienForm
         }
 
 
+        
+
+        private void FlowLayoutPanelItemClick(object sender, EventArgs e)
+        {
+            // Lấy tên của đối tượng được click
+            if (sender is Control clickedControl)
+            {
+                string itemName = clickedControl.Name;
+                MessageBox.Show("Đã click vào item có tên: " + itemName);
+            }
+        }
+
+
+
+
+
+
+
+
+
 
         int a = 0;
         private int count = 0;
@@ -47,15 +68,16 @@ namespace QLCF.NhanVienForm
                 // trong mỗi đối tượng của layout sản phẩm sẽ có 1 tag ví dụ: trà chanh có tag là trà
                 if (i % 2 == 0)
                 {
-                   
-                    User_SanPham sp = new User_SanPham()
-                    {
-                        Margin = new Padding(5, 5, 0, 0),
-                        BackColor = System.Drawing.Color.FromArgb(147, 177, 166),
-                        Size = new System.Drawing.Size(363 - 5, 135)
 
-                    };
+                    User_SanPham sp = new User_SanPham();
 
+
+                    sp.Margin = new Padding(5, 5, 0, 0);
+                    sp.BackColor = System.Drawing.Color.FromArgb(147, 177, 166);
+                    sp.Size = new System.Drawing.Size(363 - 5, 135);
+                    sp.pnlBoXSanPham.Tag = "11";
+                    
+                    ;
                     flowLayoutPanel_Contain_SanPham.Controls.Add(sp);
                 }
                 else
@@ -66,8 +88,8 @@ namespace QLCF.NhanVienForm
                     sp1.Margin = new Padding(5, 5, 0, 0);
                     sp1.BackColor = System.Drawing.Color.FromArgb(10, 111, 29);
                     sp1.Size = new System.Drawing.Size(363 - 5, 135);
+                    sp1.pnlBoXSanPham.Tag = "22";
                     flowLayoutPanel_Contain_SanPham.Controls.Add(sp1);
-
                 }
                 
             }
@@ -152,37 +174,53 @@ namespace QLCF.NhanVienForm
                .OfType<Label>() // đó đó phải là Last. trong panel lấy đối tượng có kiểu là Label
                .FirstOrDefault();// lấy đôi tượng cần tìm thôi
 
+
+            Label label_TagPanel = flowLayoutPanel_Contain_SanPham.Controls// gọi các đối tượng trong flowLayoutPanel
+               .OfType<User_SanPham>() // các đối tượng có kiểu là user_MonDuocChon
+               .FirstOrDefault()?.Controls // lấy đối tượng con đầu tiên trong user_MonDuocChon mà nó tìm thấy
+               .OfType<Panel>() // đối tượng con trong đó là kiểu panel
+               .FirstOrDefault()?.Controls
+               .OfType<Label>()
+               .LastOrDefault();// lấy đôi tượng cần tìm thôi
+            
+            
+            
+
             label_SoLuong.Text = 1.ToString();
-            Console.WriteLine("nameSPList: " + nameSPList.Count);
+            
 
 
-            if (label_SanPham != null && label_DonGia != null && label_SoLuong != null)
+            if (label_SanPham != null && label_DonGia != null && label_SoLuong != null && label_TagPanel != null)
             {
                 string value = label_SanPham.Text;
-                //Console.WriteLine(label_SanPham.Name);
+                Console.WriteLine(label_SanPham.Name+ " " + label_SanPham.Text);
                 //Console.WriteLine(label_DonGia.Name);
                 //Console.WriteLine(label_SoLuong.Name);
-
-                
-                foreach (string name in nameSPList)
+                if (nameSPList.Count > 0)
                 {
-                    Console.WriteLine(name);
-                    if (label_SanPham.Text == name)
+                    foreach (var name in nameSPList)
                     {
-                        removeItemSelected_FlowLayoutPanel();
-                        label_SoLuong.Text = (int.Parse(label_SoLuong.Text)+1).ToString();
-                        
-                        //Console.WriteLine("đã xóa món : "+label_SanPham.Text);
-                    }
-                    else
-                    {
-                        nameSPList.Add(label_SanPham.Text);
-                        Console.WriteLine("themm 22");
+
+                        Console.WriteLine(name+" -- "+ label_SanPham.Text);
+                        if (label_SanPham.Text == name)
+                        {
+                            removeItemSelected_FlowLayoutPanel();
+                            label_SoLuong.Text = (int.Parse(label_SoLuong.Text) + 1).ToString();
+                            //Console.WriteLine(name);
+                        }
+                        else
+                        {
+                            nameSPList.Add(label_SanPham.Text);
+                            //Console.WriteLine("themm 22");
+                        }
                     }
                 }
 
-                nameSPList.Add(label_SanPham.Text);
+                Console.WriteLine(" ten san pham licked: " + label_TagPanel.Text);
+                nameSPList.Add(label_TagPanel.Text);
 
+                //Console.WriteLine("nameSPList: " + label_SanPham.Text);
+               // Console.WriteLine("nameSPList:1 " + nameSPList.Count);
             }
             else
             {

@@ -62,11 +62,35 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm\DK_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\DK_NhanVien.Designer.cs">
+      <DependentUpon>DK_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\DK_SanPhamcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\DK_SanPhamcs.Designer.cs">
+      <DependentUpon>DK_SanPhamcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\DK_TaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\DK_TaiKhoan.Designer.cs">
+      <DependentUpon>DK_TaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm\DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MainForm\DoanhThu.Designer.cs">
       <DependentUpon>DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienForm\DK_DatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVienForm\DK_DatBan.Designer.cs">
+      <DependentUpon>DK_DatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVienForm\FormSellNhanVien.cs">
       <SubType>Form</SubType>

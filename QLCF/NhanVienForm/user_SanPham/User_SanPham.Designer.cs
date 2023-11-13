@@ -101,10 +101,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlBoXSanPham;
         private System.Windows.Forms.Label lbDonGia;
         public System.Windows.Forms.Label lbNameSP;
         private System.Windows.Forms.PictureBox pictureBox_Mon;
+        public System.Windows.Forms.Panel pnlBoXSanPham;
     }
 }

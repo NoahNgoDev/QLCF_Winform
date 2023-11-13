@@ -63,8 +63,8 @@ namespace QLCF.NhanVienForm.user_SanPham
         private void lbSoLuong_TextChanged(object sender, EventArgs e)
         {
             int temp_SoluongXDonGia = int.Parse(lbSoLuong.Text) * int.Parse(lbDonGia.Text); ;
-            Console.WriteLine(temp_SoluongXDonGia);
-            //soluongXDonGiaPRO = temp_SoluongXDonGia;
+            //Console.WriteLine(temp_SoluongXDonGia);
+            
         }
 
         

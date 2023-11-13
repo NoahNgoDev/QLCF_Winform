@@ -85,15 +85,19 @@ namespace QLCF.NhanVienForm.user_SanPham
 
                 // Thêm user_Sanpham vào FlowLayoutPanel của user_Sell
                 User_Sell userControlB = this.ParentForm.Controls.Find("User_Sell", true).FirstOrDefault() as User_Sell;
+                
+                
+                
                 if (userControlB != null)
                 {
                     User_MonDuocChon mdc = new User_MonDuocChon();
                     mdc.Margin = new Padding(1);
-                    mdc.BackColor = System.Drawing.Color.FromArgb(178, 200, 186);
+                    mdc.BackColor = System.Drawing.Color.FromArgb(178, 200, 186 );
                     mdc.Size = new System.Drawing.Size(385, 60);
                     mdc.BorderStyle = BorderStyle.FixedSingle;
                     mdc.lbNameSP.Text = Name;
                     userControlB.flowLayoutPanel_MonSelect.Controls.Add(mdc);
+                    Console.WriteLine("----"+mdc.lbNameSP.Text);
                 }
 
             }
