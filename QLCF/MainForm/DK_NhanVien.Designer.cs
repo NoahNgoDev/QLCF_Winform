@@ -136,7 +136,7 @@
             // 
             this.radNam.AutoSize = true;
             this.radNam.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNam.Location = new System.Drawing.Point(605, 50);
+            this.radNam.Location = new System.Drawing.Point(618, 50);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(77, 30);
             this.radNam.TabIndex = 12;
