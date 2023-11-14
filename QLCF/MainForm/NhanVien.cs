@@ -38,7 +38,7 @@ namespace QLCF
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            DK_NhanVien nv = new DK_NhanVien();//
+            DK_NhanVien nv = new DK_NhanVien();//3
             nv.Show();
         }
     }
