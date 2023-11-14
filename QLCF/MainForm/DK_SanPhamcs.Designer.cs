@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // DK_SanPhamcs
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "DK_SanPhamcs";
             this.Text = "DK_SanPhamcs";
+            this.Load += new System.EventHandler(this.DK_SanPhamcs_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

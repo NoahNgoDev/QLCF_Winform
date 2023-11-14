@@ -20,7 +20,7 @@ namespace QLCF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhap());//FormSellNhanVien_MainQuanLy());
+            Application.Run(new MainQuanLy());//FormSellNhanVien_MainQuanLy());
         }
     }
 }

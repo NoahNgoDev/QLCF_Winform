@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCF.MainForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,5 +36,10 @@ namespace QLCF
 
         }
 
+        private void btnThemNhanVien_Click(object sender, EventArgs e)
+        {
+            DK_NhanVien nv = new DK_NhanVien();
+            nv.Show();
+        }
     }
 }

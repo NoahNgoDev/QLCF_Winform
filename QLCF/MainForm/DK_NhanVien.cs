@@ -16,5 +16,26 @@ namespace QLCF.MainForm
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntThem_Click(object sender, EventArgs e)
+        {
+            DK_NhanVien tt = new DK_NhanVien();
+            if (txtMaNhanVien.Text == "" || txtHoTen.Text == "" || txtSDT.Text =="")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            string str = "Mã Nhân Viên: " + txtMaNhanVien.Text + "\nTên Nhân Viên:" + txtHoTen.Text + "\nSố Điện Thoại:" + txtSDT.Text + "\nNgày Sinh:" + datNgaySinh.Value.ToShortDateString() + "\nGiới tính:" + (radNam.Checked ? "Nam" : "Nữ");
+            MessageBox.Show(str, "Thông Báo");
+
+
+
+
+
+        }
     }
 }
