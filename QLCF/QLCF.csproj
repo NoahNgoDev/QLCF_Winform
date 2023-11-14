@@ -184,6 +184,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\DK_NhanVien.resx">
+      <DependentUpon>DK_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
